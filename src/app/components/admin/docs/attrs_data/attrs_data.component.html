@@ -1,0 +1,35 @@
+<h1 class="ui header">Catégories</h1>
+
+<input [(ngModel)]="newCategory" placeholder="Nouvelle category" type="text" />
+<button (click)="addCategory(newCategory)">
+Ajouter
+</button>
+
+<div *ngFor="let category of categories">
+
+<button class="ui teal button">
+{{category.name}}
+</button>
+
+
+
+<button (click)="editCategory(category)">
+	Editer
+</button>
+<button (click)="deleteCategory(category)">
+	Supprimer
+</button>
+
+
+<div *ngIf="selectedCategory">
+<h1>Modifiez la catégorie</h1>
+<input [(ngModel)]="selectedCategory.name" placeholder="Editez votre catégorie" />
+<button 
+	(click)="validateEditCategory(selectedCategory)"
+>
+	Valider
+</button>
+<button (click)="cancelEditCategory()" >
+	Annuler
+</button>
+

@@ -1,0 +1,42 @@
+<div class="ui attached segment">
+  <h3>Formulaire d'inscription d'organisme</h3>
+
+  <div class="ui form">
+    <h4 class="ui dividing header">Information de l'Organisme</h4>
+    <div class="field">
+      <label>Nom</label>
+      <div class="inline fields">
+        <div class="four wide field">
+          <input type="text" name="org[accr]" placeholder="Accornyme">
+        </div>
+        <div class="twelve wide field">
+          <input type="text" name="org[name]" placeholder="Nom Complet">
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label>Description</label>
+      <textarea rows="10"
+        name="org[desc]"
+        placeholder="Présentation, objectifs, motivation, nombre d'actifs, date de création, budget annuel...">
+(Présentation:)
+
+(Objectifs:)
+
+(Motivation:)
+
+(Nombre d'actifs:)
+(Date de création:)
+(Budget annuel:)
+        </textarea>
+    </div>
+    <div class="two wide column">
+            <div class="ui medium buttons">
+                <button (click)="createOrg(organism)" class="ui button">
+                  <i class="write icon"></i>
+                </button>
+            </div>
+          </div>
+  </div>
+
+</div>
