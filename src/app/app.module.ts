@@ -15,12 +15,7 @@ import { OrgModule } from "./components/org/org.module"
 import { AdminModule } from "./components/admin/admin.module"
 
 import { ServiceCaterogiesModules } from "./services/attrs_data/categories.service"
-<<<<<<< HEAD:src/app/app.module.ts
 import { ServiceOrganismsModules } from "./services/org_subscribe/org_subscribe.service"
-=======
-import { ServiceOrganismsModules } from "./services/org/org.service"
->>>>>>> master:client/app/app.module.ts
-
 
 @NgModule({
     imports: [
