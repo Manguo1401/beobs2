@@ -6,14 +6,14 @@ Ajouter
 </button>
 
 <div *ngFor="let category of categories">
-	<button class="ui teal button">
+	<button>
 	{{category.name}}
 	</button>
 
 	<button (click)="editCategory(category)">
 		Editer
 	</button>
-	<button (click)="deleteCategory(category)">
+	<button class="btn btn-primary" (click)="deleteCategory(category)">
 		Supprimer
 	</button>
 </div>
