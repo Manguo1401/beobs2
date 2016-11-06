@@ -14,11 +14,19 @@ export class ServiceOrganismsModules {
 
   constructor(private http: Http) { }
 
-
-  createOrganisme(newCat: string): Promise<Organism> {
-    return this.http.post('admin/api/addCategory', JSON.stringify({ name: newCat }), { headers: this.headers })
+  /*testfunc(newOrg:any){
+    newOrg.accr = "dedede";
+    return newOrg;
+  }*/
+  createOrganism(newOrg: Organism): Promise<Organism> {
+    //newOrg.accr = "efe"
+    console.log("org.service createOrganism"+ JSON.stringify(newOrg));
+    //let theOrg = new Organism();
+    //theOrg.accr = "dede";
+    //console.log("org.service createOrganism"+ JSON.stringify(theOrg));
+    return this.http.post('org/api/createOrganism', JSON.stringify(newOrg), { headers: this.headers })
       .toPromise()
-      .then(res => res.json())
+      .then(res => {res.json(); console.log(res.json())})
       .catch(this.handleError);
   }
 
