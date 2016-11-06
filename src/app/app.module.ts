@@ -15,6 +15,7 @@ import { OrgModule } from "./components/org/org.module"
 import { AdminModule } from "./components/admin/admin.module"
 
 import { ServiceCaterogiesModules } from "./services/attrs_data/categories.service"
+import { ServiceAttrsData } from "./services/attrs_data/attrs_data.service"
 import { ServiceOrganismsModules } from "./services/org_subscribe/org_subscribe.service"
 
 @NgModule({
@@ -29,6 +30,7 @@ import { ServiceOrganismsModules } from "./services/org_subscribe/org_subscribe.
     ],
     providers: [
         ServiceCaterogiesModules,
+        ServiceAttrsData,
         ServiceOrganismsModules
     ],
     declarations: [

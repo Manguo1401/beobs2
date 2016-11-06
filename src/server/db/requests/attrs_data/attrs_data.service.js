@@ -1,9 +1,14 @@
 //attrs_data_service
 
 var Category = require('../../models/category_model');
+var AttrData = require('../../models/attr_data_model');
 var mongoose = require('mongoose');
 
 module.exports = function(app){
+
+	//////////////
+	//Categories//
+	//////////////
 
 	app.get('/home/get_categories', function(req, res){
     	Category.find({}, function(err, json) {
@@ -34,4 +39,18 @@ module.exports = function(app){
 			res.sendStatus(200);
 		});
 	});
+
+	/////////////
+	//Attr data//
+	/////////////
+
+	app.post('/admin/api/addAttrData', function(req, res) {
+		var obj = new AttrData(req.body);
+		obj._id = mongoose.Types.ObjectId();
+		obj.save(function(err, obj) {
+			if(err) return console.log(err);
+			res.status(200).json(obj);
+		})
+	})
+
 };

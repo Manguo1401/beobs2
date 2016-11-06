@@ -6,7 +6,7 @@ Ajouter
 </button>
 
 <div *ngFor="let category of categories">
-	<button>
+	<button (click)="selectCategory(category)" >
 	{{category.name}}
 	</button>
 
@@ -30,3 +30,5 @@ Ajouter
 		Annuler
 	</button>
 </div>
+
+<my-selected-attrs-data [category]="selectedCategory" ></my-selected-attrs-data>
