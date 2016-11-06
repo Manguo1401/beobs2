@@ -4,7 +4,8 @@ import { FormsModule }    from '@angular/forms'
 
 import { HomeRoutes } from './home.routes'
 
-import { HomeMainPage } from './home_main_page.component'
+import { HomeMainPage } from './home_main_page.component';
+import { TodoAppComponent } from './todo-app/todo-app.component'
 
 @NgModule({
   imports: [
@@ -13,10 +14,11 @@ import { HomeMainPage } from './home_main_page.component'
     HomeRoutes
   ],
   declarations: [
-    HomeMainPage
+    HomeMainPage,
+    TodoAppComponent,
   ],
   providers: [
-    
+
   ]
 })
 
