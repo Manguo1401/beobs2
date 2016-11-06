@@ -12,7 +12,8 @@ module.exports = function(app){
       });
   });*/
 
-  app.post('/admin/api/createOrganism', function(req, res) {
+  app.post('/org/api/createOrganism', function(req, res) {
+    console.log("org.dao createOrganism");
     var obj = new Organism(req.body);
     obj._id = mongoose.Types.ObjectId();
     obj.save(function(err, obj) {
