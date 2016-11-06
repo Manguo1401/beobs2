@@ -16,7 +16,9 @@ import { AdminModule } from "./components/admin/admin.module"
 import { TodoRoutes } from "./components/todo-app/todo.routes"
 
 import { ServiceCaterogiesModules } from "./services/attrs_data/categories.service"
+import { ServiceAttrsData } from "./services/attrs_data/attrs_data.service"
 import { ServiceOrganismsModules } from "./services/org/org.service"
+
 
 @NgModule({
     imports: [
@@ -31,6 +33,7 @@ import { ServiceOrganismsModules } from "./services/org/org.service"
     ],
     providers: [
         ServiceCaterogiesModules,
+        ServiceAttrsData,
         ServiceOrganismsModules
     ],
     declarations: [

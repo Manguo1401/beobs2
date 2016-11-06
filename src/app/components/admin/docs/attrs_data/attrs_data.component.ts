@@ -4,8 +4,6 @@ import { Category } from './../../../../objects/categorie'
 
 import { ServiceCaterogiesModules } from './../../../../services/attrs_data/categories.service'
 
-declare var $:any;
-
 @Component({
 	selector: 'my-attrs-data-admin-component',
 	templateUrl: 'attrs_data.component.html',
@@ -30,9 +28,12 @@ export class AttrsDataAdminComponent {
 		.then(categories => this.categories = categories);
 	}
 
+	selectCategory(cat: any) {
+		this.selectedCategory = cat;
+	}
+
 	addCategory(newCat:any) {
-		//On enlève les espaces blanc s'il y en a
-		newCat = newCat.trim();
+		newCat = newCat.trim(); //On enlève les espaces blanc s'il y en a
 
 		//On regarde si newCategory a bien une valeur non nulle
 		if(!newCat) {
@@ -42,22 +43,16 @@ export class AttrsDataAdminComponent {
 		//On effectue une requête http pour ajouter une nouvelle catégorie via le service categories
 		this.serviceCategories.createCategory(newCat)
 		.then(newCat => {
-			//On ajoute la catégorie à la liste actuelle
-			this.categories.push(newCat)
-			//On remet le champ des catégories à zéro une fois l'opération effectuée
-			this.newCategory = ''
+			this.categories.push(newCat) //On ajoute la catégorie à la liste actuelle
+			this.newCategory = '' //On remet le champ des catégories à zéro une fois l'opération effectuée
 		},
 		function() {
-			console.log('il y a un problème');
+			console.log('Il y a un problème');
 		})
 	}
 
 	editCategory(cat: any) {
 		this.selectedCategory = cat;
-
-		$('.page.dimmer:first')
-			.dimmer('toggle')
-		;
 	}
 
 	validateEditCategory(editedCategory:any) {
@@ -65,10 +60,6 @@ export class AttrsDataAdminComponent {
 		.then(() => {
 			this.selectedCategory = null;
 		});
-
-		$('.page.dimmer:first')
-			.dimmer('toggle')
-		;
 	}
 
 	cancelEditCategory() {
@@ -76,9 +67,6 @@ export class AttrsDataAdminComponent {
 		this.serviceCategories.getCategories()
 		.then(categories => {
 			this.categories = categories
-			$('.page.dimmer:first')
-				.dimmer('toggle')
-			;
 		});
 
 

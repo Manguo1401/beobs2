@@ -6,9 +6,9 @@ Ajouter
 </button>
 
 <div *ngFor="let category of categories">
-	<button>
 
-	{{category.name}}
+	<button (click)="selectCategory(category)" >
+		{{category.name}}
 	</button>
 
 	<button (click)="editCategory(category)">
@@ -31,4 +31,10 @@ Ajouter
 	<button (click)="cancelEditCategory()" >
 		Annuler
 	</button>
+<<<<<<< HEAD
 </div>
+
+<my-selected-attrs-data [category]="selectedCategory" ></my-selected-attrs-data>
+=======
+</div>
+>>>>>>> master

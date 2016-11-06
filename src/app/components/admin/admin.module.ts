@@ -10,6 +10,7 @@ import { DocsAdminPage } from './docs/docs_page.component'
 
 import { HomeAdminComponent } from './home/home_admin.component'
 import { AttrsDataAdminComponent } from './docs/attrs_data/attrs_data.component'
+import { SelectedAttrsData } from './docs/attrs_data/selected_attrs_data.component'
 import { SpeciesManagementComponent } from './docs/species/species_management.component'
 
 
@@ -24,7 +25,8 @@ import { SpeciesManagementComponent } from './docs/species/species_management.co
 		HomeAdminComponent,
 		DocsAdminPage,
 		AttrsDataAdminComponent,
-		SpeciesManagementComponent
+		SpeciesManagementComponent,
+		SelectedAttrsData
 	],
 	providers: [
 		

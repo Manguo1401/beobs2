@@ -1,0 +1,6 @@
+<div *ngIf="category">
+	<h1>{{category.name}}</h1>
+
+	<input [(ngModel)]="newAttrData" type="text" placeholder="Donnée attributaire" />
+	<button (click)="addAttrData(newAttrData, category)">Ajouter</button>
+</div>
