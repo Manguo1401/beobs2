@@ -15,9 +15,14 @@ import { OrgModule } from "./components/org/org.module"
 import { AdminModule } from "./components/admin/admin.module"
 import { TodoRoutes } from "./components/todo-app/todo.routes"
 
+
+//Importation des services
 import { ServiceCaterogiesModules } from "./services/attrs_data/categories.service"
 import { ServiceAttrsData } from "./services/attrs_data/attrs_data.service"
 import { ServiceOrganismsModules } from "./services/org/org.service"
+
+//Importation des filtres
+/*import { CategoryFilterPipe } from './pipes/attrs_data/category_filter.pipe'*/
 
 
 @NgModule({
@@ -37,6 +42,7 @@ import { ServiceOrganismsModules } from "./services/org/org.service"
         ServiceOrganismsModules
     ],
     declarations: [
+        /*CategoryFilterPipe,*/
         AppComponent,
         PageNotFound
     ],

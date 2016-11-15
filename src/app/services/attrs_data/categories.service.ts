@@ -15,21 +15,21 @@ export class ServiceCaterogiesModules {
 	constructor(private http: Http) { }
 
 	getCategories(): Promise<Category[]> {
-   		return this.http.get('/home/get_categories')
+   		return this.http.get('home/dao/get_categories')
 		.toPromise()
 		.then(response => /*{*/response.json() as Category[]/*; console.log(response.json())}*/)
 		.catch(this.handleError);
 	}
 
 	createCategory(newCat: string): Promise<Category>{
-		return this.http.post('admin/api/addCategory', JSON.stringify({name: newCat}), {headers: this.headers})
+		return this.http.post('admin/dao/addCategory', JSON.stringify({name: newCat}), {headers: this.headers})
 	    .toPromise()
 	    .then(res => res.json())
 	    .catch(this.handleError);
 	}
 
 	editCategory(editedCategory: any): Promise<void> {
-		const url = 'admin/api/editCategory/' + editedCategory._id;
+		const url = 'admin/dao/editCategory/' + editedCategory._id;
 		return this.http.put(url, JSON.stringify({name: editedCategory.name}), {headers: this.headers})
 		.toPromise()
 		.then(() => null)
@@ -37,11 +37,18 @@ export class ServiceCaterogiesModules {
 	}
 
 	deleteCategory(id: any): Promise<void> {
-		const url = 'admin/api/deleteCategory/' + id
+		const url = 'admin/dao/deleteCategory/' + id
 		return this.http.delete(url, {headers: this.headers})
 			.toPromise()
 			.then(() => null)
 			.catch(this.handleError);
+	}
+
+	checkCategoryId(categories): Promise<void> {
+		return this.http.post('admin/dao/checkCategories', JSON.stringify(categories), {headers: this.headers})
+		.toPromise()
+		.then(() => null)
+		.catch(this.handleError);
 	}
 
 	private handleError(error: any): Promise<any> {
