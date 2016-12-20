@@ -16,7 +16,7 @@ import { ServiceCaterogiesModules } from './../../../../services/attrs_data/cate
 export class AttrsDataAdminComponent {
 	newCategory: string;
 	selectedCategory: Category;
-
+	selectedAttrData;
 	categories: Category[] = [];
 
 	constructor(
@@ -36,9 +36,15 @@ export class AttrsDataAdminComponent {
 	}
 
 	addCategory(newCat:any) {
-		newCat = newCat.trim(); //On enlève les espaces blanc s'il y en a
+		
 
 		//On regarde si newCategory a bien une valeur non nulle
+		if(!newCat) {
+			return ;
+		}
+		var rebuild ;
+		newCat = newCat.trim(); //On enlève les espaces blanc s'il y en a
+
 		if(!newCat) {
 			return ;
 		}
@@ -89,5 +95,9 @@ export class AttrsDataAdminComponent {
 		.then(() => {
 			console.log("Données attributaires mis à jour");
 		})
+	}
+
+	previsualiseAttrData(event) {
+		this.selectedAttrData = event.selectedAttrData;
 	}
 }

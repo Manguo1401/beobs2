@@ -17,3 +17,20 @@ body {
 	width: 50%;
 	opacity: 0.9;
 }
+
+.vcenter {
+	display: flex;
+    align-items: center;
+}
+
+.top-gap-20 {
+	margin-top : 20px;
+}
+
+.top-gap-10 {
+	margin-top : 10px;
+}
+
+.text-center {
+	text-align: center;
+}

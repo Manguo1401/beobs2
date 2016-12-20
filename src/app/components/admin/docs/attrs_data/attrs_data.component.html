@@ -1,38 +1,87 @@
-<h1 class="ui header">Catégories</h1>
+<div class="row">
+	<div class="col-md-6">
+		<h2 class="ui header">Catégories</h2>
+		<form class="form-inline">
+			<label for="newCategoryInput">Nouvelle catégorie : </label>
+			<input [(ngModel)]="newCategory" [ngModelOptions]="{standalone:true}" 
+				id="newCategoryInput" class="form-control" 
+				placeholder="ex: Temporel" type="text" 
+			/>
+			<button (click)="addCategory(newCategory)" class="btn btn-success">
+				Ajouter
+			</button>	
+		</form>
+	
+		<div class="top-gap-20">
+			<div class="list-group">
+				<a *ngFor="let category of categories" class="list-group-item" 
+					
+					[class.active]="category === selectedCategory" (click)="selectCategory(category)"
+				>
+					<div class="row vcenter">
+						<div class="col-md-7">
+							{{category.name}}
+						</div>
+						<div class="col-md-5">
+							<button class="btn btn-default" (click)="editCategory(category)" 
+								data-toggle="modal" data-target="#modifyCategory" 
+							>
+								Editer
+							</button>
 
-<input [(ngModel)]="newCategory" placeholder="Nouvelle category" type="text" />
-<button (click)="addCategory(newCategory)">
-Ajouter
-</button>
-
-<div *ngFor="let category of categories">
-
-	<button (click)="selectCategory(category)" >
-		{{category.name}}
-	</button>
-
-	<button (click)="editCategory(category)">
-		Editer
-	</button>
-
-	<button class="btn btn-primary" (click)="deleteCategory(category)">
-		Supprimer
-	</button>
+							<button class="btn btn-danger" (click)="deleteCategory(category)">
+								Supprimer
+							</button>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<my-selected-attrs-data [category]="selectedCategory" [catLength]="categories.length" (previsualiseAttrData)="previsualiseAttrData($event)"></my-selected-attrs-data>
+	</div>
 </div>
 
-<div *ngIf="selectedCategory">
-	<h1>Modifiez la catégorie</h1>
-	<input [(ngModel)]="selectedCategory.name" placeholder="Editez votre catégorie" />
-	<button 
-		(click)="validateEditCategory(selectedCategory)"
-	>
-		Valider
-	</button>
-	<button (click)="cancelEditCategory()" >
-		Annuler
-	</button>
 
+		
+
+
+
+
+<my-attr-data-wrapper [attrData]="selectedAttrData"></my-attr-data-wrapper>
+
+
+<!-- MODAL pour l'édition des catégories -->
+
+<div id="modifyCategory" class="modal fade" data-backdrop="static" role="dialog">
+	<div class="modal-dialog modal-md">
+		<div class="modal-content">
+			<div *ngIf="selectedCategory">
+				<h4 class="modal-header">
+					Modifiez la catégorie
+				</h4>
+				<div class="modal-body">
+						<input [(ngModel)]="selectedCategory.name"  class="form-control" placeholder="Editez votre catégorie" />
+					
+				</div>
+				<div class="modal-footer">
+					<button 
+						class="btn btn-success"
+						(click)="validateEditCategory(selectedCategory)"
+						data-toggle="modal" data-target="#modifyCategory"
+					>
+						Valider
+					</button>
+					<button 
+						class= "btn btn-warning"
+						(click)="cancelEditCategory()" 
+						data-toggle="modal" data-target="#modifyCategory"
+					>
+						Annuler
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>	
 </div>
-
-<my-selected-attrs-data [category]="selectedCategory" [catLength]="categories.length"></my-selected-attrs-data>
-
