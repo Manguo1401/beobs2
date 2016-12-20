@@ -1,6 +1,45 @@
 <div *ngIf="category">
+
 	<h1>{{category.name}}</h1>
 
 	<input [(ngModel)]="newAttrData" type="text" placeholder="Donnée attributaire" />
 	<button (click)="addAttrData(newAttrData, category)">Ajouter</button>
+
+	<div *ngFor="let attrData of (attrsData | categoryFilter:category._id)">
+			
+			<button>
+				{{attrData.name}}
+			</button>
+
+			<button (click)="editAttrData(attrData)">
+				Editer
+			</button>
+
+			<button class="btn btn-primary" (click)="delAttrData(attrData)">
+				Supprimer
+			</button>
+	</div>
+
+	<h2>Données attributaires sans catégories</h2>
+
+	<div *ngFor="let attrData of attrsData">
+		<button *ngIf="!attrData.category_id" (click)="addToCategory(attrData, category)">
+			{{attrData.name}} +
+		</button>
+	</div>
+
+	<div *ngIf="selectedAttrData">
+		<h1>Modifiez la donnée attributaire</h1>
+		<input [(ngModel)]="selectedAttrData.name" placeholder="Editez votre catégorie" />
+		<button 
+			(click)="validateEditAttrData(selectedAttrData)"
+		>
+			Valider
+		</button>
+		<button (click)="cancelEditAttrData()" >
+			Annuler
+		</button>
+
+	</div>
+
 </div>
