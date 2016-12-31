@@ -13,6 +13,8 @@ import { AttrsDataAdminComponent } from './docs/attrs_data/attrs_data.component'
 import { SelectedAttrsData } from './docs/attrs_data/selected_attrs_data.component'
 import { SpeciesManagementComponent } from './docs/species/species_management.component'
 
+import { CategoryFilterPipe } from './../../pipes/attrs_data/category_filter.pipe'
+
 
 @NgModule({
 	imports: [
@@ -26,7 +28,8 @@ import { SpeciesManagementComponent } from './docs/species/species_management.co
 		DocsAdminPage,
 		AttrsDataAdminComponent,
 		SpeciesManagementComponent,
-		SelectedAttrsData
+		SelectedAttrsData,
+		CategoryFilterPipe
 	],
 	providers: [
 		

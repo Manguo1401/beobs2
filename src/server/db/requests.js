@@ -1,5 +1,5 @@
 module.exports = function(app) {
-	require('./requests/attrs_data/attrs_data.service')(app);
+	require('./requests/attrs_data/attrs_data.dao')(app);
   require('./requests/organism/org.dao')(app);
   require('./requests/connect/createuser')(app);
     // User Management

@@ -15,13 +15,22 @@ import { OrgModule } from "./components/org/org.module"
 import { AdminModule } from "./components/admin/admin.module"
 
 
+
+//Importation des services
 import { ServiceCaterogiesModules } from "./services/attrs_data/categories.service"
 import { ServiceAttrsData } from "./services/attrs_data/attrs_data.service"
 import { ServiceOrganismsModules } from "./services/org/org.service"
+
 import { UserService } from './services/user/user.service'
 /*import { ConnectComponent } from "./components/users/connect/connect.component"
 import { LogoutComponent } from "./components/users/logout/logout.component"
 import { SubscribeUserComponent } from "./components/users/subscribe/subscribe_user.component"*/
+
+
+//Importation des filtres
+/*import { CategoryFilterPipe } from './pipes/attrs_data/category_filter.pipe'*/
+
+
 
 @NgModule({
     imports: [
@@ -43,6 +52,7 @@ import { SubscribeUserComponent } from "./components/users/subscribe/subscribe_u
         UserService
     ],
     declarations: [
+        /*CategoryFilterPipe,*/
         AppComponent,
 
         /*//User Management

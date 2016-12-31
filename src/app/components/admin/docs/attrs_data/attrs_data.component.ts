@@ -25,7 +25,10 @@ export class AttrsDataAdminComponent {
 
 	ngOnInit(): void {
 		this.serviceCategories.getCategories()
-		.then(categories => this.categories = categories);
+		.then(categories => {
+			this.categories = categories
+			this.checkCategoryId(categories)
+		});
 	}
 
 	selectCategory(cat: any) {
@@ -68,14 +71,23 @@ export class AttrsDataAdminComponent {
 		.then(categories => {
 			this.categories = categories
 		});
-
-
 	}
 
 	deleteCategory(category: Category) {
 		this.serviceCategories.deleteCategory(category._id)
 		.then(() => {
 			this.categories = this.categories.filter(cat => cat != category);
+			this.serviceCategories.checkCategoryId(this.categories)
+			.then(() => {
+				return null;
+			});
 		}, (err) => console.log('La catégorie n\'a pas été supprimée'));
+	}
+
+	checkCategoryId(categories) {
+		this.serviceCategories.checkCategoryId(categories)
+		.then(() => {
+			console.log("Données attributaires mis à jour");
+		})
 	}
 }
