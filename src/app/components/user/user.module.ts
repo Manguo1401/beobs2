@@ -5,6 +5,9 @@ import { FormsModule }    from '@angular/forms'
 //Routes de la session utilisateur
 import { UserRoutes } from './user.routes'
 
+//Importation des modules enfants
+import { NewObservationModule } from './new_observation/new_observation.module'
+
 //Compnsants pour les utilisateurs
 import { UserHomePage } from './user_home.page'
 
@@ -15,6 +18,7 @@ import { UserHomeComponent } from './home/user_home.component'
 	imports: [
 		CommonModule,
 		FormsModule,
+		NewObservationModule,
 		UserRoutes
 	],
 	declarations: [
