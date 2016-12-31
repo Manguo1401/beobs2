@@ -48,6 +48,17 @@
 
 
 
+<div *ngIf="selectedCategory">
+	<h1>Modifiez la catégorie</h1>
+	<input [(ngModel)]="selectedCategory.name" placeholder="Editez votre catégorie" />
+	<button
+		(click)="validateEditCategory(selectedCategory)"
+	>
+		Valider
+	</button>
+	<button (click)="cancelEditCategory()" >
+		Annuler
+	</button>
 
 <my-attr-data-wrapper [attrData]="selectedAttrData"></my-attr-data-wrapper>
 

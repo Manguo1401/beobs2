@@ -19,9 +19,9 @@ export class SubscribeOrgPage {
   constructor(
     private serviceOrganisms: ServiceOrganismsModules
   ) {
-   /* this.newOrg.name= "Name";
+    this.newOrg.name= "Name";
     this.newOrg.accr= "Accr";
-    this.newOrg.desc= "Desc";*/
+    this.newOrg.desc= "Desc";
   }
 
   ngOnInit(): void {
