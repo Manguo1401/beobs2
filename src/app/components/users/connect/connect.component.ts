@@ -46,12 +46,12 @@ export class ConnectComponent implements OnInit {
     .then(() => {
       this._isAuthenticated = true;
       //window.location.href = '/home';
-      this.router.navigateByUrl('./home');
+      this.router.navigate(['/user/home']);
     });
     /*this.user.password = ''; //gerer ici des erreurs
     this.user.username = '';*/
 
-    this._isAuthenticated = true;
+    this._isAuthenticated = false;
     //event.stopPropagation(); //pour eviter le rechargement de la page, c'est ce qui sera souhaité
   }
 

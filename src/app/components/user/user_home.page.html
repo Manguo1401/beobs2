@@ -1,18 +1,19 @@
-
+<!-- USER PAGE (a renommer) -->
 <div class="row bg-faded">
 	<nav class="navbar navbar-full navbar-light bg-faded">
 		<a routerLink="/home" routerLinkActive="active" class="navbar-brand">
 			BeObs
 		</a>
+		<span >Bienvenue {{username}} !</span>
 		<ul class="nav navbar-nav float-xs-right">
-			<li class="nav-item btn btn-outline-success">Mon profil</li>
-			<li class="nav-item btn btn-outline-success">Messages</li>
-			<li class="nav-item btn btn-outline-success">Paramètres</li>
-			<li class="nav-item btn btn-outline-danger">Se déconnecter</li>
+			<li *ngIf="username" class="nav-item btn btn-outline-success">Mon profil</li>
+			<li *ngIf="username" class="nav-item btn btn-outline-success">Messages</li>
+			<li *ngIf="username" class="nav-item btn btn-outline-success">Paramètres</li>
+			<li *ngIf="username" (click)="logout()" class="nav-item btn btn-outline-danger">Se déconnecter</li>
 		</ul>
 	</nav>
 </div>
-	
+
 
 
 <router-outlet></router-outlet>
