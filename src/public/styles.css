@@ -23,6 +23,16 @@ body {
     align-items: center;
 }
 
+.center-block {
+   margin-left:auto;
+   margin-right:auto;
+   display:block;
+}
+
+.text-center {
+   text-align:center
+}
+
 .top-gap-20 {
 	margin-top : 20px;
 }
@@ -31,6 +41,24 @@ body {
 	margin-top : 10px;
 }
 
+.v-padding-20 {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.bottom-gap-20 {
+	margin-bottom: 20px;
+}
+
 .text-center {
 	text-align: center;
+}
+
+.nav-center {
+    margin:0;
+    float:none;
+}
+
+.navbar{
+    text-align:center;
 }
