@@ -1,0 +1,38 @@
+
+<section *ngIf="!_isAuthenticated" class="child">
+  <form #formLogin="ngForm" novalidate><!-- (ngSubmit)="login(formLogin.value)" -->
+      <div class="form-group">
+        <label for="pseudo">Utilisateur</label>
+        <input type="text" [(ngModel)]="newUser.username" name="username" minlength="3" placeholder="your pseudo" required #username="ngModel">
+        <div *ngIf="!username.valid && (username.dirty || formLogin.submitted )">
+          Pseudo is required (3 characters minimum)
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <input type="password" [(ngModel)]="newUser.password" name="password" #password="ngModel" placeholder="your password" required>
+          <div *ngIf="!password.valid && (password.dirty || formLogin.submitted )">
+          Password is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" [(ngModel)]="newUser.email" name="email" #email="ngModel" placeholder="" required>
+          <div *ngIf="!email.valid && (email.dirty || formLogin.submitted )">
+          Password is required
+        </div>
+      </div>
+      <button [disabled]="!formLogin.valid" (click)="subscribe(formLogin.value)" type="submit">S'inscrire</button>
+    </form>
+</section>
+
+<section *ngIf="_isAuthenticated"  class="child">
+  <div>
+    {{tokenjwt}}
+  </div>
+  <div>
+    User {{newUser.username}} créé!
+  </div>
+</section>

@@ -5,20 +5,23 @@ import { HttpModule } from "@angular/http"
 
 import { AppComponent }  from './app.component'
 
-
 import { PageNotFound } from './components/page_not_found.component'
 
 //Importation des routes
 import { AppRoutes } from "./app.routes"
+import { TodoRoutes } from "./components/todo-app/todo.routes"
 import { HomeModule } from "./components/home.module"
 import { OrgModule } from "./components/org/org.module"
 import { AdminModule } from "./components/admin/admin.module"
-import { TodoRoutes } from "./components/todo-app/todo.routes"
+
 
 import { ServiceCaterogiesModules } from "./services/attrs_data/categories.service"
 import { ServiceAttrsData } from "./services/attrs_data/attrs_data.service"
 import { ServiceOrganismsModules } from "./services/org/org.service"
-
+import { UserService } from './services/user/user.service'
+/*import { ConnectComponent } from "./components/users/connect/connect.component"
+import { LogoutComponent } from "./components/users/logout/logout.component"
+import { SubscribeUserComponent } from "./components/users/subscribe/subscribe_user.component"*/
 
 @NgModule({
     imports: [
@@ -28,16 +31,24 @@ import { ServiceOrganismsModules } from "./services/org/org.service"
         HomeModule,
         OrgModule,
         AdminModule,
+        //todo list route,
         TodoRoutes,
+
         AppRoutes //A placer après les modules annexes
     ],
     providers: [
         ServiceCaterogiesModules,
         ServiceAttrsData,
-        ServiceOrganismsModules
+        ServiceOrganismsModules,
+        UserService
     ],
     declarations: [
         AppComponent,
+
+        /*//User Management
+        ConnectComponent,
+        LogoutComponent,
+        SubscribeUserComponent,*/
         PageNotFound
     ],
     bootstrap:    [ AppComponent ],

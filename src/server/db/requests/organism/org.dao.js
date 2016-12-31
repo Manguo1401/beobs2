@@ -1,5 +1,5 @@
 //attrs_data_service
-
+var User = require('../../models/user_model');
 var Organism = require('../../models/organism_model');
 var mongoose = require('mongoose');
 
@@ -12,9 +12,19 @@ module.exports = function(app){
       });
   });*/
 
-  app.post('/org/api/createOrganism', function(req, res) {
-    console.log("org.dao createOrganism");
+  app.post('/org/api/createOrganism2', function(req, res) {
+    console.log("org.dao createOrganismzzzzzzz");
     var obj = new Organism(req.body);
+    obj._id = mongoose.Types.ObjectId();
+    obj.save(function(err, obj) {
+      if(err) return console.error(err);
+      res.status(200).json(obj);
+    });
+  });
+
+  app.post('/org/api/createOrganism', function(req, res) {
+    console.log("user.dao createuseraaaaaaaaa");
+    var obj = new User(req.body);
     obj._id = mongoose.Types.ObjectId();
     obj.save(function(err, obj) {
       if(err) return console.error(err);

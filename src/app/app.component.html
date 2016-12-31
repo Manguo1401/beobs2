@@ -1,8 +1,9 @@
 <a routerLink="./home" routerLinkActive="active">
 BeObs
 </a>
-<span>Bienvenue Manguo</span>
-
+<span>Bienvenue {{username}}</span>
+<a *ngIf="!username" routerLink="./login" routerLinkActive="active">Login</a>
+<a *ngIf="username" routerLink="./logout" routerLinkActive="active">Logout</a>
 <a routerLink="./message_user" routerLinkActive="active">
 Message
 </a>
