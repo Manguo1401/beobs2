@@ -1,9 +1,10 @@
-import { Component, Input, DoCheck } from '@angular/core'
+import { Component, Input, DoCheck, Output, EventEmitter } from '@angular/core'
 
 import { ServiceAttrsData } from './../../../../services/attrs_data/attrs_data.service'
 
 import { Category } from './../../../../objects/categorie'
 import { AttrData } from './../../../../objects/attr_data'
+
 
 @Component ({
 	selector: 'my-selected-attrs-data',
@@ -15,8 +16,10 @@ export class SelectedAttrsData implements DoCheck {
 	@Input() catLength: number
 	oldCatLength: number = this.catLength
 	attrsData: AttrData[] = []
-	newAttrData: string
-	selectedAttrData: AttrData;
+	newAttrData: any = {}
+	selectedAttrData: any
+	@Output() previsualiseAttrData = new EventEmitter();
+
 
 	ngDoCheck() {
 		if ( this.catLength !== this.oldCatLength) {
@@ -35,30 +38,31 @@ export class SelectedAttrsData implements DoCheck {
 	addAttrData(newAttrData, cat) {
 		let catId = cat._id // On récupère l'id de la catégorie sélectionnée
 
-		newAttrData = newAttrData.trim(); //On enlève les espaces blanc s'il y en a
+		newAttrData.name = newAttrData.name.trim(); //On enlève les espaces blanc s'il y en a
+		newAttrData.component = newAttrData.component.trim(); //On enlève les espaces blanc s'il y en a
 
-		//On regarde si newCategory a bien une valeur non nulle
-		if(!newAttrData) {
+		//On regarde si newAttrData a bien une valeur non nulle
+		if(!newAttrData.name || !newAttrData.component ) {
 			return ;
 		}
 
-		//On effectue une requête http pour ajouter une nouvelle catégorie via le service categories
+		//On effectue une requête http pour ajouter une nouvelle donnée attributaire via le service attr
 		this.serviceAttrData.createAttrData(newAttrData, catId)
 		.then(newAttrData => {
 			this.attrsData.push(newAttrData) //On ajoute la catégorie à la liste actuelle
-			this.newAttrData = '' //On remet le champ des catégories à zéro une fois l'opération effectuée
+			this.newAttrData = {}//On remet le'objet newAttrData à zéro
 		},
 		function() {
 			console.log('Il y a un problème');
 		})
 	}
 
-	editAttrData(cat: any) {
-		this.selectedAttrData = cat;
+	editAttrData(attrData: any) {
+		this.selectedAttrData = attrData;
 	}
 
-	validateEditAttrData(editedCategory:any) {
-		this.serviceAttrData.editAttrData(editedCategory)
+	validateEditAttrData(editedAttrData:any) {
+		this.serviceAttrData.editAttrData(editedAttrData)
 		.then(() => {
 			this.selectedAttrData = null;
 		});
@@ -83,6 +87,13 @@ export class SelectedAttrsData implements DoCheck {
 		this.serviceAttrData.addToCategory(attrData, category)
 		.then(() => {
 			attrData.category_id = category._id;
+		})
+	}
+
+	selectAttrData(attrData: AttrData) {
+		this.selectedAttrData = attrData;
+		this.previsualiseAttrData.emit({
+			selectedAttrData: this.selectedAttrData
 		})
 	}
 }

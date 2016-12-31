@@ -11,6 +11,7 @@ import { PageNotFound } from './components/page_not_found.component'
 //Importation des routes
 import { AppRoutes } from "./app.routes"
 import { HomeModule } from "./components/home.module"
+import { UserModule } from './components/user/user.module'
 import { OrgModule } from "./components/org/org.module"
 import { AdminModule } from "./components/admin/admin.module"
 import { TodoRoutes } from "./components/todo-app/todo.routes"
@@ -31,6 +32,7 @@ import { ServiceOrganismsModules } from "./services/org/org.service"
 /*        NgSemanticModule,*/
         HttpModule,
         HomeModule,
+        UserModule,
         OrgModule,
         AdminModule,
         TodoRoutes,

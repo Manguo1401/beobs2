@@ -21,10 +21,11 @@ export class ServiceAttrsData {
 		.catch(this.handleError);
 	}
 
-	createAttrData(newAttrData: string, catId: string): Promise<AttrData>{
+	createAttrData(newAttrData: any, catId: string): Promise<AttrData>{
 		return this.http.post('admin/dao/addAttrData', 
 			JSON.stringify({
-				name: newAttrData, 
+				name: newAttrData.name,
+				component: newAttrData.comp,
 				category_id: catId
 			}), {headers: this.headers}
 		)
@@ -35,7 +36,10 @@ export class ServiceAttrsData {
 
 	editAttrData(editedAttrData: any): Promise<void> {
 		const url = 'admin/dao/editAttrData/' + editedAttrData._id;
-		return this.http.put(url, JSON.stringify({name: editedAttrData.name}), {headers: this.headers})
+		return this.http.put(url, JSON.stringify({
+			name: editedAttrData.name,
+			component: editedAttrData.component
+		}), {headers: this.headers})
 		.toPromise()
 		.then(() => null)
 		.catch(this.handleError);

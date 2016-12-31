@@ -4,6 +4,7 @@ var Schema = mongoose.Schema;
 var attrDataSchema = Schema({
 	_id: Schema.ObjectId,
     name: String,
+    component: String,
     category_id: String
 });
   
