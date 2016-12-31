@@ -1,45 +1,94 @@
 <div *ngIf="category">
 
-	<h1>{{category.name}}</h1>
-
-	<input [(ngModel)]="newAttrData" type="text" placeholder="Donnée attributaire" />
-	<button (click)="addAttrData(newAttrData, category)">Ajouter</button>
-
-	<div *ngFor="let attrData of (attrsData | categoryFilter:category._id)">
+	<h3>Gestion des attributs pour : {{category.name}}</h3>
+	<div class="row">
+		<div class="col-md-8">
+			<h5>Nouvel attribut : </h5>
+			<input [(ngModel)]="newAttrData.name" 
+				id="newAttrInput" class="form-control" type="text" placeholder="Nom"
 			
-			<button>
-				{{attrData.name}}
-			</button>
-
-			<button (click)="editAttrData(attrData)">
-				Editer
-			</button>
-
-			<button class="btn btn-primary" (click)="delAttrData(attrData)">
-				Supprimer
-			</button>
+			/>
+			<input [(ngModel)]="newAttrData.component" class="form-control top-gap-10" type="text" placeholder="Nom du composant">
+			<div class="text-center">
+				<button (click)="addAttrData(newAttrData, category)" class="btn btn-success top-gap-10">Ajouter</button>
+			</div>
+		</div>
 	</div>
+	
+	<div class="row">
+		<div class="col-md-12 list-group">
+			<h5>Liste des attributs</h5>
+			<a *ngFor="let attrData of (attrsData | categoryFilter:category._id)" 
+				class="list-group-item" [class.active]="attrData === selectedAttrData"
+				(click)="selectAttrData(attrData)"
+			>
+				<div class="row vcenter">
+					<div class="col-md-7">
+						{{attrData.name}}
+					</div>
+					<div class="col-md-5">
+						<button (click)="editAttrData(attrData)" class="btn btn-default"
+							data-toggle="modal" data-target="#modifyAttrData" 
+						>
+							Editer
+						</button>
 
-	<h2>Données attributaires sans catégories</h2>
-
-	<div *ngFor="let attrData of attrsData">
-		<button *ngIf="!attrData.category_id" (click)="addToCategory(attrData, category)">
-			{{attrData.name}} +
-		</button>
+						<button class="btn btn-danger" (click)="delAttrData(attrData)">
+							Supprimer
+						</button>
+					</div>
+				</div>
+			</a>
+		</div>
 	</div>
+	<div>
+		<h4>Données attributaires sans catégories</h4>
+		
+		<div class="list-group">
+			<div *ngFor="let attrData of attrsData">
+				<div *ngIf="!attrData.category_id" (click)="addToCategory(attrData, category)"
+				class="list-group-item list-group-item-action list-group-item-danger">
+					{{attrData.name}} 
+					<i class="fa fa-plus fa-fw" aria-hidden="true"></i>  {{category.name}}
+				</div>
+			</div>
+		</div>
+	</div>
+		
 
-	<div *ngIf="selectedAttrData">
-		<h1>Modifiez la donnée attributaire</h1>
-		<input [(ngModel)]="selectedAttrData.name" placeholder="Editez votre catégorie" />
-		<button 
-			(click)="validateEditAttrData(selectedAttrData)"
-		>
-			Valider
-		</button>
-		<button (click)="cancelEditAttrData()" >
-			Annuler
-		</button>
+	<!-- MODAL pour l'édition des données atributaires -->
 
+	<div id="modifyAttrData" class="modal fade" data-backdrop="static" role="dialog">
+		<div class="modal-dialog modal-md">
+			<div class="modal-content">
+				<div *ngIf="selectedAttrData">
+					<h4 class="modal-header">
+						Modifiez la donnée attributaire
+					</h4>
+					<div class="modal-body">
+						<label for="attrNameEdit">Nom de l'attribut</label>
+						<input [(ngModel)]="selectedAttrData.name" id="attrNameEdit" placeholder="Nom attributaire" 
+						class="form-control top-gap-10" />
+						<label for="attrCompNameEdit">Nom de son composant (en minuscules)</label>
+						<input [(ngModel)]="selectedAttrData.component" id="attrCompNameEdit" placeholder="Nom component" 
+						class="form-control top-gap-10" />
+					</div>
+					<div class="modal-footer">
+						<button 
+							(click)="validateEditAttrData(selectedAttrData)" class="btn btn-success"
+							data-toggle="modal" data-target="#modifyAttrData" 
+						>
+							Valider
+						</button>
+						<button (click)="cancelEditAttrData()" class="btn btn-warning"
+							data-toggle="modal" data-target="#modifyAttrData" 
+						>
+							Annuler
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 </div>

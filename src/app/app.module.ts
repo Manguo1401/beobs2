@@ -11,6 +11,7 @@ import { PageNotFound } from './components/page_not_found.component'
 import { AppRoutes } from "./app.routes"
 import { TodoRoutes } from "./components/todo-app/todo.routes"
 import { HomeModule } from "./components/home.module"
+import { UserModule } from './components/user/user.module'
 import { OrgModule } from "./components/org/org.module"
 import { AdminModule } from "./components/admin/admin.module"
 
@@ -38,6 +39,7 @@ import { SubscribeUserComponent } from "./components/users/subscribe/subscribe_u
 /*        NgSemanticModule,*/
         HttpModule,
         HomeModule,
+        UserModule,
         OrgModule,
         AdminModule,
         //todo list route,

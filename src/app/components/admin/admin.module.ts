@@ -13,6 +13,11 @@ import { AttrsDataAdminComponent } from './docs/attrs_data/attrs_data.component'
 import { SelectedAttrsData } from './docs/attrs_data/selected_attrs_data.component'
 import { SpeciesManagementComponent } from './docs/species/species_management.component'
 
+import { AttrDataWrapperModule } from './../global/dynamic_attrs/attr_data_wrapper.module'
+
+import { AttrsDataMap } from './../../services/attrs_data/attrs_data_comp.map'
+
+//Importation des filtres
 import { CategoryFilterPipe } from './../../pipes/attrs_data/category_filter.pipe'
 
 
@@ -20,7 +25,8 @@ import { CategoryFilterPipe } from './../../pipes/attrs_data/category_filter.pip
 	imports: [
 		CommonModule,
 		FormsModule,
-		AdminRoutes
+		AdminRoutes,
+		AttrDataWrapperModule
 	],
 	declarations: [
 		HomePageAdmin,
@@ -32,7 +38,7 @@ import { CategoryFilterPipe } from './../../pipes/attrs_data/category_filter.pip
 		CategoryFilterPipe
 	],
 	providers: [
-		
+		AttrsDataMap
 	]
 })
 
