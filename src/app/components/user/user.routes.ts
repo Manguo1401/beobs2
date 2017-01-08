@@ -6,6 +6,8 @@ import { UserHomeComponent } from './home/user_home.component'
 import { NewObservationComponent } from './new_observation/new_observation.component'
 
 import { NewObservationModule } from './new_observation/new_observation.module'
+//Composant my_observations
+import { MyObservationsComponent } from './my_observations/my_observations.component'
 
 @NgModule({
 	imports: [
@@ -18,6 +20,20 @@ import { NewObservationModule } from './new_observation/new_observation.module'
 			},{
 				path: 'new_observation',
 				loadChildren: () => NewObservationModule
+			},{
+				path:'my_observations',
+				component: MyObservationsComponent,
+				/*children: [{
+					path: 'observation_ongoing',
+					component: ObservationOnGoingComponent
+				},{
+					path: 'trophes',
+					component: TrophésComponent
+				},{
+					path: '',
+					redirectTo: 'attrs_data',
+					pathMatch: 'full'
+				}]*/
 			},{
 				path: '',
 				redirectTo: 'home',
