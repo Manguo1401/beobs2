@@ -1,21 +1,122 @@
 <div class="row">
-	<div class="col-md-4">
-		<div class="input-group">
-			<input type="text" placeholder="Rechercher" class="form-control" />
-			<span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
+	<div class="col-md-12 text-center mx-auto pb-1">
+		<div class="col-md-6 offset-md-3 lead">Vous êtes à la première étape ! Sélectionnez l'espèce que vous pensez avoir observé. Si vous n'êtes pas certains de votre observation, vous pouvez en sélectionner plusieurs.
 		</div>
-		
 	</div>
 </div>
 <div class="row">
-	<div class="col-md-6">
-		<h1 class="lead">Taxonomie scientifique</h1>
-		<div id="treeDOM">
-			
+	
+	<div class="col-md-4 offset-md-1">
+		<div class="row">
+			<div class="input-group">
+				<input type="text" placeholder="Rechercher" class="form-control" />
+				<span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
+			</div>
+		</div>
+		<div class="row m-1">
+			<div class="col-md-6">
+				<div class="row lead mb-1">
+					Type de milieu :
+				</div>
+				<div class="row">
+					<button class="offset-md-1 col-md-4 btn btn-outline-primary mb-1"><i class="fa fa-cloud" aria-hidden="true"></i><br>Aérien</button>
+					<button class="offset-md-1 col-md-4 btn btn-outline-primary mb-1"><i class="fa fa-leaf" aria-hidden="true"></i><br>Terrestre</button>
+				</div>
+				<div class="row">
+					<button class="offset-md-1 col-md-4 btn btn-outline-primary mb-1"><i class="fa fa-life-ring" aria-hidden="true"></i><br>Marin</button>
+					<button class="offset-md-1 col-md-4 btn btn-outline-primary mb-1"><i class="fa fa-tint" aria-hidden="true"></i><br>Aquatique</button>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="row lead mb-1">
+					Milieu(x) de vie :
+				</div>
+				<div class="row">
+					<div class="form-check">
+						<label class="form-check-label">
+							<input type="checkbox" class="form-check-input">
+							Sableux
+						</label>
+					</div>
+					<div class="form-check">
+						<label class="form-check-label">
+							<input type="checkbox" class="form-check-input">
+							Vaseux
+						</label>
+					</div>
+					<div class="form-check">
+						<label class="form-check-label">
+							<input type="checkbox" class="form-check-input">
+							Forestier
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row form-inline">
+			<label for="size_unit" class="lead col-md-2">Unité : </label>
+			<select id="size_unit" class="form-control col-md-2">
+				<option>m</option>
+				<option>cm</option>
+				<option>mm</option>
+			</select>
+			<label for="min-size" class="lead col-md-2">Min : </label>
+			<div class="col-2">
+				<input class="form-control" type="number" value="0" id="min-size">
+			</div>
+
+			<label for="max-size" class="lead col-md-2">Max : </label>
+			<div class="col-2">
+				<input class="form-control" type="number" value="0" id="max-size">
+			</div>
 		</div>
 	</div>
 	<div class="col-md-6">
-		<h1 class="lead">Taxonomie simplifiée</h1>
+		<nav class="breadcrumb">
+			<a class="breadcrumb-item" href="#">Animalia</a>
+			<a class="breadcrumb-item" href="#">Chordata</a>
+			<a class="breadcrumb-item" href="#">Mammalia</a>
+			<a class="breadcrumb-item" href="#">Cetacea</a>
+			<span class="breadcrumb-item active">Delphinidae</span>
+		</nav>
+		<div class="list-group mt-2">
+			<button type="button" class="list-group-item list-group-item-action">
+				<div class="col-md-3">
+					<img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" class="img-fluid rounded" alt="">
+				</div>
+				<div class="col-md-9">
+					<h5 class="list-group-item-heading">Grand dauphin de l'Indo Pacifique</h5>
+					<h5 class="list-group-item-heading"><i>Tursiops aduncus</i></h5>
+					<b>Taille</b> : 1 à 2 mètres     <b>Apnée </b>: 50 minutes       <b>Milieu de vie </b>: eaux océaniques benthiques
+					<br><br>
+					<button class="btn btn-outline-success float-xs-right">Ajouter cette espèce</button>
+				</div>
+			</button>
+			<button type="button" class="list-group-item list-group-item-action">
+				<div class="col-md-3">
+					<img src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid rounded" alt="">
+				</div>
+				<div class="col-md-9">
+					<h5 class="list-group-item-heading">Stenelle à long bec</h5>
+					<h5 class="list-group-item-heading"><i>Stenella longirostris</i></h5>
+					<b>Taille</b> : 1 à 2 mètres     <b>Apnée </b>: 50 minutes       <b>Milieu de vie </b>: eaux océaniques pélagiques
+					<br><br>
+					<button class="btn btn-outline-danger float-xs-right">Retirer cette espèce</button>
+				</div>
+			</button>
+			<button type="button" class="list-group-item list-group-item-action">
+				<div class="col-md-3">
+					<img src="../../../public/assets/images/taxonomy/stenella_attenuata.jpg" class="img-fluid rounded" alt="">
+				</div>
+				<div class="col-md-9">
+					<h5 class="list-group-item-heading">Stenelle tacheté</h5>
+					<h5 class="list-group-item-heading"><i>Stenella attenuata</i></h5>
+					<b>Taille</b> : 1 à 2 mètres     <b>Apnée </b>: 50 minutes       <b>Milieu de vie </b>: eaux océaniques pélagiques
+					<br><br>
+					<button class="btn btn-outline-success float-xs-right">Ajouter cette espèce</button>
+				</div>
+			</button>
+		</div>
 	</div>
-	
 </div>
