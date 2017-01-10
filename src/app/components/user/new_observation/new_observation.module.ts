@@ -9,14 +9,14 @@ import { NewObservationRoutes } from './new_observation.routes'
 import { NewObservationComponent } from './new_observation.component'
 import { SpeciesSelectComponent } from './species_selection/species_selection.component'
 
-import { TreeModule } from 'angular2-tree-component'
+//import { TreeModule } from 'angular2-tree-component'
 
 
 @NgModule({
 	imports: [
 		CommonModule,
 		FormsModule,
-		TreeModule,
+		//TreeModule,
 		NewObservationRoutes
 	],
 	declarations: [

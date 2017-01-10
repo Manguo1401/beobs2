@@ -1,0 +1,16 @@
+#carouselMyObs{
+  position: relative;
+}
+#carouselMyObs .carousel-item {
+  height: 500px;
+}
+
+#carouselMyObs img {
+  min-width: 100%;
+}
+
+#carouselMyObs::after {
+    display: block;
+    content: "";
+    clear: both;
+}
