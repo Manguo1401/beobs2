@@ -16,6 +16,7 @@ import { UserHomeComponent } from './home/user_home.component'
 
 //Composant my_observations
 import { MyObservationsComponent } from './my_observations/my_observations.component'
+import { MyObsTestComponent } from './my_observations/my_obs_test.component'
 
 @NgModule({
 	imports: [
@@ -27,7 +28,8 @@ import { MyObservationsComponent } from './my_observations/my_observations.compo
 	declarations: [
 		UserHomePage,
 		UserHomeComponent,
-		MyObservationsComponent
+		MyObservationsComponent,
+		MyObsTestComponent
 	],
 	providers: [
 

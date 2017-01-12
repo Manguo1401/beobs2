@@ -1,16 +1,96 @@
 #carouselMyObs{
   position: relative;
 }
-#carouselMyObs .carousel-item {
-  height: 500px;
-}
-
-#carouselMyObs img {
-  min-width: 100%;
-}
 
 #carouselMyObs::after {
     display: block;
     content: "";
     clear: both;
 }
+
+#carouselMyObs{
+  width: 100%;
+}
+
+#carouselMyObs .card{
+  width: 48%;
+  height: 100%;
+}
+
+#carouselMyObs .card img{
+  max-width: 100%;
+  max-height: 250px;
+}
+
+#carouselMyObs .img_container {
+    height: 250px;
+    display: flex;
+    align-items: center;
+
+}
+
+#carouselMyObs .carousel-control-prev-icon{
+  background-color: #000
+}
+#carouselMyObs .carousel-control-next-icon{
+  background-color: #000
+}
+
+#carouselMyObs .card:hover{
+  background-color: #F7F7F7;
+}
+
+
+.mycards .card img{
+  max-width: 100%;
+  max-height: 300px;
+}
+
+.mycards .card {
+
+}
+
+.mycards .img_container {
+    height: 300px;
+    display: flex;
+    align-items: center;
+
+}
+
+.relative-container {
+  width: 100%;
+  position: relative;
+  max-height: 100%;
+}
+
+.back-img {
+  max-width:100%;
+  height:auto;
+  width: auto;
+  max-height: 100%;
+}
+
+.icon-img {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  max-height: 60%;
+}
+
+
+/*.card {    display: flex; flex-direction: row;}
+.card-img {    order: -1;}
+.card-block {    order: 0;}
+.card-img-last {    order: 1;}
+
+.card-horizontal {    flex-direction: row;}
+.card-horizontal-sm-up { ... }
+.card-horizontal-md-up { ... } etc.
+
+.card-horizontal .card-img {    flex: 0 0 $card-img-width;}
+.card-horizontal .card-block {    flex: 0 0 calc(100% - $card-img-width)}
+
+flex-direction: row */

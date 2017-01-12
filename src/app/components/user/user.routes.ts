@@ -8,6 +8,7 @@ import { NewObservationComponent } from './new_observation/new_observation.compo
 import { NewObservationModule } from './new_observation/new_observation.module'
 //Composant my_observations
 import { MyObservationsComponent } from './my_observations/my_observations.component'
+import { MyObsTestComponent } from './my_observations/my_obs_test.component'
 
 @NgModule({
 	imports: [
