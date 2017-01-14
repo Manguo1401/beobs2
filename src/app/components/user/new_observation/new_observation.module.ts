@@ -11,9 +11,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { NewObservationComponent } from './new_observation.component'
 import { SpeciesSelectComponent } from './species_selection/species_selection.component'
 
-import { TreeModule } from 'angular2-tree-component'
-
-
 @NgModule({
 	imports: [
 		CommonModule,

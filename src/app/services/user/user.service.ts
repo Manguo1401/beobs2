@@ -54,17 +54,18 @@ export class UserService {
     return this.http.post('/user/login',
       JSON.stringify({username: username, password: password}),
       {headers: this._headers})
-      .toPromise().then(data =>
+      .toPromise().then(res =>
       {
+        console.log("userservice LoginServer resolved: user= " + res.json().data);
         this._headers = new Headers({
           'Content-Type': 'application/json',
-          'authorization': data.json().token
+          'authorization': res.json().token
         });
-        this._token = data.json().token;
-        this._username = data.json().data;
-        //console.log(data.token);
+        this._token = res.json().token;
+        this._username = res.json().data;
+        //console.log(res.token);
 
-        this._usernameSource.next(data.json().data);
+        this._usernameSource.next(res.json().data);
         //console.log("service token" + this._token);
         localStorage.setItem('token', this._token);
         localStorage.setItem('username', this._username);
@@ -98,11 +99,10 @@ export class UserService {
     );
   }
 
-  public logout() : Promise<void> {
+  public logout(){
     localStorage.setItem('token', '');
     localStorage.setItem('username', '');
     this._usernameSource = new BehaviorSubject<string>('');
-    return null;
   }
 
   public getInfo() : Promise<string> {

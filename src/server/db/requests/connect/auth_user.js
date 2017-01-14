@@ -51,7 +51,7 @@ module.exports = function(app){
     User.findOne({ username : req.body.username }, function(err, user) {
         if (err){
           console.log("user not find");
-          return null;//console.error(err);
+          return console.error(err);
         }
 
         console.log("user find:"+ user.username + " "+ user.email);
