@@ -15,7 +15,6 @@ import { SpeciesSelectComponent } from './species_selection/species_selection.co
 	imports: [
 		CommonModule,
 		FormsModule,
-		TreeModule,
 		NgbModule,
 		NewObservationRoutes
 	],
