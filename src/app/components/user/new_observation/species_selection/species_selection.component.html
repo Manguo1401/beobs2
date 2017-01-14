@@ -1,4 +1,30 @@
 <div class="row">
+	<ngb-carousel>
+  <template ngbSlide>
+    <img src="http://lorempixel.com/900/500?r=1" alt="Random first slide">
+    <div class="carousel-caption">
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </template>
+  <template ngbSlide>
+    <img src="http://lorempixel.com/900/500?r=2" alt="Random second slide">
+    <div class="carousel-caption">
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </template>
+  <template ngbSlide>
+    <img src="http://lorempixel.com/900/500?r=3" alt="Random third slide">
+    <div class="carousel-caption">
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </template>
+</ngb-carousel>
+</div>
+
+<div class="row">
 	<div class="col-md-12 text-center mx-auto pb-1">
 		<div class="col-md-6 offset-md-3 lead">Vous êtes à la première étape ! Sélectionnez l'espèce que vous pensez avoir observé. Si vous n'êtes pas certains de votre observation, vous pouvez en sélectionner plusieurs.
 		</div>
@@ -6,70 +32,56 @@
 </div>
 <div class="row">
 
+	<div class="input-group">
+		<input type="text" placeholder="Rechercher" class="form-control" />
+		<span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
+	</div>
+</div>
+<div class="row">
+
 	<div class="col-md-4 offset-md-1">
-		<div class="row">
-			<div class="input-group">
-				<input type="text" placeholder="Rechercher" class="form-control" />
-				<span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
-			</div>
-		</div>
-		<div class="row m-1">
-			<div class="col-md-6">
-				<div class="row lead mb-1">
-					Type de milieu :
+		<div class="row m-1 lead">
+			Dans quels milieux pouvons nous retrouver votre espèce ?
+		</div>	
+		<div class="row ">
+			<div class="col-md-10 offset-md-2 mt-1">
+				<div class="form-check">
+					<label class="form-check-label">
+						<input type="checkbox" class="form-check-input">
+						Terrestre
+					</label>
 				</div>
-				<div class="row">
-					<button class="offset-md-1 col-md-4 btn btn-outline-primary mb-1"><i class="fa fa-cloud" aria-hidden="true"></i><br>Aérien</button>
-					<button class="offset-md-1 col-md-4 btn btn-outline-primary mb-1"><i class="fa fa-leaf" aria-hidden="true"></i><br>Terrestre</button>
+				<div class="form-check">
+					<label class="form-check-label">
+						<input type="checkbox" class="form-check-input">
+						Aérien
+					</label>
 				</div>
-				<div class="row">
-					<button class="offset-md-1 col-md-4 btn btn-outline-primary mb-1"><i class="fa fa-life-ring" aria-hidden="true"></i><br>Marin</button>
-					<button class="offset-md-1 col-md-4 btn btn-outline-primary mb-1"><i class="fa fa-tint" aria-hidden="true"></i><br>Aquatique</button>
+				<div class="form-check">
+					<label class="form-check-label">
+						<input type="checkbox" class="form-check-input">
+						Aquatique
+					</label>
 				</div>
-			</div>
-
-			<div class="col-md-6">
-				<div class="row lead mb-1">
-					Milieu(x) de vie :
+				<div class="form-check">
+					<label class="form-check-label">
+						<input type="checkbox" class="form-check-input">
+						Aérien
+					</label>
 				</div>
-				<div class="row">
-					<div class="form-check">
-						<label class="form-check-label">
-							<input type="checkbox" class="form-check-input">
-							Sableux
-						</label>
-					</div>
-					<div class="form-check">
-						<label class="form-check-label">
-							<input type="checkbox" class="form-check-input">
-							Vaseux
-						</label>
-					</div>
-					<div class="form-check">
-						<label class="form-check-label">
-							<input type="checkbox" class="form-check-input">
-							Forestier
-						</label>
-					</div>
+				<div class="form-check">
+					<label class="form-check-label">
+						<input type="checkbox" class="form-check-input">
+						Je ne sais pas 
+					</label>
 				</div>
-			</div>
-		</div>
-		<div class="row form-inline">
-			<label for="size_unit" class="lead col-md-2">Unité : </label>
-			<select id="size_unit" class="form-control col-md-2">
-				<option>m</option>
-				<option>cm</option>
-				<option>mm</option>
-			</select>
-			<label for="min-size" class="lead col-md-2">Min : </label>
-			<div class="col-2">
-				<input class="form-control" type="number" value="0" id="min-size">
-			</div>
-
-			<label for="max-size" class="lead col-md-2">Max : </label>
-			<div class="col-2">
-				<input class="form-control" type="number" value="0" id="max-size">
-			</div>
+				<div class="form-check">
+					<label class="form-check-label">
+						<input type="checkbox" class="form-check-input">
+						Non pertinent
+					</label>
+				</div>
+			</div>	
 		</div>
 	</div>
 	<div class="col-md-6">
@@ -118,5 +130,105 @@
 				</div>
 			</button>
 		</div>
+	</div>
+</div>
+<div class="row m-1">
+	<div class="h4">Espèces se rapprochant le plus de vos critères</div>
+</div>
+<div class="row">
+	<div class="col-md-2">
+		<div class="card">
+			<img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" alt="Tursiops aduncus" class="card-img-top img-fluid">
+			<div class="card-block">
+				<p class="lead">Grand dauphin de l'Indo Pacifique</p>
+				<p class="lead"><i>Tursiops aduncus</i></p>
+				<button class="btn btn-outline-success">Ajouter cette espèce</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-2">
+		<div class="card">
+			<img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" alt="Tursiops aduncus" class="card-img-top img-fluid">
+			<div class="card-block">
+				<p class="lead">Grand dauphin de l'Indo Pacifique</p>
+				<p class="lead"><i>Tursiops aduncus</i></p>
+				<button class="btn btn-outline-success">Ajouter cette espèce</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-2">
+		<div class="card">
+			<img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" alt="Tursiops aduncus" class="card-img-top img-fluid">
+			<div class="card-block">
+				<p class="lead">Grand dauphin de l'Indo Pacifique</p>
+				<p class="lead"><i>Tursiops aduncus</i></p>
+				<button class="btn btn-outline-success">Ajouter cette espèce</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-2">
+		<div class="card">
+			<img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" alt="Tursiops aduncus" class="card-img-top img-fluid">
+			<div class="card-block">
+				<p class="lead">Grand dauphin de l'Indo Pacifique</p>
+				<p class="lead"><i>Tursiops aduncus</i></p>
+				<button class="btn btn-outline-success">Ajouter cette espèce</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-2">
+		<div class="card">
+			<img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" alt="Tursiops aduncus" class="card-img-top img-fluid">
+			<div class="card-block">
+				<p class="lead">Grand dauphin de l'Indo Pacifique</p>
+				<p class="lead"><i>Tursiops aduncus</i></p>
+				<button class="btn btn-outline-success">Ajouter cette espèce</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-2">
+		<div class="card">
+			<img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" alt="Tursiops aduncus" class="card-img-top img-fluid">
+			<div class="card-block">
+				<p class="lead">Grand dauphin de l'Indo Pacifique</p>
+				<p class="lead"><i>Tursiops aduncus</i></p>
+				<button class="btn btn-outline-success">Ajouter cette espèce</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row m-1">
+	<h4>Vos espèces sélectionnées. Donnez un indice de certitude pour chaque espèce.</h4>
+</div>
+<div class="row m-1">
+	<div class="col-md-4">
+		<ul class="list-group">
+			<li class="list-group-item">
+				<div class="row">
+					<div class="col-md-9">
+						<div class="lead">
+							Grand dauphin de l'Indo Pacifique, <i>Tursiops aduncus</i>
+						</div>
+						<div class="form-inline">
+							<label for="exampleSelect1">Indice de certitude : </label>
+						    <select class="form-control" id="exampleSelect1">
+								<option>Très peu probable (10%)</option>
+								<option>Possible (30%)</option>
+								<option>Probable (50%)</option>
+								<option>Fortement probable (70%)</option>
+								<option>Quasi-certain (90%)</option>
+						    </select>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<button class="btn btn-danger">Supprimer</button>
+					</div>	
+				</div>
+					
+			</li>
+
+			<li class="list-group-item">Dauphin à long bec, <i>Stenella truncatus</i></li>
+			<li class="list-group-item">Dauphins tachetés, <i>Stenella atenuata</i></li>
+		</ul>
 	</div>
 </div>
