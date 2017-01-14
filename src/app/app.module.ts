@@ -1,7 +1,8 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { HttpModule } from "@angular/http"
-/*import { NgSemanticModule } from 'ng-semantic';*/
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent }  from './app.component'
 
@@ -36,6 +37,7 @@ import { SubscribeUserComponent } from "./components/users/subscribe/subscribe_u
 @NgModule({
     imports: [
         BrowserModule,
+        NgbModule.forRoot(),
 /*        NgSemanticModule,*/
         HttpModule,
         HomeModule,
