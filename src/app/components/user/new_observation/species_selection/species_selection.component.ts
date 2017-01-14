@@ -1,16 +1,19 @@
 import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core'
 
-/*import * as $ from 'jquery';*/
+import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
 
 @Component ({
 	selector: 'my-species-selector',
-	templateUrl: 'species_selection.component.html'
+	templateUrl: 'species_selection.component.html',
+  	providers: [NgbCarouselConfig]
 })
 
-export class SpeciesSelectComponent implements AfterViewInit {
+export class SpeciesSelectComponent {
 
-	ngAfterViewInit() {
-
-		
-    }
+	constructor(config: NgbCarouselConfig) {
+    // customize default values of carousels used by this component tree
+    config.interval = 500;
+    config.wrap = false;
+    config.keyboard = false;
+  }
 }

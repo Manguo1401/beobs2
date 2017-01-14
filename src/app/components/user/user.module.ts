@@ -1,6 +1,7 @@
 import { NgModule }       from '@angular/core'
 import { CommonModule }   from '@angular/common'
 import { FormsModule }    from '@angular/forms'
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 //Routes de la session utilisateur
 import { UserRoutes } from './user.routes'
@@ -22,6 +23,7 @@ import { MyObsTestComponent } from './my_observations/my_obs_test.component'
 	imports: [
 		CommonModule,
 		FormsModule,
+		NgbModule,
 		NewObservationModule,
 		UserRoutes
 	],
