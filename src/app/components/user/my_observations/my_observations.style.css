@@ -40,6 +40,19 @@
   background-color: #F7F7F7;
 }
 
+/* .list-group-item:checked{
+    background-color: #e6e6e6;
+}
+.list-group-item.active{
+    background-color: #F7F7F7;
+} */
+/* #btn_bilan2.active{
+    background-color: #e6e6e6;
+} */
+
+/* #display2 .active{
+  background-color: #F7F7F7;
+} */
 
 .mycards .card img{
   max-width: 100%;
@@ -49,6 +62,7 @@
 .mycards .card {
 
 }
+
 
 .mycards .img_container {
     height: 300px;

@@ -31,13 +31,14 @@ import { SubscribeUserComponent } from "./components/users/subscribe/subscribe_u
 //Importation des filtres
 /*import { CategoryFilterPipe } from './pipes/attrs_data/category_filter.pipe'*/
 
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
     imports: [
         BrowserModule,
 /*        NgSemanticModule,*/
         HttpModule,
+        NgbModule,
         HomeModule,
         UserModule,
         OrgModule,

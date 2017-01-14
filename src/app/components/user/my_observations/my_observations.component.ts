@@ -1,7 +1,8 @@
 import { Component, AfterViewInit } from '@angular/core'
 import { UserHomeComponent } from '../home/user_home.component'
 
-import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
+//import { CarouselComponent } from 'ng2-bootstrap/ng2-bootstrap';
+//import * as $ from 'jquery';
 
 @Component ({
   selector: 'my-observations',
@@ -17,8 +18,38 @@ export class MyObservationsComponent implements AfterViewInit{
 ngAfterViewInit() {
     // Your jQuery code goes test
     $('#test').text("HALLO! ^_^");
+    $(".switch").hide();
+    $("#bilan").show();
+    $(".switch2").hide();
+    $("#bilan2").show();
+    $('#btn_bilan').click(function(){
+        $(".switch").hide();
+        $("#bilan").show();
+    });
+    $('#btn_en_attente').click(function(){
+        $(".switch").hide();
+        $("#en_attente").show();
+    });
+    $('#btn_mes_trophes').click(function(){
+        $(".switch").hide();
+        $("#mes_trophes").show();
+    });
+    $('#btn_display2').click(function(){
+        $(".switch").hide();
+        $("#display2").show();
+    });
+
+    $('#btn_bilan2').click(function(){
+        $(".switch2").hide();
+        $("#bilan2").show();
+    });
+    $('#btn_en_attente2').click(function(){
+        $(".switch2").hide();
+        $("#en_attente2").show();
+    });
+
     /*$(function () {
-      $('[data-toggle="popover"]').popover()
+      $('').popover()
     })
     // Instantiate the Bootstrap carousel
     $('#theMultiCarousel').carousel({
