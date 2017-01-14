@@ -1,0 +1,122 @@
+/* #carousel-example-generic .carousel-item.active {
+           width: 33.3%;
+           display: block;
+           float:left;
+        }
+#carousel-example-generic .carousel-item
+        {
+           width: 33.3%;
+           display: block;
+           float:left;
+        }
+#carouselMulti .carousel-inner .active.left { left: -33%; }
+#carouselMulti .carousel-inner .next        { left:  33%; }
+#carouselMulti .carousel-inner .prev        { left: -33%; }
+#carouselMulti .carousel-control.left,.carousel-control.right {background-image:none;}
+#carouselMulti .item:not(.prev) {visibility: visible;}
+#carouselMulti .item.right:not(.prev) {visibility: hidden;}
+#carouselMulti .rightest{ visibility: visible;} */
+
+#carouselMyObs{
+  position: relative;
+}
+
+#carouselMyObs::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+#carouselMyObs{
+  width: 100%;
+}
+
+#carouselMyObs .card{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+
+#carouselMyObs .card img{
+  max-width: 100%;
+  max-height: 300px;
+}
+
+#carouselMyObs .img_container {
+    height: 300px;
+    display: flex;
+    align-items: center;
+
+}
+
+#carouselMyObs .carousel-control-prev-icon{
+  background-color: #000
+}
+#carouselMyObs .carousel-control-next-icon{
+  background-color: #000
+}
+
+
+
+#theMultiCarousel .carousel-inner .active.left { left: -33%; }
+#theMultiCarousel .carousel-inner .next        { left:  33%; }
+#theMultiCarousel .carousel-inner .prev        { left: -33%; }
+#theMultiCarousel .carousel-control.left,.carousel-control.right {background-image:none;}
+#theMultiCarousel .item:not(.prev) {visibility: visible;}
+#theMultiCarousel .item.right:not(.prev) {visibility: hidden;}
+#theMultiCarousel .rightest{ visibility: visible;}
+
+
+
+
+#carouselMyObs3 .card{
+  width: 80%;
+}
+
+.mycards .card img{
+  max-width: 100%;
+  max-height: 300px;
+}
+
+.mycards .card {
+
+}
+
+.mycards .img_container {
+    height: 300px;
+    display: flex;
+    align-items: center;
+
+}
+
+/*
+.cardexemple .card {
+border: none;
+border-radius: 0;
+background-color: #f5f5f5;
+margin:0;
+}
+.cardexemple .card-title {margin: 0;}
+.cardexemple .card img {
+position: relative;
+display:block;
+transition: all .2s ease-in-out;
+}
+.cardexemple .block:hover img {
+transition: all .2s ease-in-out;
+transform: scale(.95); CSS3
+-moz-transform: scale(.95); Firefox
+-webkit-transform: scale(.95); Webkit
+-o-transform: scale(.95); Opera
+-ms-transform: scale(.95); IE 9
+}
+.cardexemple .card-footer {
+padding: 0 1.25rem 1.25rem;
+background-color: #f5f5f5;
+border: none;
+}
+.cardexemple .card-footer {background-color: #f5f5f5;}
+.cardexemple .btn-primary-outline {border-width:2px;}
+
+ */

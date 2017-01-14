@@ -14,6 +14,10 @@ import { UserHomePage } from './user_home.page'
 //Composant pour la page d'accueil des utilisateurs
 import { UserHomeComponent } from './home/user_home.component'
 
+//Composant my_observations
+import { MyObservationsComponent } from './my_observations/my_observations.component'
+import { MyObsTestComponent } from './my_observations/my_obs_test.component'
+
 @NgModule({
 	imports: [
 		CommonModule,
@@ -23,7 +27,9 @@ import { UserHomeComponent } from './home/user_home.component'
 	],
 	declarations: [
 		UserHomePage,
-		UserHomeComponent
+		UserHomeComponent,
+		MyObservationsComponent,
+		MyObsTestComponent
 	],
 	providers: [
 

@@ -1,18 +1,6 @@
-<a routerLink="./home" routerLinkActive="active">
-BeObs
-</a>
-<span>Bienvenue {{username}}</span>
-<a *ngIf="!username" routerLink="./login" routerLinkActive="active">Login</a>
-<a *ngIf="username" routerLink="./logout" routerLinkActive="active">Logout</a>
-<a routerLink="./message_user" routerLinkActive="active">
-Message
-</a>
-<a routerLink="./organisme" routerLinkActive="active">Organisme</a>
-<a routerLink="./admin" routerLinkActive="active">Admin</a>
+<div class="container-fluid px-0">
 
-<router-outlet></router-outlet>
-<div class="container-fluid">
-	
-	<router-outlet></router-outlet>
-	<a routerLink="./admin" routerLinkActive="active">Admin</a>
+  <router-outlet></router-outlet>
+  <a routerLink="./admin" routerLinkActive="active">Admin</a>
+  <!-- <span> username {{username}} token {{token}}</span> -->
 </div>

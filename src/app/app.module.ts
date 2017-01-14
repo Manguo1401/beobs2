@@ -15,7 +15,7 @@ import { UserModule } from './components/user/user.module'
 import { OrgModule } from "./components/org/org.module"
 import { AdminModule } from "./components/admin/admin.module"
 
-
+//import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 //Importation des services
 import { ServiceCaterogiesModules } from "./services/attrs_data/categories.service"
@@ -31,13 +31,14 @@ import { SubscribeUserComponent } from "./components/users/subscribe/subscribe_u
 //Importation des filtres
 /*import { CategoryFilterPipe } from './pipes/attrs_data/category_filter.pipe'*/
 
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
     imports: [
         BrowserModule,
 /*        NgSemanticModule,*/
         HttpModule,
+        NgbModule,
         HomeModule,
         UserModule,
         OrgModule,
