@@ -1,7 +1,9 @@
 import { Component, AfterViewInit } from '@angular/core'
 import { UserHomeComponent } from '../home/user_home.component'
 
-//import { CarouselComponent } from 'ng2-bootstrap/ng2-bootstrap';
+
+//import * as $ from 'bootstrap/dist/js/bootstrap.min.js';
+//import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 //import * as $ from 'jquery';
 
 @Component ({
@@ -23,16 +25,30 @@ ngAfterViewInit() {
     $(".switch2").hide();
     $("#bilan2").show();
     $('#btn_bilan').click(function(){
-        $(".switch").hide();
+      //$(".switch").hide();
+      //$("#bilan").show();
+      if($("#bilan").is(":visible"))
+        $("#bilan").hide();
+      else
         $("#bilan").show();
     });
     $('#btn_en_attente').click(function(){
-        $(".switch").hide();
+      if($("#en_attente").is(":visible"))
+        $("#en_attente").hide();
+      else
         $("#en_attente").show();
+
+        /*$(".switch").hide();
+        $("#en_attente").show();*/
     });
     $('#btn_mes_trophes').click(function(){
-        $(".switch").hide();
+      if($("#mes_trophes").is(":visible"))
+        $("#mes_trophes").hide();
+      else
         $("#mes_trophes").show();
+
+        /*$(".switch").hide();
+        $("#mes_trophes").show();*/
     });
     $('#btn_display2').click(function(){
         $(".switch").hide();
@@ -48,7 +64,10 @@ ngAfterViewInit() {
         $("#en_attente2").show();
     });
 
-    /*$(function () {
+
+    /*carousel()
+    $(function () {
+      Carousel();
       $('').popover()
     })
     // Instantiate the Bootstrap carousel
