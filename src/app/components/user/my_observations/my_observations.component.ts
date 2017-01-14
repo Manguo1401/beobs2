@@ -51,8 +51,14 @@ ngAfterViewInit() {
         $("#mes_trophes").show();*/
     });
     $('#btn_display2').click(function(){
-        $(".switch").hide();
+      $(".switch").hide();
+      if($("#display2").is(":visible"))
+        $("#display2").hide();
+      else
         $("#display2").show();
+
+      //$(".switch").hide();
+      //$("#display2").show();
     });
 
     $('#btn_bilan2').click(function(){
