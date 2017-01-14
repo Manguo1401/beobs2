@@ -18,3 +18,4 @@
       <button [disabled]="!formLogin.valid" (click)="login(formLogin.value)" type="submit">Submit</button>
     </form>
 </section>
+<section *ngIf="_isAuthenticated" class="child">CONNECT {{user.username}}</section>

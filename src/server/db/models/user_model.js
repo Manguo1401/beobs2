@@ -42,10 +42,10 @@ userSchema.methods.validPassword = function(password) {
 userSchema.methods.generateJwt = function() {
   var expiry = new Date();
   //expiry.setDate(expiry.getDate() + 1);
-  console.log('expiry.toDateString()=' + expiry.toString());
+  //console.log('expiry.toDateString()=' + expiry.toString());
   expiry.setMinutes(expiry.getMinutes() + 10); console.log('expiry.getMinutes() + 10='+expiry.toString());
   //expiry.setTime(expiry.getTime() + 100); console.log('expiry.getTime() + 100='+expiry.toString());
-  console.log(' exp=' +parseInt(expiry.getTime() / 1000));
+  //console.log(' exp=' +parseInt(expiry.getTime() / 1000));
   return jwt.sign({
     _id: this._id,
     email: this.email,
