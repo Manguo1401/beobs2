@@ -4,7 +4,7 @@ import { FormsModule }    from '@angular/forms'
 
 //Routes de la gestion des nouvelles observations
 import { NewObservationRoutes } from './new_observation.routes'
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 //Chargement des components associés
@@ -15,7 +15,6 @@ import { SpeciesSelectComponent } from './species_selection/species_selection.co
 	imports: [
 		CommonModule,
 		FormsModule,
-		TreeModule,
 		NgbModule,
 		NewObservationRoutes
 	],
