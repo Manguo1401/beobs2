@@ -36,7 +36,6 @@ import { SubscribeUserComponent } from "./components/users/subscribe/subscribe_u
     imports: [
         BrowserModule,
         NgbModule.forRoot(),
-/*        NgSemanticModule,*/
         HttpModule,
         HomeModule,
         UserModule,
