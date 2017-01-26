@@ -3,6 +3,8 @@ import { CommonModule }   from '@angular/common'
 import { FormsModule }    from '@angular/forms'
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
+import { ConnectComponent } from "../users/connect/connect.component"
+
 //Routes de la session utilisateur
 import { UserRoutes } from './user.routes'
 
@@ -30,6 +32,7 @@ import { MyObsTestComponent } from './my_observations/my_obs_test.component'
 	declarations: [
 		UserHomePage,
 		UserHomeComponent,
+		ConnectComponent,
 		MyObservationsComponent,
 		MyObsTestComponent
 	],

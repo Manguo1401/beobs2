@@ -21,17 +21,15 @@ export class UserHomePage {
   logout(){
     console.log("logout");
     this._myService.logout();//.then(() => this.router.navigate(['/login']) );
-    //logoutaction();
-    let router = this.router;
-    setTimeout(function () {
-      router.navigate(['/login']);
-}, 1000);
-
+    //this.logoutaction();
+    /*let router = this.router;
+    router.navigate(['/login']);*/
+    location.reload();
   }
 
-  logoutaction(){
+/*  logoutaction(){
     localStorage.setItem('token', '');
     localStorage.setItem('username', '');
     //this._usernameSource = new BehaviorSubject<string>('');
-  }
+  }*/
 }
