@@ -1,30 +1,4 @@
 <div class="row">
-	<ngb-carousel>
-  <template ngbSlide>
-    <img src="http://lorempixel.com/900/500?r=1" alt="Random first slide">
-    <div class="carousel-caption">
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </div>
-  </template>
-  <template ngbSlide>
-    <img src="http://lorempixel.com/900/500?r=2" alt="Random second slide">
-    <div class="carousel-caption">
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  </template>
-  <template ngbSlide>
-    <img src="http://lorempixel.com/900/500?r=3" alt="Random third slide">
-    <div class="carousel-caption">
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </div>
-  </template>
-</ngb-carousel>
-</div>
-
-<div class="row">
 	<div class="col-md-12 text-center mx-auto pb-1">
 		<div class="col-md-6 offset-md-3 lead">Vous êtes à la première étape ! Sélectionnez l'espèce que vous pensez avoir observé. Si vous n'êtes pas certains de votre observation, vous pouvez en sélectionner plusieurs.
 		</div>
@@ -32,19 +6,18 @@
 </div>
 <div class="row">
 
-	<div class="input-group">
+	<div class="input-group col-3 offset-8 py-1">
 		<input type="text" placeholder="Rechercher" class="form-control" />
 		<span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
 	</div>
 </div>
 <div class="row">
-
-	<div class="col-md-4 offset-md-1">
+	<div class="col-4 offset-1">
 		<div class="row m-1 lead">
 			Dans quels milieux pouvons nous retrouver votre espèce ?
 		</div>	
-		<div class="row ">
-			<div class="col-md-10 offset-md-2 mt-1">
+		<div class="row">
+			<div class="col-10 offset-2 mt-1">
 				<div class="form-check">
 					<label class="form-check-label">
 						<input type="checkbox" class="form-check-input">
@@ -83,6 +56,50 @@
 				</div>
 			</div>	
 		</div>
+		<div class="row">
+			<span class="lead">Espèces se rapprochant le plus de vos critères : </span>
+		</div>
+		<div class="row justify-content-center mt-2">
+			<div class="row mt-1">
+				<div class="col-3">
+					<img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" class="img-fluid rounded" alt="">
+				</div>
+				<div class="col-6">
+					<span class="list-group-item-heading">Grand dauphin de l'Indo Pacifique </span><br>
+					<span class="list-group-item-heading"><i>Tursiops aduncus</i></span>
+					
+				</div>
+				<div class="col-3">
+					<button class="btn btn-outline-success mt-4">+</button>
+				</div>
+			</div>
+			<div class="row mt-1">
+				<div class="col-3">
+					<img src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid rounded" alt="">
+				</div>
+				<div class="col-6">
+					<span class="list-group-item-heading">Stenelle à long bec</span><br>
+					<span class="list-group-item-heading"><i>Stenella longirostris</i></span>
+					
+				</div>
+				<div class="col-3">
+					<button class="btn btn-outline-success mt-4">+</button>
+				</div>
+			</div>	
+			<div class="row mt-1">
+				<div class="col-3">
+					<img src="../../../public/assets/images/taxonomy/stenella_attenuata.jpg" class="img-fluid rounded" alt="">
+				</div>
+				<div class="col-6">
+					<span class="list-group-item-heading">Stenelles tâchées</span><br>
+					<span class="list-group-item-heading"><i>Stenella attenuata</i></span>
+					
+				</div>
+				<div class="col-3">
+					<button class="btn btn-outline-success mt-4">+</button>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="col-md-6">
 		<nav class="breadcrumb">
@@ -98,11 +115,12 @@
 					<img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" class="img-fluid rounded" alt="">
 				</div>
 				<div class="col-md-9">
-					<h5 class="list-group-item-heading">Grand dauphin de l'Indo Pacifique</h5>
+					<h5 class="list-group-item-heading">Grand dauphin de l'Indo Pacifique </h5>
 					<h5 class="list-group-item-heading"><i>Tursiops aduncus</i></h5>
 					<b>Taille</b> : 1 à 2 mètres     <b>Apnée </b>: 50 minutes       <b>Milieu de vie </b>: eaux océaniques benthiques
-					<br><br>
-					<button class="btn btn-outline-success float-xs-right">Ajouter cette espèce</button>
+					<div class="row justify-content-end">
+						<button class="btn btn-outline-success">Ajouter cette espèce</button>
+					</div>
 				</div>
 			</button>
 			<button type="button" class="list-group-item list-group-item-action">
@@ -113,8 +131,10 @@
 					<h5 class="list-group-item-heading">Stenelle à long bec</h5>
 					<h5 class="list-group-item-heading"><i>Stenella longirostris</i></h5>
 					<b>Taille</b> : 1 à 2 mètres     <b>Apnée </b>: 50 minutes       <b>Milieu de vie </b>: eaux océaniques pélagiques
-					<br><br>
-					<button class="btn btn-outline-danger float-xs-right">Retirer cette espèce</button>
+					<div class="row justify-content-end">
+						<button class="btn btn-outline-danger float-xs-right">Retirer cette espèce</button>
+					</div>
+						
 				</div>
 			</button>
 			<button type="button" class="list-group-item list-group-item-action">
@@ -125,75 +145,12 @@
 					<h5 class="list-group-item-heading">Stenelle tacheté</h5>
 					<h5 class="list-group-item-heading"><i>Stenella attenuata</i></h5>
 					<b>Taille</b> : 1 à 2 mètres     <b>Apnée </b>: 50 minutes       <b>Milieu de vie </b>: eaux océaniques pélagiques
-					<br><br>
-					<button class="btn btn-outline-success float-xs-right">Ajouter cette espèce</button>
+					<div class="row justify-content-end">
+						<button class="btn btn-outline-success float-xs-right">Ajouter cette espèce</button>
+					</div>
+						
 				</div>
 			</button>
-		</div>
-	</div>
-</div>
-<div class="row m-1">
-	<div class="h4">Espèces se rapprochant le plus de vos critères</div>
-</div>
-<div class="row">
-	<div class="col-md-2">
-		<div class="card">
-			<img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" alt="Tursiops aduncus" class="card-img-top img-fluid">
-			<div class="card-block">
-				<p class="lead">Grand dauphin de l'Indo Pacifique</p>
-				<p class="lead"><i>Tursiops aduncus</i></p>
-				<button class="btn btn-outline-success">Ajouter cette espèce</button>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-2">
-		<div class="card">
-			<img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" alt="Tursiops aduncus" class="card-img-top img-fluid">
-			<div class="card-block">
-				<p class="lead">Grand dauphin de l'Indo Pacifique</p>
-				<p class="lead"><i>Tursiops aduncus</i></p>
-				<button class="btn btn-outline-success">Ajouter cette espèce</button>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-2">
-		<div class="card">
-			<img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" alt="Tursiops aduncus" class="card-img-top img-fluid">
-			<div class="card-block">
-				<p class="lead">Grand dauphin de l'Indo Pacifique</p>
-				<p class="lead"><i>Tursiops aduncus</i></p>
-				<button class="btn btn-outline-success">Ajouter cette espèce</button>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-2">
-		<div class="card">
-			<img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" alt="Tursiops aduncus" class="card-img-top img-fluid">
-			<div class="card-block">
-				<p class="lead">Grand dauphin de l'Indo Pacifique</p>
-				<p class="lead"><i>Tursiops aduncus</i></p>
-				<button class="btn btn-outline-success">Ajouter cette espèce</button>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-2">
-		<div class="card">
-			<img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" alt="Tursiops aduncus" class="card-img-top img-fluid">
-			<div class="card-block">
-				<p class="lead">Grand dauphin de l'Indo Pacifique</p>
-				<p class="lead"><i>Tursiops aduncus</i></p>
-				<button class="btn btn-outline-success">Ajouter cette espèce</button>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-2">
-		<div class="card">
-			<img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" alt="Tursiops aduncus" class="card-img-top img-fluid">
-			<div class="card-block">
-				<p class="lead">Grand dauphin de l'Indo Pacifique</p>
-				<p class="lead"><i>Tursiops aduncus</i></p>
-				<button class="btn btn-outline-success">Ajouter cette espèce</button>
-			</div>
 		</div>
 	</div>
 </div>
