@@ -1,3 +1,11 @@
+.bg-fb-color{
+	background-color: #e9ebee;
+}
+
+.bg-white{
+	background-color: white;
+}
+
 .image-container {
 	position: relative;
 }
