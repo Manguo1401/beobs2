@@ -31,14 +31,25 @@
   border-color: slategrey;
 } /* border-color: goldenrod; */
 
-.obs-nav .back-img {
+.back-img {
   max-width:100%;
   height:auto;
   width: auto;
   max-height: 100%;
 }
 
-.obs-nav .icon-img {
+/*image medaille*/
+.image-container {
+  position: relative;
+}
+
+.relative-container {
+  width: 100%;
+  position: relative;
+  max-height: 100%;
+}
+
+.icon-img {
   position: absolute;
   margin: auto;
   left: 0;
@@ -48,7 +59,7 @@
   max-height: 60%;
 }
 
-.obs-nav .text-img-center{
+.text-img-center{
   position: absolute;
   top:35px;
   width: 100%;
