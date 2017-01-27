@@ -7,5 +7,6 @@ import { Component } from '@angular/core'
 })
 
 export class UserHomeComponent {
-	
+	username = localStorage.getItem('username');
+  token = localStorage.getItem('token');
 }

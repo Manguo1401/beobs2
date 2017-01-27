@@ -47,6 +47,7 @@ export class ConnectComponent implements OnInit {
       this._isAuthenticated = true;
       //window.location.href = '/home';
       this.router.navigate(['/user/home']);
+      location.reload();
     });
     /*this.user.password = ''; //gerer ici des erreurs
     this.user.username = '';*/
