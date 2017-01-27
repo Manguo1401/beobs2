@@ -1,6 +1,8 @@
 import { Component, AfterViewInit } from '@angular/core'
 import { UserHomeComponent } from '../home/user_home.component'
 
+//import {NgbAccordionConfig} from '@ng-bootstrap/ng-bootstrap';
+
 //import * as $ from 'jquery';
 
 @Component ({
