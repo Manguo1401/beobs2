@@ -9,6 +9,8 @@ import { NewObservationModule } from './new_observation/new_observation.module'
 //Composant my_observations
 import { MyObservationsComponent } from './my_observations/my_observations.component'
 import { MyObsTestComponent } from './my_observations/my_obs_test.component'
+//Composant Fil d'actu
+import { NewsComponent } from './news/news.component'
 
 @NgModule({
 	imports: [
@@ -24,6 +26,10 @@ import { MyObsTestComponent } from './my_observations/my_obs_test.component'
 			},{
 				path:'my_observations',
 				component: MyObservationsComponent,
+			},{
+				path:'fil',
+				component: NewsComponent,
+			},
 				/*children: [{
 					path: 'observation_ongoing',
 					component: ObservationOnGoingComponent
@@ -35,7 +41,7 @@ import { MyObsTestComponent } from './my_observations/my_obs_test.component'
 					redirectTo: 'attrs_data',
 					pathMatch: 'full'
 				}]*/
-			},{
+			{
 				path: '',
 				redirectTo: 'home',
 				pathMatch: 'full'

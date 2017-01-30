@@ -1,39 +1,22 @@
-import { Component, AfterViewInit, ElementRef, Renderer } from '@angular/core'
-import { UserHomeComponent } from '../home/user_home.component'
-
+import { Component, AfterViewInit } from '@angular/core';
+import { UserHomeComponent } from '../home/user_home.component';
 import {NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
-//import * as $ from 'bootstrap/dist/js/bootstrap.min.js';
-//import * as $ from 'jquery';
 
 @Component ({
-  selector: 'my-observations',
-  templateUrl: 'my_observations.component.html',
+  selector: 'my-news',
+  templateUrl: 'news.component.html',
   providers: [NgbDatepicker],
   styleUrls: [
-    'my_observations.style.css',
+    '../my_observations/my_observations.style.css',
     //'../user_banner.css'
   ]
 })
 
-export class MyObservationsComponent implements AfterViewInit{
+export class NewsComponent implements AfterViewInit{
   //model;
-  /*constructor(config: NgbCarouselConfig) {
-  // customize default values of carousels used by this component tree
-      config.interval = 10000;
-      config.wrap = false;
-      config.keyboard = false;
-    }*/
 
-
-  constructor(elementRef: ElementRef, renderer: Renderer, config: NgbDatepicker) {
-
-
-      // Listen to click events in the component
-      renderer.listenGlobal('window', 'scroll', (evt) => {
-        //window.scroll() d'angular2
-      })
+  constructor(config: NgbDatepicker) {
   }
-
 
   ngAfterViewInit() {
 
@@ -85,14 +68,6 @@ export class MyObservationsComponent implements AfterViewInit{
             $('#leftpanelfixed').removeClass("fixed");
         }
       });
-
-
-
-      //Positionne le tab selectionné contre le contenu associé.
-      $('#obs_nav .card').click(function(){
-        $('.card').removeClass("selected");
-        $(this).addClass("selected");
-      })
 
     });
 

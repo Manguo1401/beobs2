@@ -28,7 +28,7 @@
 
 #obs_nav .card{
   border-width: thin;
-  border-color: slategrey;
+  border-color: lightgray;
 } /* border-color: goldenrod; */
 
 
@@ -69,7 +69,7 @@
 
 #obs_nav .card:hover{
   background-color: #F7F7F7;
-  border-color: blue;
+  border-color: gray;
 }
 
 #bilan{
@@ -93,18 +93,35 @@
   top: 26px;
   border-bottom: 0px;
   z-index: 9;
-  /* border-color: blue; */
+  border-color: #a0a0a0;
   background-color: #F7F7F7;
   border-bottom-right-radius:0px;
   border-bottom-left-radius:0px;
 }
 .text-darkgreen{
-  color: darkgreen;
+  color: olivedrab;
 }
 
 .badge-darkgreen{
-  background-color: darkgreen;
+  color: olivedrab;
+  background-color: rgba(107, 142, 35, 0.3);
+  /* background-color: olivedrab; */
 }
+
+.badge-info{
+  color: #5bc0de!important;
+  background-color: rgba(91, 192, 222, 0.3);
+}
+
+.badge-warning{
+  color: #f0ad4e!important;
+  background-color: rgba(240, 173, 78, 0.3);
+}
+
+.badge-default{
+  background-color: rgba(99, 108, 114, 0.3)
+}
+
 
 #obs_nav::after {
     display: block;
@@ -113,13 +130,50 @@
 }
 
 #obs_content{
-  border-top: thin solid blue;
-  margin-left: 15px;
-  margin-right: 15px;
-  padding: 10px;
+  border-top: thin solid #a0a0a0;
+  /* margin-left: 15px;
+  margin-right: 15px; */
+
   background-color: #F7F7F7;
 }
 
+.leftpanelfixed{
+  /* position:fixed; */
+
+  /* background-color: white; */
+  /* border: 1px solid black; */
+}
+
+ngb-datepicker{
+  width: 100%;
+}
+
+.fixed{
+  position: fixed;
+  z-index: 100;
+  left: 0px;
+  top: 0px;
+}
+
+#overflowfix{
+  height: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#overflowfix li{
+  /* border-color: olivedrab; */
+  background-color: #F1F9F1;
+}
+
+#overflowfix .badge:first-child{
+  border-bottom-right-radius:0px;
+  border-bottom-left-radius:0px;
+}
+#overflowfix .badge:last-child{
+  border-top-right-radius:0px;
+  border-top-left-radius:0px;
+}
 
 /* #obs_content .content_item:hover{
   background-color: #F7F7F7;
@@ -146,7 +200,10 @@
 }/*border: 1px solid #5bc0de;*/
 
 .fil-obs:hover{
-  background-color: lightcyan;
+  /* background-color: lightcyan; */
+  /* margin:1px;
+  border: 0px;
+  border-left: 2px solid lightblue; */
 }
 
 .fil-ident{
@@ -155,7 +212,10 @@
 }/* border: 1px solid #f0ad4e; */
 
 .fil-ident:hover{
-  background-color: lightgoldenrodyellow;
+  /* background-color: lightgoldenrodyellow; */
+  /* margin:1px;
+  border: 0px;
+  border-left: 2px solid palegoldenrod; */
 }
 
 #carouselMultiEspece{
