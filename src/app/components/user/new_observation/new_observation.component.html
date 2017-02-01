@@ -1,5 +1,28 @@
-<div class="row pt-1 justify-content-center">
-	<h1 class="display-3">Nouvelle observation</h1>
+<div class="col-12">
+	<div class="row pt-1 justify-content-center">
+		<h1 class="display-3">Nouvelle observation</h1>
+	</div>
+	<div class="row justify-content-center my-3">
+		<div class="col-2">
+			<a routerLink="./select_trip" routerLinkActive="active" class="btn btn-outline-primary btn-lg btn-block">
+				Sélectionne<br>une sortie
+			</a>
+		</div>
+		<div class="col-2">
+			<a routerLink="./select_species" routerLinkActive="active" class="btn btn-outline-primary btn-lg btn-block">
+				Sélectionne<br>ton espèce
+			</a>
+		</div>
+		<div class="col-2">
+			<a routerLink="./select_localisation" routerLinkActive="active" class="btn btn-outline-primary btn-lg btn-block">
+				Localise<br>ton observation
+			</a>
+		</div>
+		<div class="col-2">
+			<a routerLink="./select_attrs" routerLinkActive="active" class="btn btn-outline-primary btn-lg btn-block">
+				Entre<br>les attributs
+			</a>
+		</div>
+	</div>
+	<router-outlet></router-outlet>
 </div>
-
-<router-outlet></router-outlet>
