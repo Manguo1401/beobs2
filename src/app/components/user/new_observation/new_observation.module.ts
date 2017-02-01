@@ -4,12 +4,15 @@ import { FormsModule }    from '@angular/forms'
 
 //Routes de la gestion des nouvelles observations
 import { NewObservationRoutes } from './new_observation.routes'
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 
 //Chargement des components associés
 import { NewObservationComponent } from './new_observation.component'
 import { SpeciesSelectComponent } from './species_selection/species_selection.component'
+import { TripSelectorComponent } from './trip_selector/trip_selector.component'
+import { LocalisationSelectorComponent } from './localisation_selector/localisation_selector.component'
+import { AttrsSelectorComponent } from './attrs_selector/attrs_selector.component'
 
 @NgModule({
 	imports: [
@@ -20,7 +23,10 @@ import { SpeciesSelectComponent } from './species_selection/species_selection.co
 	],
 	declarations: [
 		SpeciesSelectComponent,
-		NewObservationComponent
+		NewObservationComponent,
+		TripSelectorComponent,
+		LocalisationSelectorComponent,
+		AttrsSelectorComponent
 	],
 	providers: [
 
