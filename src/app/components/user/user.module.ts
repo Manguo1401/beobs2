@@ -20,6 +20,8 @@ import { UserHomeComponent } from './home/user_home.component'
 //Composant my_observations
 import { MyObservationsComponent } from './my_observations/my_observations.component'
 import { MyObsTestComponent } from './my_observations/my_obs_test.component'
+//Composant Fil d'actu
+import { NewsComponent } from './news/news.component'
 
 @NgModule({
 	imports: [
@@ -34,7 +36,8 @@ import { MyObsTestComponent } from './my_observations/my_obs_test.component'
 		UserHomeComponent,
 		ConnectComponent,
 		MyObservationsComponent,
-		MyObsTestComponent
+		MyObsTestComponent,
+		NewsComponent
 	],
 	providers: [
 

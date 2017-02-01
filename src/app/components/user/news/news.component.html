@@ -1,0 +1,431 @@
+<!-- Fil d'actu -->
+<my-user-home-component></my-user-home-component>
+<div class="row v-padding-20 mx-0">
+  <h1 class="display-5">Fil d'actu</h1>
+</div>
+<div id="obs_content" class="pt-3 rounded row" >
+  <div id="leftpanelfixed" class="leftpanelfixed col-3 pr-0">
+    <div class="row my-1">
+      <span class="col-4 p-0 text-nowrap w-50 align-self-center">Avant le :</span>
+      <div class="col-8 p-0 input-group">
+        <input class="form-control" placeholder="Aujourd'hui"
+               name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+        <i class="input-group-addon fa fa-calendar" aria-hidden="true" (click)="d.toggle()"></i>
+      </div>
+    </div>
+    <div class="row">
+      <label class="col-4 p-0 text-nowrap align-self-center">Affichage :</label>
+      <div class="col-8 p-0 btn-group" data-toggle="buttons">
+
+        <label class="w-50 btn btn-secondary active">
+          <input type="radio" name="options" id="option1" autocomplete="off" checked> Liste
+        </label>
+        <label class="w-50 btn btn-secondary">
+          <input type="radio" name="options" id="option2" autocomplete="off"> Carte
+        </label>
+      </div>
+    </div>
+
+    <div>
+      <h6 class="ml-4 p-1">Liste des espèces:</h6>
+    </div>
+    <div id="overflowfix" style="height: 10px;">
+      <ul id="obs-list-esp" class="list-group">
+        <li class="list-group-item p-0">
+          <div class="d-flex flex-row w-100">
+            <div class="col-4 p-1 align-self-center">
+              <img class="img-fluid rounded w-100" src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" alt="Card image cap">
+            </div>
+            <div class="col-8 px-1 d-flex flex-row">
+              <div class="align-self-center mx-auto">
+                <button type="button" class="btn btn-primary mx-auto">Identifier!</button>
+              </div>
+
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item p-0">
+          <div class="d-flex flex-row w-100">
+            <div class="col-3 p-1 align-self-center">
+              <img class="img-fluid rounded w-100" src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" alt="Card image cap">
+            </div>
+            <div class="col-9 px-1 d-flex flex-row">
+              <div class="align-self-center">
+                <div>Stenelle à long bec</div>
+                <div><i>Stenella longisrostris</i></div>
+              </div>
+
+              <div class="d-flex flex-column align-self-center ml-auto">
+                <span class="badge badge-info rounded-top">6</span>
+                <span class="badge badge-warning rounded-bottom">12</span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-9 ml-auto d-flex flex-column">
+
+
+    <div class="content_item fil-obs d-flex flex-column">
+      <div class="row d-flex justify-content-between">
+        <h4>Sortie en mer</h4> <span>Le 26/12/2016</span>
+      </div>
+      <div class="row">
+        <div class="col-4">
+
+          <ul id="obs-list-esp" class="list-group">
+            <li class="list-group-item p-0">
+              <img src="../../../public/assets/images/taxonomy/stenella_attenuata.jpg" class="img-fluid rounded-top" alt="">
+            </li>
+            <li class="list-group-item list-group-item-success">
+              <div class="d-flex w-100">
+                <div>1. dauphin Longbec</div>
+                <div class="ml-auto align-self-center badge badge-warning">25</div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex w-100">
+                <div>2. Stenella Attenuata</div>
+                <div class="ml-auto align-self-center badge badge-warning">1</div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex w-100">
+                <div>3. Stenella Longirostris</div>
+                <div class="ml-auto align-self-center badge badge-warning">0</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <ul id="obs-list-esp" class="list-group">
+            <li class="list-group-item p-0">
+              <img src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid rounded-top" alt="">
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex w-100">
+                <div>1. dauphin Longbec</div>
+                <div class="ml-auto align-self-center badge badge-warning">2</div>
+              </div>
+            </li>
+            <li class="list-group-item list-group-item-warning">
+              <div class="d-flex w-100">
+                <div>&nbsp;&nbsp; Stenella Attenuata</div>
+                <div class="ml-auto align-self-center badge badge-warning">18</div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex w-100">
+                <div>&nbsp;&nbsp; Stenella Longirostris</div>
+                <div class="ml-auto align-self-center badge badge-warning">1</div>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-4">
+          <ul id="obs-list-esp" class="list-group">
+            <li class="list-group-item p-0">
+              <img src="../../../public/assets/images/maquette/dauphinImg.jpg" class="img-fluid w-100 rounded-top" alt="">
+            </li>
+            <li class="list-group-item">
+              <button type="button" class="btn btn-primary mx-auto">Identifier!</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="fil-ident content_item d-flex flex-column">
+      <div class="row d-flex justify-content-between">
+        <h4>Identifications</h4> <span>Le 10/12/2016</span>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          En cours:
+          <ul id="obs-list-esp" class="list-group">
+            <li class="list-group-item p-0">
+              <img src="../../../public/assets/images/taxonomy/stenella_attenuata.jpg" class="img-fluid rounded-top" alt="">
+            </li>
+            <li class="list-group-item list-group-item-success">
+              <div class="d-flex w-100">
+                <div>=> Dauphin Longbec</div>
+                <div class="ml-auto align-self-center badge badge-warning">25</div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex w-100">
+                <div>Stenella Attenuata</div>
+                <div class="ml-auto align-self-center badge badge-warning">1</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-4">
+          En cours:
+          <ul id="obs-list-esp" class="list-group">
+            <li class="list-group-item p-0">
+              <img src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid rounded-top" alt="">
+            </li>
+            <li class="list-group-item list-group-item-warning">
+              <div class="d-flex w-100">
+                <div>=> Dauphin Longbec</div>
+                <div class="ml-auto align-self-center badge badge-warning">2</div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex w-100">
+                <div>Stenella Attenuata</div>
+                <div class="ml-auto align-self-center badge badge-warning">18</div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex w-100">
+                <div>Stenella Longirostris</div>
+                <div class="ml-auto align-self-center badge badge-warning">1</div>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-4">
+          Réussite:
+          <ul id="obs-list-esp" class="list-group">
+            <li class="list-group-item p-0">
+              <img src="../../../public/assets/images/maquette/dauphinImg.jpg" class="img-fluid w-100 rounded-top" alt="">
+            </li>
+            <li class="list-group-item list-group-item-success">
+              <div class="d-flex w-100">
+                <div>Stenella Attenuata</div>
+                <div class="ml-auto align-self-center badge badge-success">OK</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="fil-obs content_item d-flex flex-column">
+      <div class="row d-flex justify-content-between">
+        <h4>Sortie en mer</h4> <span>Le 16/11/2016</span>
+      </div>
+      <div class="row">
+        <div class="w-100 row obs_unit rounded mb-3">
+          <div class="col-4 p-0">
+            <img src="../../../public/assets/images/taxonomy/stenella_attenuata.jpg" class="img-fluid rounded" alt="">
+          </div>
+          <div class="col-8 p-0  d-flex align-items-center">
+            <ul id="obs-list-esp" class="list-group w-100 rounded-right">
+              <li class="list-group-item list-group-item-success">
+                <div class="d-flex w-100">
+                  <div>1. dauphin Longbec</div>
+                  <div class="ml-auto align-self-center badge badge-warning">25</div>
+                </div>
+              </li>
+              <li class="list-group-item list-group-item-warning">
+                <div class="d-flex w-100">
+                  <div>2. Stenella Attenuata</div>
+                  <div class="ml-auto align-self-center badge badge-warning">1</div>
+                </div>
+              </li>
+              <li class="list-group-item list-group-item-warning">
+                <div class="d-flex w-100">
+                  <div>3. Stenella Longirostris</div>
+                  <div class="ml-auto align-self-center badge badge-warning">0</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="w-100 row obs_unit rounded mb-3">
+          <div class="col-4 p-0">
+            <img src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid rounded-top" alt="">
+          </div>
+          <div class="col-8 p-0 d-flex align-items-center">
+            <ul id="obs-list-esp" class="list-group w-100">
+
+              <li class="list-group-item list-group-item-warning">
+                <div class="d-flex w-100">
+                  <div>1. dauphin Longbec</div>
+                  <div class="ml-auto align-self-center badge badge-warning">2</div>
+                </div>
+              </li>
+              <li class="list-group-item list-group-item-info">
+                <div class="d-flex w-100">
+                  <div>X. Stenella Attenuata</div>
+                  <div class="ml-auto align-self-center badge badge-warning">18</div>
+                </div>
+              </li>
+              <li class="list-group-item list-group-item-warning">
+                <div class="d-flex w-100">
+                  <div>X. Stenella Longirostris</div>
+                  <div class="ml-auto align-self-center badge badge-warning">1</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="w-100 row obs_unit rounded">
+          <div class="col-4 p-0 ">
+            <img src="../../../public/assets/images/maquette/dauphinImg.jpg" class="img-fluid w-100 rounded-top" alt="">
+          </div>
+          <div class="col-8 p-0 d-flex align-items-center">
+            <div class="mx-auto">
+              <button type="button" class="btn btn-primary">Identifier!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fil-obs content_item d-flex flex-column">
+      <div class="row d-flex justify-content-between">
+        <h4>Sortie en mer</h4> <span>Le 16/11/2016</span>
+      </div>
+      <div class="row">
+        <div class="w-100 row obs_unit rounded mb-3">
+          <div class="col-4 p-0">
+            <img src="../../../public/assets/images/taxonomy/stenella_attenuata.jpg" class="img-fluid rounded" alt="">
+          </div>
+          <div class="col-8 p-0  d-flex align-items-center">
+            <ul id="obs-list-esp" class="list-group w-75 mx-auto rounded-right">
+              <li class="list-group-item list-group-item-success">
+                <div class="d-flex w-100">
+                  <div>1. dauphin Longbec</div>
+                  <div class="ml-auto align-self-center badge badge-warning">25</div>
+                </div>
+              </li>
+              <li class="list-group-item list-group-item-warning">
+                <div class="d-flex w-100">
+                  <div>2. Stenella Attenuata</div>
+                  <div class="ml-auto align-self-center badge badge-warning">1</div>
+                </div>
+              </li>
+              <li class="list-group-item list-group-item-warning">
+                <div class="d-flex w-100">
+                  <div>3. Stenella Longirostris</div>
+                  <div class="ml-auto align-self-center badge badge-warning">0</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="w-100 row obs_unit rounded mb-3">
+          <div class="col-4 p-0">
+            <img src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid rounded-top" alt="">
+          </div>
+          <div class="col-8 p-0 d-flex align-items-center">
+            <ul id="obs-list-esp" class="list-group w-75 mx-auto">
+
+              <li class="list-group-item list-group-item-warning">
+                <div class="d-flex w-100">
+                  <div>1. dauphin Longbec</div>
+                  <div class="ml-auto align-self-center badge badge-warning">2</div>
+                </div>
+              </li>
+              <li class="list-group-item list-group-item-info">
+                <div class="d-flex w-100">
+                  <div>X. Stenella Attenuata</div>
+                  <div class="ml-auto align-self-center badge badge-warning">18</div>
+                </div>
+              </li>
+              <li class="list-group-item list-group-item-warning">
+                <div class="d-flex w-100">
+                  <div>X. Stenella Longirostris</div>
+                  <div class="ml-auto align-self-center badge badge-warning">1</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="w-100 row obs_unit rounded">
+          <div class="col-4 p-0 ">
+            <img src="../../../public/assets/images/maquette/dauphinImg.jpg" class="img-fluid w-100 rounded-top" alt="">
+          </div>
+          <div class="col-8 p-0 d-flex align-items-center">
+            <div class="mx-auto">
+              <button type="button" class="btn btn-primary">Identifier!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fil-ident content_item d-flex flex-column">
+      <div class="row d-flex justify-content-between">
+        <h4>Identification Réussite</h4> <span>Le 10/10/2016</span>
+      </div>
+    </div>
+
+    <div class="fil-obs content_item d-flex flex-column">
+      <div class="row d-flex justify-content-between">
+        <h4>Sortie en mer</h4> <span>Le 16/11/2016</span>
+      </div>
+      <div class="row">
+        <div class="col-4">
+
+          <ul id="obs-list-esp" class="list-group">
+            <li class="list-group-item p-0">
+              <img src="../../../public/assets/images/taxonomy/stenella_attenuata.jpg" class="img-fluid rounded-top" alt="">
+            </li>
+            <li class="list-group-item list-group-item-success">
+              <div class="d-flex w-100">
+                <div>1. dauphin Longbec</div>
+                <div class="ml-auto align-self-center badge badge-warning">25</div>
+              </div>
+            </li>
+            <li class="list-group-item list-group-item-warning">
+              <div class="d-flex w-100">
+                <div>2. Stenella Attenuata</div>
+                <div class="ml-auto align-self-center badge badge-warning">1</div>
+              </div>
+            </li>
+            <li class="list-group-item list-group-item-warning">
+              <div class="d-flex w-100">
+                <div>3. Stenella Longirostris</div>
+                <div class="ml-auto align-self-center badge badge-warning">0</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <ul id="obs-list-esp" class="list-group">
+            <li class="list-group-item p-0">
+              <img src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid rounded-top" alt="">
+            </li>
+            <li class="list-group-item list-group-item-success">
+              <div class="d-flex w-100">
+                <div>1. dauphin Longbec</div>
+                <div class="ml-auto align-self-center badge badge-warning">2</div>
+              </div>
+            </li>
+            <li class="list-group-item list-group-item-info">
+              <div class="d-flex w-100">
+                <div>X. Stenella Attenuata</div>
+                <div class="ml-auto align-self-center badge badge-warning">18</div>
+              </div>
+            </li>
+            <li class="list-group-item list-group-item-warning">
+              <div class="d-flex w-100">
+                <div>X. Stenella Longirostris</div>
+                <div class="ml-auto align-self-center badge badge-warning">1</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <ul id="obs-list-esp" class="list-group">
+            <li class="list-group-item p-0">
+              <img src="../../../public/assets/images/maquette/dauphinImg.jpg" class="img-fluid w-100 rounded-top" alt="">
+            </li>
+            <li class="list-group-item">
+              <button type="button" class="btn btn-primary btn-sm mx-auto">Identifier!</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
