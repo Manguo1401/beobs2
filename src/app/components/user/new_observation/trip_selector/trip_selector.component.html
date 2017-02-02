@@ -1,14 +1,52 @@
 <div class="row">
 	<div class="col-6 mx-auto">
 		<div class="list-group">
-			<button class="list-group-item">
-				<div class="d-flex w-100">
-					<h5>
-						<span style="color: green;"><i class="fa fa-plus" aria-hidden="true"></i> </span> Nouvelle sortie
-					</h5>
+			<div class="list-group-item">
+				<div style="cursor:pointer" data-toggle="collapse" href="#collapseNewTrip" aria-expanded="false" aria-controls="collapseNewTrip">
+					<div class="d-flex w-100">
+						<h5>
+							<span style="color: green;"><i class="fa fa-plus" aria-hidden="true"></i> </span> Nouvelle sortie
+						</h5>
+					</div>
 				</div>
-			</button>
+
+				<div class="w-100 d-flex" class="collapse" id="collapseNewTrip">
+					<div class="col-12">
+						<label class="lead" for="">Nom de la sortie : </label>
+						<input type="text" class="form-control form-control-lg" placeholder="Exemple : Le grand puit du fanion entre amis" />
+					</div>
+
+					<div class="col-12 mt-2">
+						<label class="lead" for="">Dates :</label>
+					</div>
+						
+					<div class="row">
+						
+
+						<label for="example-datetime-local-input" class="col-1 offset-1">Du </label>
+						<div class="col-8">
+							<input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+						</div>
+						<div class="col-2"></div>
+						<label for="example-datetime-local-input" class="col-1 offset-1 my-2">au </label>
+						<div class="col-8 my-2">
+							<input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+						</div>
+					</div>
+					<div class="col-12 mt-2">
+						<label class="lead" for="">Localisation :</label>
+					</div>
+					<div class="map" id="trip_map" style="z-index:200"></div>
+				</div>
+				
+			</div>
+			
 		</div>
+
+		<!-- ________________________________________________ -->
+
+
+		<!-- ________________________________________________ -->
 		<div class="list-group mt-2">
 			<button class="list-group-item">
 				<div class="d-flex w-100 justify-content-between">
