@@ -157,14 +157,6 @@
     clear: both;
 }
 
-#obs_content{
-  border-top: thin solid #a0a0a0;
-  /* margin-left: 15px;
-  margin-right: 15px; */
-
-  background-color: #F7F7F7;
-}
-
 .leftpanelfixed{
   /* position:fixed; */
 

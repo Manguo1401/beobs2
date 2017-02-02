@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "^2.4.5",
     "@angular/router": "^3.4.5",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.19",
+    "@types/bootstrap": "^3.3.32",
     "@types/google-maps": "^3.2.0",
     "@types/jasmine": "^2.5.41",
     "@types/jquery": "^2.0.39",
