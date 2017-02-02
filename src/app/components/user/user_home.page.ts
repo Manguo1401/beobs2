@@ -6,7 +6,8 @@ import {UserService} from '../../services/user/user.service';
 
 @Component ({
 	selector: 'my-user-home-page',
-	templateUrl: 'user_home.page.html'
+	templateUrl: 'user_home.page.html',
+  styleUrls: ['user_banner.css']
 })
 
 export class UserHomePage {

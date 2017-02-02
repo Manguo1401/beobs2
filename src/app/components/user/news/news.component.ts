@@ -1,11 +1,11 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { UserHomeComponent } from '../home/user_home.component';
-import {NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
+//import {NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
 
 @Component ({
   selector: 'my-news',
   templateUrl: 'news.component.html',
-  providers: [NgbDatepicker],
+  //providers: [NgbDatepicker],
   styleUrls: [
     '../my_observations/my_observations.style.css',
     //'../user_banner.css'
@@ -15,23 +15,25 @@ import {NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
 export class NewsComponent implements AfterViewInit{
   //model;
 
-  constructor(config: NgbDatepicker) {
-  }
+  /*constructor(config: NgbDatepicker) {
+  }*/
 
   ngAfterViewInit() {
 
     $( document ).ready(function() {//permet d'attendre le chargement des composants fils!
       //Leftpanelfixed se fixe quand le scroll positionne en au le panel (et inversement)
+      var fixedNavTop = 54; //Si la nav principale est fixed, la prendre en compte (dans la CSS aussi)
+
       let topelement = $('#leftpanelfixed').offset().top;
 
       //Dimensionner la hauteur du panneau des espèces en fonction de la fenetre
       var hwin = $(window).height();
       var hoverflowInPanel = $('#overflowfix').offset().top - topelement;
-      $('#overflowfix').height(hwin-hoverflowInPanel);
+      $('#overflowfix').height(hwin-hoverflowInPanel-fixedNavTop);
       //alert("hwin="+hwin+", hoverflowInPanel="+$('#overflowfix').offset().top+"-"+topelement+",overflowfix H="+$('#overflowfix').height()+"newH="+(hwin-hoverflowInPanel));
 
       //initialisation si le scroll est déjà bas
-      if($(window).scrollTop()>topelement)
+      if($(window).scrollTop()>topelement-fixedNavTop)
       {
         //console.log('bat => fixe');
         if(!$('#leftpanelfixed').hasClass("fixed"))
@@ -56,7 +58,7 @@ export class NewsComponent implements AfterViewInit{
         }*/
         this.scrollTop = $(window).scrollTop();
 
-        if($(window).scrollTop()>topelement)
+        if($(window).scrollTop()>topelement-fixedNavTop)
         {
           //console.log('bat => fixe');
           if(!$('#leftpanelfixed').hasClass("fixed"))
