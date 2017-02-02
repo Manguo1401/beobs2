@@ -1,0 +1,29 @@
+.rightfixed{
+	position: fixed;
+	z-index: 100;
+	right: 0px;
+	top: 0px;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.organism-icon {
+	height: 50px;
+}
+
+.info {
+	position: absolute;
+	float: right;
+	right: 4px;
+	top : 4px;
+	color: #5ba8de;
+}
+
+.active {
+	background-color: rgba(0,0,0,.20);
+    border-color: rgba(0,0,0,.20);
+}
