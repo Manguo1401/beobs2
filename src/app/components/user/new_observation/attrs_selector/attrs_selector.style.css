@@ -25,5 +25,5 @@
 
 .active {
 	background-color: rgba(0,0,0,.20);
-    border-color: rgba(0,0,0,.20);
+    border-color: rgba(0,0,0,.05);
 }
