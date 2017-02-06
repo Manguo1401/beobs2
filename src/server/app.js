@@ -19,8 +19,8 @@ mongoose.connect('mongodb://localhost:27017/test');
 var db = mongoose.connection;
 mongoose.Promise = global.Promise;*/
 
-//chargement de la db 
-/*require('./db/requests')(app);*/
+//chargement de la db
+require('./db/requests')(app);
 
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname,'/../../dist/index.html'));
