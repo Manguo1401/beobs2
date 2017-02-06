@@ -9,8 +9,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 //Chargement des components associés
 import { NewObservationComponent } from './new_observation.component'
-import { SpeciesSelectComponent } from './species_selection/species_selection.component'
 import { TripSelectorComponent } from './trip_selector/trip_selector.component'
+import { SpeciesSelectComponent } from './species_selection/species_selection.component'
+import { MediaUploadComponent } from './media_upload/media_upload.component'
 import { LocalisationSelectorComponent } from './localisation_selector/localisation_selector.component'
 import { AttrsSelectorComponent } from './attrs_selector/attrs_selector.component'
 
@@ -25,6 +26,7 @@ import { AttrsSelectorComponent } from './attrs_selector/attrs_selector.componen
 		SpeciesSelectComponent,
 		NewObservationComponent,
 		TripSelectorComponent,
+		MediaUploadComponent,
 		LocalisationSelectorComponent,
 		AttrsSelectorComponent
 	],
