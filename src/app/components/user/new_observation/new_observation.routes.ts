@@ -7,6 +7,7 @@ import { SpeciesSelectComponent } from './species_selection/species_selection.co
 import { TripSelectorComponent } from './trip_selector/trip_selector.component'
 import { LocalisationSelectorComponent } from './localisation_selector/localisation_selector.component'
 import { AttrsSelectorComponent } from './attrs_selector/attrs_selector.component'
+import { MediaUploadComponent } from './media_upload/media_upload.component'
 
 
 @NgModule({
@@ -23,6 +24,9 @@ import { AttrsSelectorComponent } from './attrs_selector/attrs_selector.componen
 			},{
 				path: 'select_localisation',
 				component: LocalisationSelectorComponent
+			},{
+				path: 'upload_media',
+				component: MediaUploadComponent
 			},{
 				path: 'select_attrs',
 				component: AttrsSelectorComponent
