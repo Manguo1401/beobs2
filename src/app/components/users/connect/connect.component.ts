@@ -17,6 +17,8 @@ export class ConnectComponent implements OnInit {
 
   private _isAuthenticated: boolean;
   public user: User =  new User();
+  register: boolean = false;
+  tokenjwt = "vide";
 
   constructor(
     private _myService : UserService,
@@ -37,6 +39,12 @@ export class ConnectComponent implements OnInit {
     )
   }
 
+  showReg(){
+    this.register = true;
+  }
+
+
+
   test(){console.log(JSON.stringify(this.user))}
 
   login(value: User) {
@@ -54,6 +62,28 @@ export class ConnectComponent implements OnInit {
 
     this._isAuthenticated = false;
     //event.stopPropagation(); //pour eviter le rechargement de la page, c'est ce qui sera souhaité
+  }
+
+  subscribe(value: User) {
+    //event.preventDefault();
+
+    console.log("user.component subscribe submit");
+    //On effectue une requête http pour créer le nouvel utilisateur via le service user
+    this._myService.registerUser(this.user).then(
+      () => {
+        this.tokenjwt = localStorage.getItem('token');
+        this._isAuthenticated = true;
+        this.user.username = localStorage.getItem('username');
+
+        console.log("CreateUser OK: User=" +localStorage.getItem('username')+ " &token=" +localStorage.getItem('token'));
+        //this.tokenjwt = localStorage.getItem('token');
+        //console.log("user.comp res.title" +res.title);
+        //console.log("user.comp localStorage-username" + this.user.username);
+        this.router.navigate(['/user/home']);
+        location.reload();
+    });
+
+    //event.stopPropagation();
   }
 
 }

@@ -3,7 +3,7 @@ import { CommonModule }   from '@angular/common'
 import { FormsModule }    from '@angular/forms'
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
-import { ConnectComponent } from "../users/connect/connect.component"
+//import { ConnectComponent } from "../users/connect/connect.component"
 
 //Routes de la session utilisateur
 import { UserRoutes } from './user.routes'
@@ -11,8 +11,8 @@ import { UserRoutes } from './user.routes'
 //Importation des modules enfants
 import { NewObservationModule } from './new_observation/new_observation.module'
 
-//Compnsants pour les utilisateurs
-import { UserHomePage } from './user_home.page'
+/*//Componsants pour les utilisateurs
+import { UserHomePage } from './user_home.page'*/
 
 //Composant pour la page d'accueil des utilisateurs
 import { UserHomeComponent } from './home/user_home.component'
@@ -32,9 +32,9 @@ import { NewsComponent } from './news/news.component'
 		UserRoutes
 	],
 	declarations: [
-		UserHomePage,
+		//UserHomePage,
 		UserHomeComponent,
-		ConnectComponent,
+		//ConnectComponent,
 		MyObservationsComponent,
 		MyObsTestComponent,
 		NewsComponent

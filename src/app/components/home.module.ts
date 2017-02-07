@@ -6,9 +6,12 @@ import { HomeRoutes } from './home.routes'
 
 import { HomeMainPage } from './home_main_page.component';
 import { TodoAppComponent } from './todo-app/todo-app.component'
-//import { ConnectComponent } from "./users/connect/connect.component"
+import { ConnectComponent } from "./users/connect/connect.component"
 import { LogoutComponent } from "./users/logout/logout.component"
 import { SubscribeUserComponent } from "./users/subscribe/subscribe_user.component"
+
+//Componsants pour les utilisateurs
+import { UserHomePage } from './user/user_home.page'
 
 @NgModule({
   imports: [
@@ -17,13 +20,14 @@ import { SubscribeUserComponent } from "./users/subscribe/subscribe_user.compone
     HomeRoutes,
   ],
   declarations: [
+    UserHomePage,
     HomeMainPage,
 
     //Todo list
     TodoAppComponent,
 
     //User Management
-    //ConnectComponent,
+    ConnectComponent,
     LogoutComponent,
     SubscribeUserComponent,
   ],

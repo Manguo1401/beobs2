@@ -2,7 +2,12 @@ import { NgModule }       from '@angular/core'
 import { CommonModule }   from '@angular/common'
 import { FormsModule }    from '@angular/forms'
 
+import {HomeModule} from '../home.module'
+
 import { OrgRoutes } from './org.routes'
+
+//Componsants pour les utilisateurs
+//import { UserHomePage } from '../user/user_home.page'
 
 //Compnsants pour les organismes
 import { HomePageOrg } from './home_page_org.component'
@@ -17,9 +22,11 @@ import { SubscribeOrgPage } from './subscribe/subscribe_org.component'
 	imports: [
 		CommonModule,
 		FormsModule,
+		HomeModule,
 		OrgRoutes
 	],
 	declarations: [
+		//UserHomePage,
 		HomePageOrg,
 		HomeOrgComponent,
 		DataChoicePage,

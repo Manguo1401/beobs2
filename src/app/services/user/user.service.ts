@@ -71,7 +71,7 @@ export class UserService {
         localStorage.setItem('username', this._username);
         console.log("localStorage.getItem('token')" + localStorage.getItem('token'));
       })
-    .catch(this.handleError);
+    //.catch(this.handleError);
   }
 
   public loginwithObservable(username : string, password: string) : void {

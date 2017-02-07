@@ -25,6 +25,7 @@ export class UserHomePage {
     //this.logoutaction();
     /*let router = this.router;
     router.navigate(['/login']);*/
+    this.router.navigate(['/home']);
     location.reload();
   }
 
