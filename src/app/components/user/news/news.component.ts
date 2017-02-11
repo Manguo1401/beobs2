@@ -1,5 +1,6 @@
-import { Component, AfterViewInit } from '@angular/core';
-import { UserHomeComponent } from '../home/user_home.component';
+import { Component, AfterViewInit } from '@angular/core'
+import { UserBannerComponent } from '../user_banner/user_banner.component'
+import { UserMenuComponent } from '../user_banner/user_menu.component'
 //import {NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
 
 @Component ({

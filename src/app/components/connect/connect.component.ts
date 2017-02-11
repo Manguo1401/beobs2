@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core'
 import { FormsModule }    from '@angular/forms'
-import {UserService} from '../../../services/user/user.service';
-import {User} from '../../../objects/user';
+import {UserService} from '../../services/user/user.service'
+import {User} from '../../objects/user'
 import { Router } from '@angular/router'
 
 //Angular2Tutorial/backend at master · GuillaumeUnice/Angular2Tutorial · GitHub
@@ -19,6 +19,7 @@ export class ConnectComponent implements OnInit {
   public user: User =  new User();
   register: boolean = false;
   tokenjwt = "vide";
+  authfail: boolean = false;
 
   constructor(
     private _myService : UserService,
@@ -31,6 +32,7 @@ export class ConnectComponent implements OnInit {
         if(res) {
           this._isAuthenticated = true;
           this.user.username = res;
+          this.tokenjwt = localStorage.getItem('token');
         } else {
           this._isAuthenticated = false;
           this.user.username = null;
@@ -50,12 +52,23 @@ export class ConnectComponent implements OnInit {
   login(value: User) {
     //event.preventDefault();
     console.log("connect"+ JSON.stringify(value));
+    this.authfail = false;
     this._myService.login(value.username, value.password)
     .then(() => {
-      this._isAuthenticated = true;
+      this.tokenjwt = localStorage.getItem('token');
+      this.user.username = localStorage.getItem('username');
       //window.location.href = '/home';
-      this.router.navigate(['/user/home']);
-      location.reload();
+      console.log("tokenjwt="+ this.tokenjwt);
+      if(this.tokenjwt != "")
+      {
+        this._isAuthenticated = true;
+        this.router.navigate(['/user/home']);
+        //location.reload();
+      }
+      else{
+        this.authfail = true;
+      }
+
     });
     /*this.user.password = ''; //gerer ici des erreurs
     this.user.username = '';*/
@@ -80,7 +93,7 @@ export class ConnectComponent implements OnInit {
         //console.log("user.comp res.title" +res.title);
         //console.log("user.comp localStorage-username" + this.user.username);
         this.router.navigate(['/user/home']);
-        location.reload();
+        //location.reload();
     });
 
     //event.stopPropagation();

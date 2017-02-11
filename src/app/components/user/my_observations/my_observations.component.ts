@@ -1,5 +1,6 @@
 import { Component, AfterViewInit, ElementRef, Renderer } from '@angular/core'
-import { UserHomeComponent } from '../home/user_home.component'
+import { UserBannerComponent } from '../user_banner/user_banner.component'
+import { UserMenuComponent } from '../user_banner/user_menu.component'
 
 import {NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
 //import * as $ from 'bootstrap/dist/js/bootstrap.min.js';
@@ -77,7 +78,7 @@ export class MyObservationsComponent implements AfterViewInit{
 
 				if($(window).scrollTop()>(topelement-fixedNavTop))
 				{
-					//console.log('bat => fixe');
+					//console.log('bat => fixe');s
 					if(!$('#leftpanelfixed').hasClass("fixed"))
 						$('#leftpanelfixed').addClass("fixed");
 				}

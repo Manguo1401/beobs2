@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router'
 
 import { UserHomePage } from './user_home.page'
-import { UserHomeComponent } from './home/user_home.component'
+//import { UserHomeComponent } from './home/user_home.component'
 import { NewObservationComponent } from './new_observation/new_observation.component'
 
 import { NewObservationModule } from './new_observation/new_observation.module'
 //Composant my_observations
 import { MyObservationsComponent } from './my_observations/my_observations.component'
-import { MyObsTestComponent } from './my_observations/my_obs_test.component'
+
 //Composant Fil d'actu
 import { NewsComponent } from './news/news.component'
 
@@ -16,11 +16,11 @@ import { NewsComponent } from './news/news.component'
 	imports: [
 		RouterModule.forChild([{
 			path: 'user',
-			component: UserHomePage,
+			component: UserHomePage, ////NOT USED
 			children: [{
-				path:'home',
-				component: UserHomeComponent
-			},{
+			/*	path:'home',
+				component: UserHomeComponent //NOT USED
+			},{*/
 				path: 'new_observation',
 				loadChildren: () => NewObservationModule
 			},{

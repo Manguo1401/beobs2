@@ -4,14 +4,14 @@ import { FormsModule }    from '@angular/forms'
 
 import { HomeRoutes } from './home.routes'
 
-import { HomeMainPage } from './home_main_page.component';
-import { TodoAppComponent } from './todo-app/todo-app.component'
-import { ConnectComponent } from "./users/connect/connect.component"
-import { LogoutComponent } from "./users/logout/logout.component"
-import { SubscribeUserComponent } from "./users/subscribe/subscribe_user.component"
+import { HomeComponent } from './home.component';
+//import { TodoAppComponent } from './todo-app/todo-app.component'
+import { ConnectComponent } from './connect/connect.component'
+
 
 //Componsants pour les utilisateurs
-import { UserHomePage } from './user/user_home.page'
+//import { UserHomePage } from './user/user_home.page'
+import { MainMenuComponent } from './main_menu.component'
 
 @NgModule({
   imports: [
@@ -20,16 +20,20 @@ import { UserHomePage } from './user/user_home.page'
     HomeRoutes,
   ],
   declarations: [
-    UserHomePage,
-    HomeMainPage,
+    //MainMenu
+    MainMenuComponent,
+    //HomePage,
+    HomeComponent,
 
     //Todo list
-    TodoAppComponent,
+    //TodoAppComponent,
 
     //User Management
     ConnectComponent,
-    LogoutComponent,
-    SubscribeUserComponent,
+  ],
+  exports: [
+    MainMenuComponent,
+    ConnectComponent
   ],
   providers: [
 

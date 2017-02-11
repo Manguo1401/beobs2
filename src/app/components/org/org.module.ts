@@ -9,6 +9,10 @@ import { OrgRoutes } from './org.routes'
 //Componsants pour les utilisateurs
 //import { UserHomePage } from '../user/user_home.page'
 
+//banner
+import { OrgBannerComponent } from './org_banner/org_banner.component'
+import { OrgMenuComponent } from './org_banner/org_menu.component'
+
 //Compnsants pour les organismes
 import { HomePageOrg } from './home_page_org.component'
 import { HomeOrgComponent } from './home/home.component'
@@ -26,6 +30,8 @@ import { SubscribeOrgPage } from './subscribe/subscribe_org.component'
 		OrgRoutes
 	],
 	declarations: [
+		OrgBannerComponent,
+		OrgMenuComponent,
 		//UserHomePage,
 		HomePageOrg,
 		HomeOrgComponent,
@@ -33,7 +39,8 @@ import { SubscribeOrgPage } from './subscribe/subscribe_org.component'
 		AttrsDataChoiceOrgComponent,
 		LocationChoiceOrgComponent,
 		SpeciesChoiceOrgComponent,
-		SubscribeOrgPage
+		SubscribeOrgPage,
+
 	],
 	providers: [
 

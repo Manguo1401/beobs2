@@ -3,6 +3,7 @@ import { CommonModule }   from '@angular/common'
 import { FormsModule }    from '@angular/forms'
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
+import {HomeModule} from '../home.module'
 //import { ConnectComponent } from "../users/connect/connect.component"
 
 //Routes de la session utilisateur
@@ -11,15 +12,17 @@ import { UserRoutes } from './user.routes'
 //Importation des modules enfants
 import { NewObservationModule } from './new_observation/new_observation.module'
 
-/*//Componsants pour les utilisateurs
-import { UserHomePage } from './user_home.page'*/
+//Componsants pour les utilisateurs
+import { UserHomePage } from './user_home.page'
 
-//Composant pour la page d'accueil des utilisateurs
-import { UserHomeComponent } from './home/user_home.component'
+//Composant pour la bannière utilisateur
+import { UserBannerComponent } from './user_banner/user_banner.component'
+//Composant pour le menu utilisateur
+import { UserMenuComponent } from './user_banner/user_menu.component'
 
 //Composant my_observations
 import { MyObservationsComponent } from './my_observations/my_observations.component'
-import { MyObsTestComponent } from './my_observations/my_obs_test.component'
+
 //Composant Fil d'actu
 import { NewsComponent } from './news/news.component'
 
@@ -28,17 +31,22 @@ import { NewsComponent } from './news/news.component'
 		CommonModule,
 		FormsModule,
 		NgbModule,
+		HomeModule,
 		NewObservationModule,
 		UserRoutes
 	],
 	declarations: [
-		//UserHomePage,
-		UserHomeComponent,
+		UserHomePage,
+		UserBannerComponent,
+		UserMenuComponent,
 		//ConnectComponent,
 		MyObservationsComponent,
-		MyObsTestComponent,
 		NewsComponent
 	],
+	exports: [
+    /*UserBannerComponent,
+    UserMenuComponent*/
+  ],
 	providers: [
 
 	]
