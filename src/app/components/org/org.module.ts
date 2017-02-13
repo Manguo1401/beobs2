@@ -2,7 +2,16 @@ import { NgModule }       from '@angular/core'
 import { CommonModule }   from '@angular/common'
 import { FormsModule }    from '@angular/forms'
 
+import {HomeModule} from '../home.module'
+
 import { OrgRoutes } from './org.routes'
+
+//Componsants pour les utilisateurs
+//import { UserHomePage } from '../user/user_home.page'
+
+//banner
+import { OrgBannerComponent } from './org_banner/org_banner.component'
+import { OrgMenuComponent } from './org_banner/org_menu.component'
 
 //Compnsants pour les organismes
 import { HomePageOrg } from './home_page_org.component'
@@ -17,16 +26,21 @@ import { SubscribeOrgPage } from './subscribe/subscribe_org.component'
 	imports: [
 		CommonModule,
 		FormsModule,
+		HomeModule,
 		OrgRoutes
 	],
 	declarations: [
+		OrgBannerComponent,
+		OrgMenuComponent,
+		//UserHomePage,
 		HomePageOrg,
 		HomeOrgComponent,
 		DataChoicePage,
 		AttrsDataChoiceOrgComponent,
 		LocationChoiceOrgComponent,
 		SpeciesChoiceOrgComponent,
-		SubscribeOrgPage
+		SubscribeOrgPage,
+
 	],
 	providers: [
 

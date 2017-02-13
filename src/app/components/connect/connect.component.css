@@ -1,0 +1,15 @@
+.child {
+  /* background: #c0392b; */
+}
+
+.connectcomp{
+  /*
+  z-index: 2000; */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#connectcontent{
+  position: absolute;
+  /* margin-top: 20px; */
+}

@@ -1,13 +1,14 @@
 import { Component } from '@angular/core'
 import { Router } from '@angular/router';
-import { ConnectComponent } from "../users/connect/connect.component"
+//import { ConnectComponent } from "../users/connect/connect.component"
 
+import {MainMenuComponent} from '../main_menu.component';
 import {UserService} from '../../services/user/user.service';
 
 @Component ({
 	selector: 'my-user-home-page',
 	templateUrl: 'user_home.page.html',
-  styleUrls: ['user_banner.css']
+  //styleUrls: ['user_banner.css']
 })
 
 export class UserHomePage {
@@ -25,6 +26,7 @@ export class UserHomePage {
     //this.logoutaction();
     /*let router = this.router;
     router.navigate(['/login']);*/
+    this.router.navigate(['/home']);
     location.reload();
   }
 

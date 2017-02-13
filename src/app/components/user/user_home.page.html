@@ -1,19 +1,6 @@
 <!-- USER PAGE (a renommer) -->
 
-	<nav class="navbar fixed-top navbar-toggleable-md navbar-light bg-banner mx-0">
-		<a routerLink="/home" routerLinkActive="active" class="navbar-brand">
-			BeObs
-		</a>
-		<div class="ml-auto">
-			<ul class="nav navbar-nav">
-				<li *ngIf="username" class="nav-item btn btn-outline-success ml-1">Mon profil</li>
-				<li *ngIf="username" class="nav-item btn btn-outline-success ml-1">Messages</li>
-				<li *ngIf="username" class="nav-item btn btn-outline-success ml-1">Paramètres</li>
-				<li *ngIf="username" (click)="logout()" class="nav-item btn btn-outline-danger ml-1">Se déconnecter</li>
-			</ul>
-		</div>
-	</nav>
-<!-- <connect></connect> -->
+<my-main-menu></my-main-menu>
 <router-outlet></router-outlet>
 
 <!-- 	<a routerLink="./message_user" routerLinkActive="active">

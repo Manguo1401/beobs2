@@ -3,6 +3,10 @@ import { Organism } from '../../../objects/organism'
 
 import { ServiceOrganismsModules } from './../../../services/org/org.service'
 
+//banner
+import { OrgBannerComponent } from '../org_banner/org_banner.component'
+import { OrgMenuComponent } from '../org_banner/org_menu.component'
+
 //declare var $:any;
 
 @Component({

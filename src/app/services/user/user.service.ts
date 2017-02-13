@@ -46,7 +46,7 @@ export class UserService {
           localStorage.setItem('username', this._username);
           //console.log("localStorage.getItem('token')" + localStorage.getItem('token'));
         })
-      .catch(this.handleError);
+      .catch(e => console.log("reject: " /*+ e.message + "((err: " + e)*/));
   }
 
 
@@ -63,6 +63,7 @@ export class UserService {
         });
         this._token = res.json().token;
         this._username = res.json().data;
+        //this._message = res.json().message;
         //console.log(res.token);
 
         this._usernameSource.next(res.json().data);
@@ -71,7 +72,7 @@ export class UserService {
         localStorage.setItem('username', this._username);
         console.log("localStorage.getItem('token')" + localStorage.getItem('token'));
       })
-    .catch(this.handleError);
+    .catch(e => console.log("reject: " + e));
   }
 
   public loginwithObservable(username : string, password: string) : void {

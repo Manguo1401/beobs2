@@ -16,6 +16,7 @@ import { UserModule } from './components/user/user.module'
 import { OrgModule } from "./components/org/org.module"
 import { AdminModule } from "./components/admin/admin.module"
 
+//import { MainMenuComponent } from './components/main_menu.component'
 
 //import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
@@ -43,8 +44,7 @@ import { SubscribeUserComponent } from "./components/users/subscribe/subscribe_u
         OrgModule,
         AdminModule,
         //todo list route,
-        TodoRoutes,
-
+        //TodoRoutes,
         AppRoutes //A placer après les modules annexes
     ],
     providers: [
@@ -56,13 +56,14 @@ import { SubscribeUserComponent } from "./components/users/subscribe/subscribe_u
     declarations: [
         /*CategoryFilterPipe,*/
         AppComponent,
-
+        //MainMenuComponent,
         /*//User Management
         ConnectComponent,
         LogoutComponent,
         SubscribeUserComponent,*/
         PageNotFound
     ],
+
     bootstrap:    [ AppComponent ],
     schemas: [
         CUSTOM_ELEMENTS_SCHEMA
