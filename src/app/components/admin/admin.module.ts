@@ -4,6 +4,7 @@ import { FormsModule }    from '@angular/forms'
 
 import { AdminRoutes } from './admin.routes'
 
+import {HomeModule} from '../home.module'
 //Compnsants pour le panneau d'administration
 import { HomePageAdmin } from './home_page_admin.component'
 import { DocsAdminPage } from './docs/docs_page.component'
@@ -25,6 +26,7 @@ import { CategoryFilterPipe } from './../../pipes/attrs_data/category_filter.pip
 	imports: [
 		CommonModule,
 		FormsModule,
+		HomeModule,
 		AdminRoutes,
 		AttrDataWrapperModule
 	],

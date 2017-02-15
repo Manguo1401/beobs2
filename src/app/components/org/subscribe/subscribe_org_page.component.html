@@ -1,5 +1,55 @@
-<my-org-banner-component></my-org-banner-component>
-<my-org-menu-component></my-org-menu-component>
+<!-- <my-org-banner-component></my-org-banner-component> -->
+<div class="bg-faded">
+  <h3>Formulaire d'inscription d'organisme</h3>
+  <div class="row mx-0 p-2 mx-0">
+    <div class="col-3 d-flex flex-column">
+      <div class="field">
+        <label>Nom:</label>
+        <div class="fields">
+          <div class="field">
+            <input class="w-100" [(ngModel)]="newOrg.accr" type="text" placeholder="Acronyme" required>
+          </div>
+          <div class="field w-100">
+            <input class="w-100" [(ngModel)]="newOrg.name" type="text" placeholder="Nom Complet" required>
+          </div>
+        </div>
+        <div class="field">
+          <label>Brève Description:</label>
+          <textarea class="w-100" rows="6">
+  (Phrase clé:)
+
+  (objectif principal:)
+          </textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mx-auto">
+      <div class="image-container">
+        <div class="relative-container height-60">
+          <img class= "mx-auto d-block back-img w-100" src="../../../public/assets/images/structures/business_logo_4.png" alt="Business 3 Icon" />
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+
+      <div class="field">
+        <label>Description :</label>
+        <textarea class="w-100" rows="8">
+  (Présentation:)
+  (Liste des objectifs:)
+  (Nombre d'actif:)
+  (Localisation:)
+  (Date de création:)
+        </textarea>
+      </div>
+      <div class="field"><input class="w-100" type="text" placeholder="Site web"></div>
+    </div>
+  </div>
+
+</div>
+<!--<my-org-menu-component></my-org-menu-component>
+
 <div class="ui attached segment">
   <p *ngIf="!issubmitted">!issubmitted</p>
   <h3>Formulaire d'inscription d'organisme</h3>
@@ -40,4 +90,4 @@
         </div>
   </div>
 
-</div>
+</div> -->

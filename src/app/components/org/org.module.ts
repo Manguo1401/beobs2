@@ -21,6 +21,7 @@ import { AttrsDataChoiceOrgComponent } from './data_choice/attrs_data/attrs_data
 import { LocationChoiceOrgComponent } from './data_choice/location_data/location_choice.component'
 import { SpeciesChoiceOrgComponent } from './data_choice/species_data/species_choice.component'
 import { SubscribeOrgPage } from './subscribe/subscribe_org.component'
+import { PostulerOrgComponent } from './postuler/postuler.component'
 
 @NgModule({
 	imports: [
@@ -40,7 +41,7 @@ import { SubscribeOrgPage } from './subscribe/subscribe_org.component'
 		LocationChoiceOrgComponent,
 		SpeciesChoiceOrgComponent,
 		SubscribeOrgPage,
-
+		PostulerOrgComponent
 	],
 	providers: [
 
