@@ -6,7 +6,7 @@ import { DataChoicePage } from './data_choice/data_choice_page.component'
 import { HomeOrgComponent } from './home/home.component'
 
 import { SubscribeOrgPage } from './subscribe/subscribe_org.component'
-
+import { PostulerOrgComponent } from './postuler/postuler.component'
 
 import { AttrsDataChoiceOrgComponent } from './data_choice/attrs_data/attrs_data_choice.component'
 import { LocationChoiceOrgComponent } from './data_choice/location_data/location_choice.component'
@@ -41,6 +41,9 @@ import { SpeciesChoiceOrgComponent } from './data_choice/species_data/species_ch
 			},{
 				path: 'subscribe',
 				component: SubscribeOrgPage
+			},{
+				path: 'postuler',
+				component: PostulerOrgComponent
 			},{
 				path: '',
 				redirectTo: 'home',

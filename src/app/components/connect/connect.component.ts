@@ -62,7 +62,7 @@ export class ConnectComponent implements OnInit {
       if(this.tokenjwt != "")
       {
         this._isAuthenticated = true;
-        this.router.navigate(['/user/home']);
+        this.router.navigate(['/user/fil']);
         //location.reload();
       }
       else{

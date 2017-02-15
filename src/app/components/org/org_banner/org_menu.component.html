@@ -4,10 +4,10 @@
       <nav class="navbar navbar-toggleable-md navbar-light">
         <ul class="nav navbar-nav">
           <li class="nav-item mr-1">
-            <div class="rounded bg-white"><button [routerLink]="['./home']" routerLinkActive="active" class="nav-item btn btn-outline-success">Informations</button></div>
+            <div class="rounded bg-white"><button [routerLink]="['/organisme/home']" routerLinkActive="active" class="nav-item btn btn-outline-success">Informations</button></div>
           </li>
           <li class="nav-item mr-1">
-            <div class="rounded bg-white"><button routerLink="./../my_observations" routerLinkActive="active" class="nav-item btn btn-outline-success">Postuler</button></div>
+            <div class="rounded bg-white"><button routerLink="/organisme/postuler" routerLinkActive="active" class="nav-item btn btn-outline-success">Postuler</button></div>
           </li>
           <li class="nav-item mr-1">
             <div class="rounded bg-white"><a routerLink="./../new_observation" routerLinkActive="active" class="nav-item btn btn-outline-primary">Données</a></div>
@@ -32,9 +32,9 @@
                 Paramètres de recherche
               </button>
               <div class="dropdown-menu" aria-labelledby="btndata">
-                <a [routerLink]="['./data_choice']" routerLinkActive="active" class="dropdown-item" href="#">Sélection des espèces</a>
-                <a class="dropdown-item" href="#">Zone de recherche</a>
-                <a class="dropdown-item" href="#">Données souhaitées</a>
+                <a [routerLink]="['/organisme/data_choice/species']" routerLinkActive="active" class="dropdown-item" href="#">Sélection des espèces</a>
+                <a [routerLink]="['/organisme/data_choice/location']" routerLinkActive="active" class="dropdown-item" href="#">Zone de recherche</a>
+                <a [routerLink]="['/organisme/data_choice/attrs_data']" class="dropdown-item" href="#">Données souhaitées</a>
               </div>
             </div>
           </li>
