@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router'
 
-import { UserHomePage } from './user_home.page'
+import { UserHomePage } from './user.page'
 //import { UserHomeComponent } from './home/user_home.component'
 import { NewObservationComponent } from './new_observation/new_observation.component'
 

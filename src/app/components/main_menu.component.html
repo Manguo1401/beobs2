@@ -1,23 +1,25 @@
-<div class="topMargeNav" style="margin-top: 54px;">
-  <nav class="navbar fixed-top navbar-toggleable-md navbar-light bg-banner mx-0">
+<div class="topMargeNav">
+  <nav class="navbar sticky-top navbar-toggleable-md bg-banner mx-0">
     <a routerLink="/home" routerLinkActive="active" class="navbar-brand">
       BeObs
     </a>
-    <div class="mt-1">Bienvenue {{username}} !</div>
+    <div class="mt-1 ml-2">
+      <div class="btn nav-item nav-link" routerLink="/user/fil" routerLinkActive="active"><i class="fa fa-user-circle-o mr-1" aria-hidden="true"></i>Bienvenue {{username}} !</div>
+    </div>
     <div class="ml-5"><connect></connect></div>
     <div class="ml-auto">
       <ul class="nav navbar-nav">
-        <li *ngIf="username" class="rounded bg-white nav-item ml-1">
-          <div class="btn btn-outline-success" routerLink="/user/home" routerLinkActive="active"><i class="fa fa-user-circle-o mr-1" aria-hidden="true"></i>Mon profil</div>
+        <!-- <li *ngIf="username" class="rounded bg-white nav-item ml-1">
+          <div class="btn btn-outline-success" routerLink="/user/fil" routerLinkActive="active"><i class="fa fa-user-circle-o mr-1" aria-hidden="true"></i>Mon profil</div>
+        </li> -->
+        <li *ngIf="username" class="btn p-0 nav-item ml-1">
+          <div class="nav-link"><i class="fa fa-envelope-o mr-1" aria-hidden="true"></i>Messages</div>
         </li>
-        <li *ngIf="username" class="rounded bg-white nav-item ml-1">
-          <div class="btn btn-outline-success"><i class="fa fa-envelope-o mr-1" aria-hidden="true"></i>Messages</div>
+        <li *ngIf="username" class="btn p-0 nav-item ml-1">
+          <div class="nav-link"><i class="fa fa-cogs mr-1" aria-hidden="true"></i>Paramètres</div>
         </li>
-        <li *ngIf="username" class="rounded bg-white nav-item ml-1">
-          <div class="btn btn-outline-success"><i class="fa fa-cogs mr-1" aria-hidden="true"></i>Paramètres</div>
-        </li>
-        <li *ngIf="username" (click)="logout()" class="rounded bg-white nav-item ml-1">
-          <div class="btn btn-outline-danger"><i class="fa fa-sign-out mr-1" aria-hidden="true"></i>Se déconnecter</div>
+        <li *ngIf="username" (click)="logout()" class="btn p-0 nav-item ml-1">
+          <div class="nav-link btn-outline-danger rounded"><i class="fa fa-sign-out mr-1" aria-hidden="true"></i>Se déconnecter</div>
         </li>
       </ul>
     </div>

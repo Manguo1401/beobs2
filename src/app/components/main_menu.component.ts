@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component ({
   selector: 'my-main-menu',
   templateUrl: 'main_menu.component.html',
-  styleUrls: ['main_menu.style.css']
+  styleUrls: ['main_menu.style.css','../app.component.css']
 })
 
 export class MainMenuComponent {

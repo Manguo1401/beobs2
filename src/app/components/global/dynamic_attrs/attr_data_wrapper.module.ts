@@ -5,21 +5,24 @@ import { AttrDataWrapperComponent} from './attr_data_wrapper.component'
 import { DateAttrComponent } from './temporal/date_attr.component'
 import { TimeAttrComponent } from './temporal/time_attr.component'
 import { UndefinedAttrComponent } from './undefined/undefined_attr.component'
+import { BuilderListAttrComponent } from './generic_component/builder.list_attr.component'
 
 @NgModule({
 	imports: [
-		
+
 	],
 	declarations: [
 		AttrDataWrapperComponent,
 		DateAttrComponent,
 		TimeAttrComponent,
-		UndefinedAttrComponent
+		UndefinedAttrComponent,
+		BuilderListAttrComponent
 	],
 	entryComponents: [
 		DateAttrComponent,
 		TimeAttrComponent,
-		UndefinedAttrComponent
+		UndefinedAttrComponent,
+		BuilderListAttrComponent
 	],
 	providers: [
 

@@ -13,7 +13,7 @@ import { UserRoutes } from './user.routes'
 import { NewObservationModule } from './new_observation/new_observation.module'
 
 //Componsants pour les utilisateurs
-import { UserHomePage } from './user_home.page'
+import { UserHomePage } from './user.page'
 
 //Composant pour la bannière utilisateur
 import { UserBannerComponent } from './user_banner/user_banner.component'

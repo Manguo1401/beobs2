@@ -2,6 +2,8 @@ import { NgModule }       from '@angular/core'
 import { CommonModule }   from '@angular/common'
 import { FormsModule }    from '@angular/forms'
 
+
+//import {HomeModule} from '../../home.module'
 //Routes de la gestion des nouvelles observations
 import { NewObservationRoutes } from './new_observation.routes'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
@@ -20,6 +22,7 @@ import { AttrsSelectorComponent } from './attrs_selector/attrs_selector.componen
 		CommonModule,
 		FormsModule,
 		NgbModule,
+		//HomeModule,
 		NewObservationRoutes
 	],
 	declarations: [
