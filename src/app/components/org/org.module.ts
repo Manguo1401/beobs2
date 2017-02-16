@@ -14,7 +14,7 @@ import { OrgBannerComponent } from './org_banner/org_banner.component'
 import { OrgMenuComponent } from './org_banner/org_menu.component'
 
 //Compnsants pour les organismes
-import { HomePageOrg } from './home_page_org.component'
+import { HomePageOrg } from './org.page'
 import { HomeOrgComponent } from './home/home.component'
 import { DataChoicePage } from './data_choice/data_choice_page.component'
 import { AttrsDataChoiceOrgComponent } from './data_choice/attrs_data/attrs_data_choice.component'

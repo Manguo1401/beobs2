@@ -9,7 +9,7 @@ import {MainMenuComponent} from '../main_menu.component';
 
 @Component({
 	selector: 'my-home-page-org',
-	templateUrl: 'home_page_org.component.html'
+	templateUrl: 'org.page.html'
 })
 
 export class HomePageOrg {

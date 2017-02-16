@@ -5,3 +5,29 @@
 .bg-white{
   background-color: white;
 }
+
+
+.topMargeNav .btn{
+  color:black;
+}
+
+.navbar-brand{
+  color:black;
+}
+
+.topMargeNav .btn-outline-danger{
+  border-color: brown;
+  color: brown;
+}
+
+.topMargeNav .btn-outline-danger:hover{
+  color:white;
+  border-color:white;
+  background-color: brown;
+}
+
+.topMargeNav .btn:hover{
+  color:white;
+  border:1px solid white;
+  /* background-color: darkblue; */
+}

@@ -1,12 +1,14 @@
 <my-main-menu></my-main-menu>
 
 <h1>Panneau d'administration</h1>
-
-<a [routerLink]="['./home']" routerLinkActive="active">Accueil admin</a>
-<a [routerLink]="['./docs']" routerLinkActive="active">Gestion des documents</a>
-
-<a [routerLink]="['/home']" routerLinkActive="active">Retour à l'accueil principal</a>
-
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <div class="navbar-nav">
+    <!-- <a class="nav-item nav-link" [routerLink]="['./home']" routerLinkActive="active">Accueil admin</a> -->
+    <a class="nav-item nav-link" [routerLink]="['./docs']" routerLinkActive="active">Gestion des documents</a>
+    <a class="nav-item nav-link" [routerLink]="['./docs']" routerLinkActive="active">Component Builder</a>
+    <!-- <a class="nav-item nav-link ml-auto" [routerLink]="['/home']" routerLinkActive="active">Retour à l'accueil principal</a> -->
+  </div>
+</nav>
 <router-outlet></router-outlet>
 
 
