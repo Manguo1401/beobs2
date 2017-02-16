@@ -23,6 +23,9 @@ import { MyObsTestComponent } from './my_observations/my_obs_test.component'
 //Composant Fil d'actu
 import { NewsComponent } from './news/news.component'
 
+//Composants livre taxonomique et le guide d'identification des espèces
+import { TaxonomicBookComponent } from './taxonomic_book/taxonomic_book.component'
+
 @NgModule({
 	imports: [
 		CommonModule,
@@ -37,7 +40,8 @@ import { NewsComponent } from './news/news.component'
 		ConnectComponent,
 		MyObservationsComponent,
 		MyObsTestComponent,
-		NewsComponent
+		NewsComponent,
+		TaxonomicBookComponent
 	],
 	providers: [
 

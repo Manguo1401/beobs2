@@ -1,22 +1,25 @@
 <!-- USER PAGE (a renommer) -->
 
-	<nav class="navbar fixed-top navbar-toggleable-md navbar-light bg-banner mx-0">
-		<a routerLink="/home" routerLinkActive="active" class="navbar-brand">
-			BeObs
-		</a>
-		<div class="ml-auto">
-			<ul class="nav navbar-nav">
-				<li *ngIf="username" class="nav-item btn btn-outline-success ml-1">Mon profil</li>
-				<li *ngIf="username" class="nav-item btn btn-outline-success ml-1">Messages</li>
-				<li *ngIf="username" class="nav-item btn btn-outline-success ml-1">Paramètres</li>
-				<li *ngIf="username" (click)="logout()" class="nav-item btn btn-outline-danger ml-1">Se déconnecter</li>
-			</ul>
-		</div>
-	</nav>
-<!-- <connect></connect> -->
-<router-outlet></router-outlet>
+<nav class="navbar sticky-top navbar-inverse bg-primary navbar-toggleable-md">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<a routerLink="/home" routerLinkActive="active" class="navbar-brand">
+		BeObs
+	</a>
+	<div class="collapse navbar-collapse">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Messages</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Paramètres</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Se déconnecter</a>
+			</li>
+		</ul>
+	</div>
+</nav>
 
-<!-- 	<a routerLink="./message_user" routerLinkActive="active">
-	Message
-</a> -->
-<!-- 	<a routerLink="./organisme" routerLinkActive="active">Organisme</a> -->
+<router-outlet></router-outlet>

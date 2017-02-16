@@ -11,6 +11,8 @@ import { MyObservationsComponent } from './my_observations/my_observations.compo
 import { MyObsTestComponent } from './my_observations/my_obs_test.component'
 //Composant Fil d'actu
 import { NewsComponent } from './news/news.component'
+//Composants livre taxonomique et le guide d'identification des espèces
+import { TaxonomicBookComponent } from './taxonomic_book/taxonomic_book.component'
 
 @NgModule({
 	imports: [
@@ -29,6 +31,9 @@ import { NewsComponent } from './news/news.component'
 			},{
 				path:'fil',
 				component: NewsComponent,
+			},{
+				path: 'taxonomic_book',
+				component: TaxonomicBookComponent
 			},
 				/*children: [{
 					path: 'observation_ongoing',

@@ -1,12 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-    /* margin-top: 15px;
-    margin-bottom: 10px; */
+	background-color: #F7F7F7;
+	/* margin-top: 15px;
+	margin-bottom: 10px; */
 }
 
 .navbar-brand>img {
-    display: inline;
+	display: inline;
 }
 
 .alert {
@@ -20,7 +21,7 @@ body {
 
 .vcenter {
 	display: flex;
-    align-items: center;
+	align-items: center;
 }
 
 .center-block {
@@ -55,12 +56,12 @@ body {
 }
 
 .nav-center {
-    margin:0;
-    float:none;
+	margin:0;
+	float:none;
 }
 
 .navbar{
-    text-align:center;
+	text-align:center;
 }
 
 .faded_background {
