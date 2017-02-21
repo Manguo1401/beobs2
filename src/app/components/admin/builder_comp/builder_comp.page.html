@@ -1,0 +1,114 @@
+<div class="w-75 mx-auto">
+
+
+	<div class="row w-100">
+		<h3>Construction du composant:</h3>
+		<div class="form-group w-100">
+			<label class="col-2">Label</label>
+			<input class="form-control col-2" type="text" [(ngModel)]="label">
+		</div>
+		<div class="form-group w-100">
+			<label class="col-2">Information</label>
+			<input class="form-control col-6" type="text" [(ngModel)]="info">
+		</div>
+		<div class="form-group w-100">
+			<label class="col-2">Type:</label>
+			<div id="Type" class="col-4 btn-group" data-toggle="buttons">
+				<label class="btn btn-secondary active">
+					<input type="radio" name="Multiplicity" value="single" autocomplete="off" checked> Single Select
+				</label>
+				<label class="btn btn-secondary">
+					<input type="radio" name="Multiplicity" value="multiple" autocomplete="off"> Multiple Select
+				</label>
+			</div>
+		</div>
+		<div class="w-100">
+			<label class="col-2">Format:</label>
+			<div id="Format" class="col-8 btn-group" data-toggle="buttons">
+				<label class="btn btn-secondary single">
+					<input type="radio" name="format" value="dropdownlist" autocomplete="off"> Dropdownlist
+				</label>
+				<label class="btn btn-secondary single">
+					<input type="radio" name="format" value="radiolist" autocomplete="off"> Radiolist
+				</label>
+				<label class="btn btn-secondary multiple">
+					<input type="radio" name="format" value="checklist" autocomplete="off"> Checklist
+				</label>
+				<label class="btn btn-secondary single multiple">
+					<input type="radio" name="format" value="selectlist" autocomplete="off"> SelectListe
+				</label>
+				<label class="btn btn-secondary single multiple">
+					<input type="radio" name="format" value="autocompleteliste" autocomplete="off"> AutoCompleteListe
+				</label>
+			</div>
+		</div>
+		<div class="btn-group" role="group">
+			<button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Selectionner une liste:
+			</button>
+			<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+				<a class="dropdown-item" href="#">Boolean</a>
+				<a class="dropdown-item" href="#">0-10</a>
+			</div>
+		</div>
+		<label>Créer une nouvelle liste</label><input type="text" ><div class="btn btn-secondary">Créer</div>
+	</div>
+	<div>
+		Administration de la liste [listname]
+		<label>Ajouter un élément</label><input type="text" ><div class="btn btn-secondary">ajouter</div>
+	</div>
+
+	<div class="w-75 row rounded">
+		<div class="card h-100 ">
+			<div class="card-block">
+				<h4 class="card-title" style="padding:1rem;">{{label}} :</h4>
+				<h6 class="card-subtitle text-muted">{{info}}</h6>
+				<div class="input-type form-group my-1">
+					<div class="dropdownlist w-100">
+						<select class="form-control" id="sel1">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+						</select>
+					</div>
+					<div class="checklist w-100">
+						<div class="btn-group" data-toggle="buttons">
+							<label class="btn btn-secondary">
+								<input type="checkbox" autocomplete="off"> Checkbox 1
+							</label>
+							<label class="btn btn-secondary">
+								<input type="checkbox" autocomplete="off"> Checkbox 2
+							</label>
+							<label class="btn btn-secondary">
+								<input type="checkbox" autocomplete="off"> Checkbox 3
+							</label>
+						</div>
+					</div>
+					<div class="radiolist w-100">
+						<div class="btn-group" data-toggle="buttons">
+							<label class="btn btn-secondary">
+								<input type="radio" name="options" id="option1" autocomplete="off"> Radio 1
+							</label>
+							<label class="btn btn-secondary">
+								<input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+							</label>
+							<label class="btn btn-secondary">
+								<input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+							</label>
+						</div>
+					</div>
+					<div class="selectlist w-100">
+						<select multiple size="2" class="form-control" id="sel1">
+							<option class="d-flex w-100">1 <div class="btn btn-secondary ml-auto py-0 px-1">+</div></option>
+							<option class="d-flex w-100">2 <div class="btn btn-secondary ml-auto py-0 px-1">+</div></option>
+							<option class="d-flex w-100">3 <div class="btn btn-secondary ml-auto py-0 px-1">+</div></option>
+							<option class="d-flex w-100">4 <div class="btn btn-secondary ml-auto py-0 px-1">+</div></option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
