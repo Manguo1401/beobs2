@@ -18,6 +18,10 @@ import { AttrDataWrapperModule } from './../global/dynamic_attrs/attr_data_wrapp
 
 import { AttrsDataMap } from './../../services/attrs_data/attrs_data_comp.map'
 
+//Page builder
+import { BuilderCompPage } from './builder_comp/builder_comp.page'
+
+
 //Importation des filtres
 import { CategoryFilterPipe } from './../../pipes/attrs_data/category_filter.pipe'
 
@@ -37,7 +41,8 @@ import { CategoryFilterPipe } from './../../pipes/attrs_data/category_filter.pip
 		AttrsDataAdminComponent,
 		SpeciesManagementComponent,
 		SelectedAttrsData,
-		CategoryFilterPipe
+		CategoryFilterPipe,
+		BuilderCompPage
 	],
 	providers: [
 		AttrsDataMap
