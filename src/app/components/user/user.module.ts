@@ -26,6 +26,8 @@ import { MyObservationsComponent } from './my_observations/my_observations.compo
 //Composant Fil d'actu
 import { NewsComponent } from './news/news.component'
 
+import { TaxonomicBookComponent } from './taxonomic_book/taxonomic_book.component'
+
 @NgModule({
 	imports: [
 		CommonModule,
@@ -41,7 +43,8 @@ import { NewsComponent } from './news/news.component'
 		UserMenuComponent,
 		//ConnectComponent,
 		MyObservationsComponent,
-		NewsComponent
+		NewsComponent,
+		TaxonomicBookComponent
 	],
 	exports: [
     /*UserBannerComponent,
