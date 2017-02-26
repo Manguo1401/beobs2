@@ -8,7 +8,6 @@ import { FormsModule }    from '@angular/forms'
 import { NewObservationRoutes } from './new_observation.routes'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
-
 //Chargement des components associés
 import { NewObservationComponent } from './new_observation.component'
 import { TripSelectorComponent } from './trip_selector/trip_selector.component'
