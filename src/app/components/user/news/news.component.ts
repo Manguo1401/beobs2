@@ -1,6 +1,4 @@
 import { Component, AfterViewInit } from '@angular/core'
-import { UserBannerComponent } from '../user_banner/user_banner.component'
-import { UserMenuComponent } from '../user_banner/user_menu.component'
 import {NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
 
 @Component ({
@@ -8,7 +6,7 @@ import {NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
   templateUrl: 'news.component.html',
   providers: [NgbDatepicker],
   styleUrls: [
-    '../my_observations/my_observations.style.css',
+    './../my_observations/my_observations.style.css',
     //'../user_banner.css'
   ]
 })

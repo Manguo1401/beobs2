@@ -1,6 +1,4 @@
 import { Component, AfterViewInit, ElementRef, Renderer } from '@angular/core'
-import { UserBannerComponent } from '../user_banner/user_banner.component'
-import { UserMenuComponent } from '../user_banner/user_menu.component'
 
 import {NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
 //import * as $ from 'bootstrap/dist/js/bootstrap.min.js';

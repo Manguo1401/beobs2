@@ -9,6 +9,8 @@ import { NewObservationModule } from './new_observation/new_observation.module'
 //Composant my_observations
 import { MyObservationsComponent } from './my_observations/my_observations.component'
 
+import { TaxonomicBookComponent } from './taxonomic_book/taxonomic_book.component'
+
 //Composant Fil d'actu
 import { NewsComponent } from './news/news.component'
 
@@ -29,6 +31,9 @@ import { NewsComponent } from './news/news.component'
 			},{
 				path:'fil',
 				component: NewsComponent,
+			},{
+				path:'taxonomic_book',
+				component: TaxonomicBookComponent,
 			},
 				/*children: [{
 					path: 'observation_ongoing',
