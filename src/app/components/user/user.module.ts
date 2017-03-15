@@ -31,6 +31,9 @@ import { NewsComponent } from './news/news.component'
 
 import { TaxonomicBookComponent } from './taxonomic_book/taxonomic_book.component'
 
+//Le component d'identification des observations
+import { ObsIdentificationComponent } from './obs_identification/obs_identification.component'
+
 //Import de chartjs pour les graphiques
 import { ChartsModule } from 'ng2-charts/ng2-charts'
 
@@ -52,7 +55,8 @@ import { ChartsModule } from 'ng2-charts/ng2-charts'
 		MyObservationsComponent,
 		NewsComponent,
 		TaxonomicBookComponent,
-		GlobalResultsComponent
+		GlobalResultsComponent,
+		ObsIdentificationComponent
 	],
 	exports: [
     /*UserBannerComponent,
