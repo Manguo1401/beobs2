@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, AfterViewInit } from '@angular/core'
 
 //banner
 import { OrgBannerComponent } from '../org_banner/org_banner.component'
@@ -10,6 +10,11 @@ import { OrgMenuComponent } from '../org_banner/org_menu.component'
   //styleUrls: ['../../../app.component.css'],
 })
 
-export class MemberManagementComponent {
+export class MemberManagementComponent implements AfterViewInit{
+  ngAfterViewInit() {
 
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  }
 }

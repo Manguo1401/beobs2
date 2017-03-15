@@ -1,0 +1,52 @@
+<div class="w-75 row rounded">
+    <div class="card h-100 ">
+      <div class="card-block">
+        <h4 class="card-title" style="padding:1rem;">{{label}} :</h4>
+        <h6 class="card-subtitle text-muted">{{info}}</h6>
+        <div class="input-type form-group my-1">
+          <div *ngIf="type='dropdownlist'" class="dropdownlist w-100">
+            <select class="form-control" id="sel1">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+          </div>
+          <div *ngIf="type='checklist'"  class="checklist w-100">
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-secondary">
+                <input type="checkbox" autocomplete="off"> Checkbox 1
+              </label>
+              <label class="btn btn-secondary">
+                <input type="checkbox" autocomplete="off"> Checkbox 2
+              </label>
+              <label class="btn btn-secondary">
+                <input type="checkbox" autocomplete="off"> Checkbox 3
+              </label>
+            </div>
+          </div>
+          <div *ngIf="type='radiolist'" class="radiolist w-100">
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option1" autocomplete="off"> Radio 1
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+              </label>
+            </div>
+          </div>
+          <div *ngIf="type='selectlist'" class="selectlist w-100">
+            <select multiple size="2" class="form-control" id="sel1">
+              <option class="d-flex w-100">1 <div class="btn btn-secondary ml-auto py-0 px-1">+</div></option>
+              <option class="d-flex w-100">2 <div class="btn btn-secondary ml-auto py-0 px-1">+</div></option>
+              <option class="d-flex w-100">3 <div class="btn btn-secondary ml-auto py-0 px-1">+</div></option>
+              <option class="d-flex w-100">4 <div class="btn btn-secondary ml-auto py-0 px-1">+</div></option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
