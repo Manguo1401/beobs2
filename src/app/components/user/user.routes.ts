@@ -11,6 +11,9 @@ import { MyObservationsComponent } from './my_observations/my_observations.compo
 
 import { TaxonomicBookComponent } from './taxonomic_book/taxonomic_book.component'
 
+//Résultats globaux
+import { GlobalResultsComponent } from './global_results/global_results.component'
+
 //Composant Fil d'actu
 import { NewsComponent } from './news/news.component'
 
@@ -34,6 +37,9 @@ import { NewsComponent } from './news/news.component'
 			},{
 				path:'taxonomic_book',
 				component: TaxonomicBookComponent,
+			},{
+				path: 'global_results',
+				component: GlobalResultsComponent
 			},
 				/*children: [{
 					path: 'observation_ongoing',
