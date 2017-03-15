@@ -21,13 +21,13 @@ export class NewsComponent implements AfterViewInit{
 
     $( document ).ready(function() {//permet d'attendre le chargement des composants fils!
       //Leftpanelfixed se fixe quand le scroll positionne en au le panel (et inversement)
-      var fixedNavTop = 54; //Si la nav principale est fixed, la prendre en compte (dans la CSS aussi)
+      let fixedNavTop = 54; //Si la nav principale est fixed, la prendre en compte (dans la CSS aussi)
 
       let topelement = $('#leftpanelfixed').offset().top;
 
       //Dimensionner la hauteur du panneau des espèces en fonction de la fenetre
-      var hwin = $(window).height();
-      var hoverflowInPanel = $('#overflowfix').offset().top - topelement;
+      let hwin = $(window).height();
+      let hoverflowInPanel = $('#overflowfix').offset().top - topelement;
       $('#overflowfix').height(hwin-hoverflowInPanel-fixedNavTop);
       //alert("hwin="+hwin+", hoverflowInPanel="+$('#overflowfix').offset().top+"-"+topelement+",overflowfix H="+$('#overflowfix').height()+"newH="+(hwin-hoverflowInPanel));
 
