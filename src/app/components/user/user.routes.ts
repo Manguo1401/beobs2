@@ -9,7 +9,14 @@ import { NewObservationModule } from './new_observation/new_observation.module'
 //Composant my_observations
 import { MyObservationsComponent } from './my_observations/my_observations.component'
 
+//Guide taxonomique
 import { TaxonomicBookComponent } from './taxonomic_book/taxonomic_book.component'
+
+//Identifieur d'observations
+import { ObsIdentificationComponent } from './obs_identification/obs_identification.component'
+
+//Résultats globaux
+import { GlobalResultsComponent } from './global_results/global_results.component'
 
 //Composant Fil d'actu
 import { NewsComponent } from './news/news.component'
@@ -34,6 +41,12 @@ import { NewsComponent } from './news/news.component'
 			},{
 				path:'taxonomic_book',
 				component: TaxonomicBookComponent,
+			},{
+				path: 'global_results',
+				component: GlobalResultsComponent
+			},{
+				path: 'obs_identification',
+				component: ObsIdentificationComponent
 			},
 				/*children: [{
 					path: 'observation_ongoing',

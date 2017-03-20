@@ -1,0 +1,139 @@
+<div class="row v-padding-20 justify-content-center m-0">
+	<h1 class="display-3">Résultats</h1>
+</div>
+
+<div class="row m-0">
+	<div class="col-12">
+		<div class="d-flex flex-row-reverse">
+			<div class="btn-group btn-group-lg" role="group" aria-label="Filtres">
+				<button 
+				class="btn btn-outline-success btn-lg m-0" 
+				style="border-bottom-left-radius: 0"
+				type="button" 
+				(click)="showPanel('taxonomic_tree')"
+				>
+				<i class="fa fa-paw" aria-hidden="true"></i> / <i class="fa fa-leaf" aria-hidden="true"></i>
+				<br>
+				Espèce
+			</button>
+
+			<button 
+				class="btn btn-outline-success btn-lg" 
+				style="border-bottom-right-radius: 0" 
+				(click)="showPanel('period')"
+			>
+				<i class="fa fa-calendar" aria-hidden="true"></i>
+				<br>
+				Période
+			</button>
+
+			<button 
+				class="btn btn-outline-success btn-lg" 
+				style="border-bottom-right-radius: 0" 
+				(click)="showPanel('chart')"
+			>
+				<i class="fa fa-pie-chart" aria-hidden="true"></i>
+				<br>
+				Graphiques
+			</button>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="row d-flex m-0">
+	<div class="col-6">
+		<div class="map" id="global_result_map"></div>
+	</div>
+
+	<div class="col-6" *ngIf="showedPanel == 'taxonomic_tree'" >
+		<div class="col-12 py-3 px-1 green-border d-flex flex-column cont ">
+			<nav class="breadcrumb mb-0">
+				<a class="breadcrumb-item" href="#">Animalia</a>
+				<a class="breadcrumb-item" href="#">Chordata</a>
+				<a class="breadcrumb-item" href="#">Mammalia</a>
+				<a class="breadcrumb-item" href="#">Cetacea</a>
+				<span class="breadcrumb-item active">Delphinidae</span>
+			</nav>
+			<div class="row my-3">
+				<div class="col-12 input-group input-group-lg">
+					<input type="text" placeholder="Rechercher" class="form-control" />
+					<span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
+				</div>
+			</div>
+			<div class="row px-3">
+				<div class="parent col-12 px-0">
+					<div class="list-group">
+						<button type="button" class="list-group-item list-group-item-action">
+							<div class="col-md-3">
+								<img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" class="img-fluid rounded taxonomic_img" alt="">
+							</div>
+							<div class="col-md-9">
+								<h5 class="list-group-item-heading">Grand dauphin de l'Indo Pacifique </h5>
+								<h5 class="list-group-item-heading"><i>Tursiops aduncus</i></h5>
+								<b>Taille</b> : 1 à 2 mètres     <b>Apnée </b>: 50 minutes       <b>Milieu de vie </b>: eaux océaniques benthiques
+							</div>
+						</button>
+						<button type="button" class="list-group-item list-group-item-action">
+							<div class="col-md-3">
+								<img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" class="img-fluid rounded taxonomic_img" alt="">
+							</div>
+							<div class="col-md-9">
+								<h5 class="list-group-item-heading">Grand dauphin de l'Indo Pacifique </h5>
+								<h5 class="list-group-item-heading"><i>Tursiops aduncus</i></h5>
+								<b>Taille</b> : 1 à 2 mètres     <b>Apnée </b>: 50 minutes       <b>Milieu de vie </b>: eaux océaniques benthiques
+							</div>
+						</button>
+						<button type="button" class="list-group-item list-group-item-action">
+							<div class="col-md-3">
+								<img src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid rounded taxonomic_img" alt="">
+							</div>
+							<div class="col-md-9">
+								<h5 class="list-group-item-heading">Stenelle à long bec</h5>
+								<h5 class="list-group-item-heading"><i>Stenella longirostris</i></h5>
+								<b>Taille</b> : 1 à 2 mètres     <b>Apnée </b>: 50 minutes       <b>Milieu de vie </b>: eaux océaniques pélagiques
+							</div>
+						</button>
+						<button type="button" class="list-group-item list-group-item-action">
+							<div class="col-md-3">
+								<img src="../../../public/assets/images/taxonomy/stenella_attenuata.jpg" class="img-fluid rounded taxonomic_img" alt="">
+							</div>
+							<div class="col-md-9">
+								<h5 class="list-group-item-heading">Stenelle tacheté</h5>
+								<h5 class="list-group-item-heading"><i>Stenella attenuata</i></h5>
+								<b>Taille</b> : 1 à 2 mètres     <b>Apnée </b>: 50 minutes       <b>Milieu de vie </b>: eaux océaniques pélagiques
+							</div>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-6" *ngIf="showedPanel == 'period'" >
+		<div class="col-12 py-3 px-1 green-border cont">
+			<div class="form-group">
+				<label for="results_date_start" class="col-2 col-form-label">Date de début</label>
+				<div class="col-12">
+					<input class="form-control" type="date" value="1900-01-01" id="results_date_start">
+				</div>
+				<label for="results_dat_end" class="col-2 col-form-label">Date de fin</label>
+				<div class="col-12">
+					<input class="form-control" type="date" value="2017-03-01" id="results_dat_end">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-6" *ngIf="showedPanel == 'chart'">
+		<div class="col-12 py-3 px-1 green-border cont d-flex align-items-center" style="margin-right= 15px">
+			<canvas baseChart height="auto"
+				[data]="pieChartData"
+				[labels]="pieChartLabels"
+				[chartType]="pieChartType"
+				(chartHover)="chartHovered($event)"
+				(chartClick)="chartClicked($event)">
+			</canvas>
+		</div>
+	</div>
+</div>

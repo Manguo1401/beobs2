@@ -16,9 +16,7 @@ import { UserModule } from './components/user/user.module'
 import { OrgModule } from "./components/org/org.module"
 import { AdminModule } from "./components/admin/admin.module"
 
-//import { MainMenuComponent } from './components/main_menu.component'
 
-//import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 //Importation des services
 import { ServiceCaterogiesModules } from "./services/attrs_data/categories.service"
