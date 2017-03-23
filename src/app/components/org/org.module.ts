@@ -23,9 +23,9 @@ import { SpeciesChoiceOrgComponent } from './data_choice/species_data/species_ch
 import { SubscribeOrgPage } from './subscribe/subscribe_org.component'
 import { PostulerOrgComponent } from './postuler/postuler.component'
 import { MemberManagementComponent } from './member_management/member_management.component'
-import { PresentationOrgComponent } from './presentation/presentation.component'
-import { RechercheZoneOrgComponent } from './presentation/recherche_zone.component'
-import { MembreOrgComponent } from './presentation/membre.component'
+import { PresentationOrgComponent } from './information/presentation/presentation.component'
+import { SearchedDataOrgComponent } from './information/searched_data/searched_data.component'
+import { MembersOrgComponent } from './information/members/members.component'
 
 
 @NgModule({
@@ -49,8 +49,8 @@ import { MembreOrgComponent } from './presentation/membre.component'
 		PostulerOrgComponent,
 		MemberManagementComponent,
 		PresentationOrgComponent,
-		RechercheZoneOrgComponent,
-		MembreOrgComponent
+		SearchedDataOrgComponent,
+		MembersOrgComponent
 	],
 	providers: [
 
