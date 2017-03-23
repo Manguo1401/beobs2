@@ -48,15 +48,18 @@
 			</button>
 			<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
 				<a class="dropdown-item" href="#">Boolean</a>
-				<a class="dropdown-item" href="#">0-10</a>
+				<a *ngFor="let list of listElems" class="dropdown-item" >{{list.listname}}</a>
 			</div>
 		</div>
-		<label>Créer une nouvelle liste</label><input type="text" ><div class="btn btn-secondary">Créer</div>
+		<div class="ml-auto">
+			<label>Créer une nouvelle liste</label><input type="text" ><div class="btn btn-secondary">Créer</div>
+			<div>
+				List {{listelemSelected.listname}}:
+				<label>Ajouter un élément</label><input type="text" ><div class="btn btn-secondary">ajouter</div>
+			</div>
+		</div>
 	</div>
-	<div>
-		Administration de la liste [listname]
-		<label>Ajouter un élément</label><input type="text" ><div class="btn btn-secondary">ajouter</div>
-	</div>
+
 
 	<div class="w-75 row rounded">
 		<div class="card h-100 ">

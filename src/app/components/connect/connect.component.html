@@ -27,7 +27,7 @@
                   Mot de passe requis
                 </div>
               </div>
-              <button class="mx-auto" [disabled]="!formLogin.valid" (click)="login(formLogin.value)" type="submit">Connexion</button>
+              <button class="mx-auto" [disabled]="!formLogin.valid" (click)="login(formLogin.value)">Connexion</button>
               <a class="mx-auto" (click)="showReg()">Créer un compte</a>
             </form>
           </section>
@@ -45,7 +45,7 @@
               <div class="form-group">
                 <div class="d-flex justify-content-between">
                   <label for="password">Mot de passe:</label>
-                  <input type="password" [(ngModel)]="user.password" name="password" #password="ngModel" placeholder="mot de passe" required>
+                  <input type="password" [(ngModel)]="user.password" name="password" #password="ngModel" placeholder="mot de passe">
                   <!--<input type="password" name="passwordBis" placeholder="Confirmez" required> #passwordBis="ngModel" -->
                 </div>
                 <div *ngIf="(!password.valid && (password.dirty || formRegister.submitted))">
@@ -68,7 +68,7 @@
               Confirmation de l'adresse e-mail incorrecte
             </div> -->
               </div>
-              <button class="mx-auto" [disabled]="!formRegister.valid" (click)="subscribe(formRegister.value)" type="submit">Créer mon compte</button>
+              <button class="mx-auto" [disabled]="!formRegister.valid" (click)="subscribe(formRegister.value)">Créer mon compte</button>
             </form>
           </section>
       <!-- <section *ngIf="_isAuthenticated" class="child">CONNECT {{user.username}}</section> -->
