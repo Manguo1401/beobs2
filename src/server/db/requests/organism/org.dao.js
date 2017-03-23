@@ -12,8 +12,8 @@ module.exports = function(app){
       });
   });*/
 
-  app.post('/org/api/createOrganism2', function(req, res) {
-    console.log("org.dao createOrganismzzzzzzz");
+  app.post('/org/api/createOrganism', function(req, res) {
+    console.log("org.dao createOrganism start");
     var obj = new Organism(req.body);
     obj._id = mongoose.Types.ObjectId();
     obj.save(function(err, obj) {
@@ -22,25 +22,16 @@ module.exports = function(app){
     });
   });
 
-  app.post('/org/api/createOrganism', function(req, res) {
-    console.log("user.dao createuseraaaaaaaaa");
-    var obj = new User(req.body);
-    obj._id = mongoose.Types.ObjectId();
-    obj.save(function(err, obj) {
-      if(err) return console.error(err);
-      res.status(200).json(obj);
-    });
-  });
 /*
-  app.put('/admin/api/editCategory/:id', function(req,res) {
-    Category.findOneAndUpdate({_id: req.params.id}, req.body, function(err) {
+  app.put('/org/api/editOrganism/:id', function(req,res) {
+    Organism.findOneAndUpdate({_id: req.params.id}, req.body, function(err) {
           if(err) return console.error(err);
           res.sendStatus(200);
         });
   });
 
-  app.delete('/admin/api/deleteCategory/:id', function(req, res) {
-    Category.findByIdAndRemove({_id: req.params.id}, function(err) {
+  app.delete('/org/api/deleteOrganism/:id', function(req, res) {
+    Organism.findByIdAndRemove({_id: req.params.id}, function(err) {
       if(err) return console.error(err);
       res.sendStatus(200);
     });

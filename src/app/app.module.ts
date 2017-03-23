@@ -22,6 +22,7 @@ import { AdminModule } from "./components/admin/admin.module"
 import { ServiceCaterogiesModules } from "./services/attrs_data/categories.service"
 import { ServiceAttrsData } from "./services/attrs_data/attrs_data.service"
 import { ServiceOrganismsModules } from "./services/org/org.service"
+import { AdminService } from "./services/admin/admin.service"
 
 import { UserService } from './services/user/user.service'
 /*import { ConnectComponent } from "./components/users/connect/connect.component"
@@ -49,7 +50,8 @@ import { SubscribeUserComponent } from "./components/users/subscribe/subscribe_u
         ServiceCaterogiesModules,
         ServiceAttrsData,
         ServiceOrganismsModules,
-        UserService
+        UserService,
+        AdminService
     ],
     declarations: [
         /*CategoryFilterPipe,*/
