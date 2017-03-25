@@ -3,6 +3,18 @@
   margin-left: 0px;
 }
 
+.size-icon{
+  width: 20px;
+  height: 20px;
+}
+
+.size-medium{
+  width: 100px;
+}
+
+.size-medium-column{
+  width: 170px;
+}
 
 #carouselMultiTrophe{
   width:100%;
@@ -292,9 +304,9 @@ ngb-datepicker{
   background-color: #F7F7F7;
 }
 
-#carouselMultiEspece .img_container_limitH{
+.img_container_limitH{
   overflow:hidden;
-  height: 150px;
+  max-height: 190px;
   width: 100%;
 }
 
