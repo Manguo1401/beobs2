@@ -1,7 +1,7 @@
-<div class="ui attached segment">
-  <h3>ATTRS DATA COMPONENT</h3>
-
-  <ul *ngFor="let categorie of categories">
-  	<button class="ui inverted brown button">{{categorie.name}}</button>
-  </ul>
+<div class="row my-3">
+	<div class="col-3">
+		<ul class="list-group">
+			<li class="list-group-item" *ngFor="let categorie of categories">{{categorie.name}}</li>
+		</ul>
+	</div>
 </div>
