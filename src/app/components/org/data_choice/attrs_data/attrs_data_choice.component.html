@@ -1,7 +1,168 @@
-<div class="ui attached segment">
-  <h3>ATTRS DATA COMPONENT</h3>
-
-  <ul *ngFor="let categorie of categories">
-  	<button class="ui inverted brown button">{{categorie.name}}</button>
-  </ul>
+<div class="d-flex flex-row justify-content-center my-3">
+	<h2>Choisissez vos données attributaires</h2>
 </div>
+
+<div class="row">
+	<div class="col-4 offset-1">
+		<div class="d-flex flex-row justify-content-between">
+			<h4>Temporel</h4>
+			<button class="btn btn-outline-default">
+				Revenir aux catégories
+			</button>
+		</div>
+		<ul class="list-group my-2">
+			<li class="list-group-item active">Heure</li>
+			<li class="list-group-item">Date</li>
+			<li class="list-group-item">Période</li>
+			<li class="list-group-item">Saison</li>
+		</ul>
+	</div>
+	<div class="col-6">
+		<div class="row">
+			<div class="col-12 attr-box mb-3 px-0">
+				<div class="card card-outline-default" style="background-color: #fff">
+					<div class="card-block">
+						<h4 class="card-title">Heure</h4>
+						<h6 class="card-subtitle mb-2">Entrez l'heure à laquelle vous avez observer votre individu</h6>
+						<div class="form-group row my-3">
+							<div class="col-12">
+								<input class="form-control" type="time" value="13:10" id="example-time-input">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="d-flex flex-row justify-content-end">
+			<button class="btn btn-outline-success">
+				Ajouter
+			</button>
+		</div>
+	</div>
+</div>
+
+<div class="d-flex flex-row justify-content-center mt-3">
+	<h2>Récapitulatif de vos données</h2>
+</div>
+
+<div class="d-flex flex-row justify-content-center mb-3">
+	<p class="lead">Donnez une importance à chacune de vos données attributaires en fonction des espèces sélectionnées</p>
+</div>
+
+<div class="d-flex flex-row justify-content-center">
+	<div class="col-10">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Données attributaires</th>
+					<th class="align-middle">
+						<img src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="vignette mx-auto rounded-circle" alt="">
+						<br>
+						Stenella longirostris
+						<br>
+						Stennelle à long bec
+					</th>
+					<th class="align-middle">
+						<img src="../../../public/assets/images/taxonomy/stenella_attenuata.jpg" class="vignette mx-auto rounded-circle" alt="">
+						<br>
+						Stenella attenuata
+						<br>
+						Stennelle tacheté
+					</th>
+					<th class="align-middle">
+						<img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" class="vignette mx-auto rounded-circle" alt="">
+						<br>
+						Tursiops aduncus
+						<br>
+						Grand dauphin de l'Indo Pacifique
+					</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="align-middle">Heure</td>
+					<td class="align-middle">
+						<select class="custom-select">
+							<option value="1">Essentiel</option>
+							<option value="2">Important</option>
+							<option value="3" selected>Utile</option>
+							<option value="4">Facultatif</option>
+						</select>
+					</td>
+					<td class="align-middle">
+						<select class="custom-select">
+							<option value="1">Essentiel</option>
+							<option value="2">Important</option>
+							<option value="3" selected>Utile</option>
+							<option value="4">Facultatif</option>
+						</select>
+					</td>
+					<td class="align-middle">
+						<select class="custom-select">
+							<option value="1">Essentiel</option>
+							<option value="2">Important</option>
+							<option value="3" selected>Utile</option>
+							<option value="4">Facultatif</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="align-middle">Taille</td>
+					<td class="align-middle">
+						<select class="custom-select">
+							<option value="1">Essentiel</option>
+							<option value="2">Important</option>
+							<option value="3" selected>Utile</option>
+							<option value="4">Facultatif</option>
+						</select>
+					</td>
+					<td class="align-middle">
+						<select class="custom-select">
+							<option value="1">Essentiel</option>
+							<option value="2">Important</option>
+							<option value="3" selected>Utile</option>
+							<option value="4">Facultatif</option>
+						</select>
+					</td>
+					<td class="align-middle">
+						<select class="custom-select">
+							<option value="1">Essentiel</option>
+							<option value="2">Important</option>
+							<option value="3" selected>Utile</option>
+							<option value="4">Facultatif</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="align-middle">Date</td>
+					<td class="align-middle">
+						<select class="custom-select">
+							<option value="1">Essentiel</option>
+							<option value="2">Important</option>
+							<option value="3" selected>Utile</option>
+							<option value="4">Facultatif</option>
+						</select>
+					</td>
+					<td class="align-middle">
+						<select class="custom-select">
+							<option value="1">Essentiel</option>
+							<option value="2">Important</option>
+							<option value="3" selected>Utile</option>
+							<option value="4">Facultatif</option>
+						</select>
+					</td>
+					<td class="align-middle">
+						<select class="custom-select">
+							<option value="1">Essentiel</option>
+							<option value="2">Important</option>
+							<option value="3" selected>Utile</option>
+							<option value="4">Facultatif</option>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+

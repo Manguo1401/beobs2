@@ -84,3 +84,8 @@ body {
 	height: 400px;
 	width: 100%;
 }
+
+.map-controller {
+  top: 80px;
+  left: .5em;
+}

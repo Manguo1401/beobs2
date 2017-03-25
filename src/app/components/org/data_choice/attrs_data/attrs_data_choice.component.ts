@@ -6,7 +6,8 @@ import { ServiceCaterogiesModules } from './../../../../services/attrs_data/cate
 
 @Component({
 	selector: 'my-attrs-data-choice-org',
-	templateUrl: 'attrs_data_choice.component.html'
+	templateUrl: 'attrs_data_choice.component.html',
+	styleUrls: ['attrs_data_choice.style.css']
 })
 
 export class AttrsDataChoiceOrgComponent {

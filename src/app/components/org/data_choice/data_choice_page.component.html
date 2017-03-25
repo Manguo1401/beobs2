@@ -2,13 +2,25 @@
 <my-org-menu-component></my-org-menu-component>
 
 <div class="ui attached segment">
-  <h2 >DATA CHOICE PAGE </h2>
-  <nav>
-  	<a routerLink="./attrs_data" routerLinkActive="active">Données attributaires</a>
-  	<a routerLink="./location" routerLinkActive="active">Localisation</a>
-  	<a routerLink="./species" routerLinkActive="active">Espèces</a>
-  </nav>
+	<div class="row my-2">
+		<div class="col-12">
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+					<a class="nav-link lead" routerLink="./species" routerLinkActive="active">Espèces</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link lead" routerLink="./location" routerLinkActive="active">Localisation</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link lead" routerLink="./attrs_data" routerLinkActive="active">
+						Données attributaires
+					</a>
+				</li>
+			</ul>
 
-  <router-outlet></router-outlet>
+			<router-outlet></router-outlet>
+		</div>
+	</div>
+
 
 </div>
