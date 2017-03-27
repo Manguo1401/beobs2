@@ -120,16 +120,33 @@
   </div>
   <div class="col-9 ml-auto d-flex flex-column">
 
-
-    <div class="content_item fil-obs d-flex flex-column mb-3">
-      <div class="row d-flex justify-content-between">
-        <h5><span>Manguo: </span>Sortie en mer</h5> <span>Le 26/12/2016</span>
+    <div class="content_item fil-obs d-flex flex-column mb-3 pt-0">
+      <div class="d-flex flex-row justify-content-between mb-1">
+        <div class="row p-0">
+          <div class="align-self-center p-1">
+            <img class="img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">
+          </div>
+          <div class="align-self-center p-0">
+            <h6 class="m-0">Manguo</h6>
+          </div>
+        </div>
+        <span class="lead small align-self-center">ajouté le 26/12/2016</span>
       </div>
-      <div class="row">
-        <div class="d-flex flex-wrap">
-          <div class="col-4">
+      <div class="d-flex flex-row">
+        <div class="d-flex flex-column size-medium-column">
+          <img id="img1" (click)="show('img1','Obs1')" src="../../../public/assets/images/maquette/dauphinImg.jpg" class="img-fluid size-medium mb-1 icon-success" alt="">
+          <img id="img2" (click)="show('img2','Obs2')" src="../../../public/assets/images/taxonomy/stenella_attenuata.jpg" class="img-fluid size-medium mb-1 icon-waiting" alt="">
+          <img id="img3" (click)="show('img3','Obs3')" src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid size-medium mb-1 icon-wrong" alt="">
+        </div>
+        <div id="SortieInfo" class="col flex-column pr-5">
+          <div class="d-flex flex-row"><h5 class="text-primary">Sortie bateau</h5><div class="mx-auto align-self-center badge badge-success">+28 pts!</div></div>
+          <div class="d-flex justify-content-between"><span>Le: 22/12/2016</span><span>Durée: 6h</span><span>Superficie: 120km²</span></div>
+          <div class="d-flex w-100"><span>Sortie vers l'ilot sada, superbe pêche avec Mathieu, et quelques belles observations, j'espère que vous allez aimer les photos!</span></div>
+        </div>
+        <div id="Obs1Info" class="col-3 p-0">
+          <div class="">
             <ul id="obs-list" class="list-group h-100">
-              <li class="list-group-item p-0">
+              <li class="list-group-item p-0 img_container_limitH">
                 <img src="../../../public/assets/images/maquette/dauphinImg.jpg" class="img-fluid w-100 rounded-top" alt="">
               </li>
               <li class="list-group-item list-group-item-success">
@@ -141,9 +158,11 @@
               </li>
             </ul>
           </div>
-          <div class="col-4">
+        </div>
+        <div id="Obs2Info" class="col-3 p-0">
+          <div class="">
             <ul id="obs-list" class="list-group h-100">
-              <li class="list-group-item p-0">
+              <li class="list-group-item p-0 img_container_limitH">
                 <img src="../../../public/assets/images/taxonomy/stenella_attenuata.jpg" class="img-fluid rounded-top" alt="">
               </li>
               <li class="list-group-item">
@@ -169,10 +188,180 @@
               </li>
             </ul>
           </div>
+        </div>
+        <div id="Obs3Info" class="col-3 p-0">
+          <div class="">
+            <ul id="obs-list" class="list-group">
+              <li class="list-group-item p-0 img_container_limitH">
+                <img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" class="img-fluid rounded-top" alt="">
+              </li>
+              <li class="list-group-item list-group-item-success">
+                <div class="d-flex flex-row w-100">
+                  <div class="p-0 align-self-center col-1 mr-1 text-center"><i class="fa fa-users" aria-hidden="true"></i></div>
+                  <div class="ml-2">Dauphin Longbec</div>
+                  <div class="ml-auto align-self-center badge badge-danger">+0 pt</div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="d-flex flex-row w-100">
+                  <div class="p-0 align-self-center col-1 mr-1 text-center"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+                  <div>1. Stenella Attenuata</div>
+                  <div class="ml-auto align-self-center badge badge-warning">2</div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="d-flex flex-row w-100">
+                  <div class="p-0 align-self-center col-1 mr-1 text-center"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+                  <div>2. Stenella Longirostris</div>
+                  <div class="ml-auto align-self-center badge badge-warning">1</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="Obs1Details" class="ml-5 w-50">
+          <span class="lead">Commentaires:</span>
+          <table class="table flex-nowrap">
+            <tbody>
+              <tr>
+                <td class="text-nowrap"><img class="img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Jacob</td>
+                <td>
+                  Belle photo!
+                </td>
+              </tr>
+              <tr>
+                <td class="text-nowrap"><img class="img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Manguo</td>
+                <td class="w-75"><input type="textarea" class="w-100" placeholder="Exprimez-vous">
+                  <div><button type="button" class="btn btn-secondary btn-sm d-flex ml-auto">Valider</button></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="Obs3Details" class="ml-5 w-50">
+          <span class="lead">Commentaires:</span>
+          <table class="table flex-nowrap">
+            <tbody>
+              <tr>
+                <td class="text-nowrap"><img class="img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Max</td>
+                <td>
+                  Superbe ta photo!
+                </td>
+              </tr>
+              <tr>
+                <td class="text-nowrap"><img class="img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Jacob</td>
+                <td>Manguo tu t'es trompé d'espèce parce que tu n'as pas fait attention à la forme du museau.</td>
+              </tr>
+              <tr>
+                <td><img class="img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Larry</td>
+                <td>Ce qui est caractéristique à cette espèce c'est la tache sur l'aileron! </td>
+              </tr>
+              <tr>
+                <td class="text-nowrap"><img class="img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Manguo</td>
+                <td class="w-75"><input type="textarea" class="w-100" placeholder="Exprimez-vous">
+                  <div><button type="button" class="btn btn-secondary btn-sm d-flex ml-auto">Valider</button></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="Obs2Details" class="ml-5 w-50">
+          <span class="lead">Commentaires:</span>
+          <table class="table flex-nowrap">
+            <tbody>
+              <tr>
+                <td class="text-nowrap"><img class="img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Manguo</td>
+                <td class="w-75"><input type="textarea" class="w-100" placeholder="Exprimez-vous">
+                  <div><button type="button" class="btn btn-secondary btn-sm d-flex ml-auto">Valider</button></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="content_item fil-obs d-flex flex-column mb-3 pt-0">
+      <div class="d-flex flex-row justify-content-between mb-1">
+        <div class="row p-0">
+          <div class="align-self-center p-1">
+            <img class="img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">
+          </div>
+          <div class="align-self-center p-0">
+            <h6 class="m-0">Manguo</h6>
+          </div>
+        </div>
+        <span class="lead small align-self-center">ajouté le 26/12/2016</span>
+      </div>
+      <div class="d-flex flex-row">
+        <div class="d-flex flex-wrap w-100">
           <div class="col-4">
             <ul id="obs-list" class="list-group h-100">
-              <li class="list-group-item p-0">
+              <li class="list-group-item p-0 img_container_limitH">
+                <img src="../../../public/assets/images/maquette/dauphinImg.jpg" class="img-fluid w-100 rounded-top" alt="">
+              </li>
+              <li class="list-group-item list-group-item-success">
+                <div class="d-flex flex-row w-100">
+                  <div class="p-0 align-self-center col-1 mr-1 text-center"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+                  <div>1. Stenella Attenuata</div>
+                  <div class="ml-auto align-self-center badge badge-success">+12 pts!</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content_item fil-obs d-flex flex-column mb-3 pt-0">
+      <div class="d-flex flex-row justify-content-between mb-1">
+        <div class="row p-0">
+          <div class="align-self-center p-1">
+            <img class="img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">
+          </div>
+          <div class="align-self-center p-0">
+            <h6 class="m-0">Manguo</h6>
+          </div>
+        </div>
+        <span class="lead small align-self-center">ajouté le 26/12/2016</span>
+      </div>
+      <div class="d-flex flex-row">
+        <div class="d-flex flex-wrap w-100">
+          <div class="col-4">
+            <ul id="obs-list" class="list-group h-100">
+              <li class="list-group-item p-0 img_container_limitH">
+                <img src="../../../public/assets/images/taxonomy/stenella_attenuata.jpg" class="img-fluid rounded-top" alt="">
+              </li>
+              <li class="list-group-item">
+                <div class="d-flex flex-row w-100">
+                  <div class="p-0 align-self-center col-1 mr-1 text-center"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+                  <div>1. Dauphin Longbec</div>
+                  <div class="ml-auto align-self-center badge badge-warning">25</div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="d-flex flex-row w-100">
+                  <div class="p-0 align-self-center col-1 mr-1 text-center"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+                  <div>2. Stenella Attenuata</div>
+                  <div class="ml-auto align-self-center badge badge-warning">1</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <ul id="obs-list" class="list-group h-100">
+              <li class="list-group-item p-0 img_container_limitH">
                 <img src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid rounded-top" alt="">
+              </li>
+              <li class="list-group-item">
+                <div class="d-flex flex-row w-100">
+                  <div class="p-0 align-self-center col-1 mr-1 text-center">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                  </div>
+                  <div>Stenella Attenuata</div>
+                  <div class="ml-auto align-self-center badge badge-warning">28</div>
+                </div>
               </li>
               <li class="list-group-item">
                 <div class="d-flex flex-row w-100">
@@ -181,15 +370,6 @@
                   </div>
                   <div>1. dauphin Longbec</div>
                   <div class="ml-auto align-self-center badge badge-warning">2</div>
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="d-flex flex-row w-100">
-                  <div class="p-0 align-self-center col-1 mr-1 text-center">
-                    <i class="fa fa-users" aria-hidden="true"></i>
-                  </div>
-                  <div>Stenella Attenuata</div>
-                  <div class="ml-auto align-self-center badge badge-warning">18</div>
                 </div>
               </li>
               <li class="list-group-item">
@@ -206,8 +386,15 @@
 
           <div class="col-4">
             <ul id="obs-list" class="list-group h-100">
-              <li class="list-group-item p-0">
+              <li class="list-group-item p-0 img_container_limitH">
                 <img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" class="img-fluid rounded-top" alt="">
+              </li>
+              <li class="list-group-item list-group-item-success">
+                <div class="d-flex flex-row w-100">
+                  <div class="p-0 align-self-center col-1 mr-1 text-center"><i class="fa fa-users" aria-hidden="true"></i></div>
+                  <div>&nbsp;&nbsp;&nbsp;Dauphin Longbec</div>
+                  <div class="ml-auto align-self-center badge badge-danger">+0 pt</div>
+                </div>
               </li>
               <li class="list-group-item">
                 <div class="d-flex flex-row w-100">
@@ -221,13 +408,6 @@
                   <div class="p-0 align-self-center col-1 mr-1 text-center"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
                   <div>2. Stenella Longirostris</div>
                   <div class="ml-auto align-self-center badge badge-warning">1</div>
-                </div>
-              </li>
-              <li class="list-group-item list-group-item-success">
-                <div class="d-flex flex-row w-100">
-                  <div class="p-0 align-self-center col-1 mr-1 text-center"><i class="fa fa-users" aria-hidden="true"></i></div>
-                  <div>&nbsp;&nbsp;&nbsp;Dauphin Longbec</div>
-                  <div class="ml-auto align-self-center badge badge-danger">+0 pt</div>
                 </div>
               </li>
             </ul>
@@ -269,15 +449,6 @@
             <li class="list-group-item p-0">
               <img src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid rounded-top" alt="">
             </li>
-            <li class="list-group-item list-group-item-warning">
-              <div class="d-flex flex-row w-100">
-                <div class="p-0 align-self-center col-1 mr-1 text-center">
-                  <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-                </div>
-                <div>Dauphin Longbec</div>
-                <div class="ml-auto align-self-center badge badge-warning">2</div>
-              </div>
-            </li>
             <li class="list-group-item">
               <div class="d-flex flex-row w-100">
                 <div class="p-0 align-self-center col-1 mr-1 text-center">
@@ -285,6 +456,15 @@
                 </div>
                 <div>Stenella Attenuata</div>
                 <div class="ml-auto align-self-center badge badge-warning">18</div>
+              </div>
+            </li>
+            <li class="list-group-item list-group-item-warning">
+              <div class="d-flex flex-row w-100">
+                <div class="p-0 align-self-center col-1 mr-1 text-center">
+                  <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </div>
+                <div>Dauphin Longbec</div>
+                <div class="ml-auto align-self-center badge badge-warning">2</div>
               </div>
             </li>
             <li class="list-group-item">

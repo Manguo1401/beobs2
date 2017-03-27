@@ -1,4 +1,4 @@
-import { Component, AfterViewInit} from '@angular/core'
+import { Component, AfterViewInit, ElementRef, Renderer} from '@angular/core'
 
 //banner
 import { OrgBannerComponent } from '../org_banner/org_banner.component'
@@ -13,7 +13,7 @@ import {NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
 })
 
 export class HomeOrgComponent implements AfterViewInit{
-  model;
+  //model;
 
   constructor(config: NgbDatepicker) {
   }

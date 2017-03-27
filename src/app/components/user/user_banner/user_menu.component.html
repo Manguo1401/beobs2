@@ -1,51 +1,50 @@
 <div class="bg-faded">
   <div class="row mx-0">
-    <div class="col px-0">
-      <nav class="navbar navbar-toggleable-md navbar-light v-padding-20">
+    <div class="usermenu_user col px-0">
+      <nav class="navbar navbar-toggleable-md navbar-light pt-2 pb-0">
         <ul class="nav navbar-nav">
           <li class="nav-item mr-1">
-            <div class="rounded bg-white"><button routerLink="./fil" routerLinkActive="active" class="nav-item btn btn-outline-success">Fil d'actualité</button></div>
+            <div class=""><button routerLink="./fil" routerLinkActive="active" class="nav-item btn btnunder-1">Fil d'actualité</button></div>
+          </li>
+          <li class="nav-item btn-group mr-1" role="group">
+            <div class="">
+              <button id="btnObs" type="button" class="btn btnunder-1 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Observations
+              </button>
+              <div class="dropdown-menu" aria-labelledby="btnObs">
+                <a routerLink="./new_observation" routerLinkActive="active" class="dropdown-item btnunder-1">Nouvelle observation</a>
+                <a routerLink="./my_observations" routerLinkActive="active" class="dropdown-item btnunder-1">Mes observations</a>
+                <a routerLink="./global_results" routerLinkActive="active" class="dropdown-item btnunder-1">Résultats</a>
+              </div>
+            </div>
           </li>
           <li class="nav-item mr-1">
-            <div class="rounded bg-white"><button routerLink="./my_observations" routerLinkActive="active" class="nav-item btn btn-outline-success">Mes Observations</button></div>
+            <div class=""><a routerLink="./taxonomic_book" routerLinkActive="active" class="nav-item btn btnunder-2">Guide d'identification</a></div>
           </li>
           <li class="nav-item mr-1">
-            <div class="rounded bg-white"><a routerLink="./new_observation" routerLinkActive="active" class="nav-item btn btn-outline-primary">Nouvelle observation</a></div>
-          </li>
-          <li class="nav-item mr-1">
-            <div class="rounded bg-white"><a routerLink="./taxonomic_book" routerLinkActive="active" class="nav-item btn btn-outline-primary">Guide d'identification</a></div>
-          </li>
-          <li class="nav-item mr-1">
-            <div class="rounded bg-white"><a routerLink="./global_results" routerLinkActive="active" class="nav-item btn btn-outline-primary">Résultats</a></div>
-          </li>
-          <li class="nav-item mr-1">
-            <div class="rounded bg-white"><a routerLink="./obs_identification" routerLinkActive="active" class="nav-item btn btn-outline-warning">Identification d'observations</a></div>
+            <div class=""><a routerLink="./obs_identification" routerLinkActive="active" class="nav-item btn btnunder-3">Identification d'observations</a></div>
           </li>
         </ul>
       </nav>
     </div>
     <div class="col px-0">
-      <nav class="navbar navbar-toggleable-md navbar-light v-padding-20 pull-right">
+      <nav class="navbar navbar-toggleable-md navbar-light pull-right pt-2 pb-0">
         <ul class="nav navbar-nav">
-          <li class="nav-item ml-1">
+<!--           <li class="nav-item ml-1">
             <span class="navbar-text">Organismes : </span>
           </li>
           <li class="nav-item ml-1">
-            <div class="rounded bg-white">
-              <button  routerLink="./../organisme/subscribe" routerLinkActive="active" class="nav-item btn btn-outline-success">Créer</button>
+            <div class="bg-white">
+              <button  routerLink="./../organisme/subscribe" routerLinkActive="active" class="nav-item btn btnunder-1">Créer</button>
             </div>
-          </li>
-          <li class="nav-item ml-1">
-            <div class="rounded bg-white">
-              <button class="nav-item btn btn-outline-success">Postuler</button>
-            </div>
-          </li>
+          </li>-->
           <li class="nav-item btn-group ml-1" role="group">
-            <div class="rounded bg-white">
-              <button id="btnOrganismes" type="button" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Mes organismes
+            <div class="">
+              <button id="btnOrganismes" type="button" class="btn btnunder-1 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Organismes
               </button>
               <div class="dropdown-menu" aria-labelledby="btnOrganismes">
+                <a class="dropdown-item" href="#">Créer</a>
                 <a class="dropdown-item" href="#">Fast Banana</a>
                 <a class="dropdown-item" href="#">BBB</a>
                 <a class="dropdown-item" href="#">OK</a>
@@ -53,11 +52,6 @@
                 <a class="dropdown-item" href="#">aFake productions</a>
                 <a class="dropdown-item" href="#">Dunder mifflin</a>
               </div>
-            </div>
-          </li>
-          <li class="nav-item ml-1">
-            <div class="rounded bg-white">
-              <button class="nav-item btn btn-outline-success">Rechercher</button>
             </div>
           </li>
         </ul>

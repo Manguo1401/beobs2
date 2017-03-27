@@ -17,6 +17,25 @@ export class NewsComponent implements AfterViewInit{
   constructor(config: NgbDatepicker) {
   }
 
+
+  show(imgclick:string, nameItem:string){
+    $("#SortieInfo").hide();
+    $("#Obs1Info").hide();
+    $("#Obs2Info").hide();
+    $("#Obs3Info").hide();
+    $("#Obs1Details").hide();
+    $("#Obs2Details").hide();
+    $("#Obs3Details").hide();
+    $("#"+nameItem+"Info").show();
+    $("#"+nameItem+"Details").show();
+
+    $("#img1").removeClass('icon-active');
+    $("#img2").removeClass('icon-active');
+    $("#img3").removeClass('icon-active');
+    $("#"+imgclick).addClass('icon-active');
+  }
+
+
   ngAfterViewInit() {
 
     $( document ).ready(function() {//permet d'attendre le chargement des composants fils!
@@ -69,6 +88,14 @@ export class NewsComponent implements AfterViewInit{
             $('#leftpanelfixed').removeClass("fixed");
         }
       });
+
+
+      $("#Obs1Info").hide();
+      $("#Obs2Info").hide();
+      $("#Obs3Info").hide();
+      $("#Obs1Details").hide();
+      $("#Obs2Details").hide();
+      $("#Obs3Details").hide();
 
     });
 

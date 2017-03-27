@@ -183,14 +183,9 @@ ngb-datepicker{
   overflow-x: hidden;
 }
 
-#obs-list-esp li{
+#obs-list-info li{
   /* border-color: olivedrab; */
-  background-color: #F1F9F1;
-}
-
-#obs-list-ident li{
-  /* border-color: olivedrab; */
-  background-color: #FFFEEE;
+  background-color: #FFFFFF;
 }
 
 #overflowfix .badge:first-child{
