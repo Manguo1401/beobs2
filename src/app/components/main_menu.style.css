@@ -6,6 +6,14 @@
   background-color: white;
 }
 
+.marginMenu{
+  padding-top: 50px;
+}
+
+.topMargeNav{
+  position: fixed;
+  z-index: 10000;
+}
 
 .topMargeNav .btn{
   color:black;

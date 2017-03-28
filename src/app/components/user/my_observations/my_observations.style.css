@@ -3,6 +3,39 @@
   margin-left: 0px;
 }
 
+.size-icon{
+  width: 20px;
+  height: 20px;
+}
+
+.size-medium{
+  width: 100px;
+}
+
+.size-medium-column{
+  width: 110px;
+}
+
+.icon-success{
+  border: 0px solid #5cb85c;
+  border-left-width: 3px;
+}
+
+.icon-active{
+  /* box-shadow: 1px 0 0px 1px #5cb85c; */
+  /* 50px 0px 0px -32px rgba(40,40,100,0.75);10px 0px 10px -5px rgba(0,0,0,0.75); */
+  border-width: 2px !important;
+}
+
+.icon-waiting{
+  border: 0px solid  rgba(240, 173, 78, 1);
+  border-left-width: 3px;
+}
+
+.icon-wrong{
+   border: 0px solid #d9534f;
+  border-left-width: 3px;
+}
 
 #carouselMultiTrophe{
   width:100%;
@@ -292,9 +325,9 @@ ngb-datepicker{
   background-color: #F7F7F7;
 }
 
-#carouselMultiEspece .img_container_limitH{
+.img_container_limitH{
   overflow:hidden;
-  height: 150px;
+  max-height: 190px;
   width: 100%;
 }
 
