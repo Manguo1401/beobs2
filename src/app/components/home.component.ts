@@ -6,7 +6,7 @@ import {MainMenuComponent} from './main_menu.component'
 @Component ({
 	selector: 'my-home-component',
 	templateUrl: 'home.component.html',
-  //styleUrls: ['user/user_banner.css']
+  styleUrls: ['home.style.css']
 })
 
 export class HomeComponent {
