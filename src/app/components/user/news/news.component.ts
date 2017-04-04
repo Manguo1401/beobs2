@@ -21,7 +21,7 @@ export class NewsComponent implements AfterViewInit{
 	public nbElem:string="none";
 
 	constructor(config: NgbDatepicker) {
-		this.listelem = [{"FilContent":"S1","ObsList":["1","2","3"]},{"FilContent":"I1","ObsList":["1","2","3"]}];
+		this.listelem = [{"FilContent":"S1","ObsList":["1","2","3"]},{"FilContent":"I1","ObsList":["1","2","3"]},{"FilContent":"SO1","ObsList":["1","2"]}];
 	}
 
 	public overstatus="no";
