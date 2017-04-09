@@ -1,3 +1,5 @@
+@import "../../css/colors.style";
+
 .row{
   margin-right: 0px;
   margin-left: 0px;
@@ -10,6 +12,9 @@
 
 .size-medium{
   width: 100px;
+  margin-top: 2px;
+  margin-right: 2px;
+  margin-bottom: 4px;
 }
 
 .size-medium-column{
@@ -27,12 +32,12 @@
 }
 
 .icon-wrong{
-   border: 0px solid #d9534f;
+  border: 0px solid #d9534f;
   border-left-width: 3px;
 }
 
 .icon-ident{
-  border: 0px solid #333;
+  border: 0px solid lightgrey;
   border-left-width: 3px;
 }
 
@@ -42,6 +47,9 @@
   border-width: 2px !important;
   position: relative;
   left: 1px;
+  margin:0px;
+  margin-bottom: 4px;
+  margin-left: 1px;
 }
 
 .block-up{
@@ -172,24 +180,24 @@
   border-bottom-right-radius:0px;
   border-bottom-left-radius:0px;
 }
-.text-darkgreen{
-  color: olivedrab;
+.text-Espece{
+  color: $GuideEspece;/*olivedrab;*/
 }
 
-.badge-darkgreen{
-  color: olivedrab;
-  background-color: rgba(107, 142, 35, 0.3);
+.badge-Espece{
+  color: $GuideEspece;/*olivedrab;*/
+  background-color: rgba(139, 69, 19, 0.3);/*rgba(107, 142, 35, 0.3);*/
   /* background-color: olivedrab; */
 }
 
-.badge-info{
-  color: #5bc0de!important;
-  background-color: rgba(91, 192, 222, 0.3);
+.badge-Obs{
+  color: $UserObsColor!important;/*#5bc0de!important;*/
+  background-color: rgba(135, 206, 235, 0.3);/*rgba(91, 192, 222, 0.3);*/
 }
 
-.badge-warning{
-  color: #f0ad4e!important;
-  background-color: rgba(240, 173, 78, 0.3);
+.badge-Ident{
+  color: $UserIdentifColor!important;/*#f0ad4e!important;*/
+  background-color: rgba(46, 139, 87, 0.3);/*rgba(240, 173, 78, 0.3);*/
 }
 
 .badge-default{
@@ -209,10 +217,10 @@
   /* background-color: white; */
   /* border: 1px solid black; */
 }
-
-ngb-datepicker{
+/*
+.ngb-datepicker{
   width: 100%;
-}
+} */
 
 .fixed{
   position: fixed;
@@ -227,9 +235,40 @@ ngb-datepicker{
   overflow-x: hidden;
 }
 
+.limitH-60{
+  height: 60px;
+}
+
+.over-icon{
+  position: absolute;
+  top:20px;
+  left: 10px;
+}
+
+.over-icon{
+  position: absolute;
+  top:4px;
+  left: 4px;
+}
+
+.over-icon button{
+  padding: 20px 16px 21px 16px;
+  border-width: 0px;
+  color:transparent;
+}
+
+.over-icon button:hover{
+  padding: 20px 16px 21px 16px;
+  border-width: 1px;
+  color:white;
+}
+
+#obs-list-ident
+
+
 #obs-list-esp li{
   /* border-color: olivedrab; */
-  background-color: #F1F9F1;
+  background-color: $UserObsColor; /* #F1F9F1; */
 }
 
 #obs-list-ident li{

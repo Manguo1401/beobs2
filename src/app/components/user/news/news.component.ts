@@ -6,7 +6,7 @@ import {NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
 	templateUrl: 'news.component.html',
 	providers: [NgbDatepicker],
 	styleUrls: [
-	'./../my_observations/my_observations.style.css',
+	'./../my_observations/my_observations.style.scss',
 	//'../user_banner.css'
 	]
 })
@@ -177,6 +177,7 @@ export class NewsComponent implements AfterViewInit{
 				}
 			});
 
+			//$(".over-icon").hide();
 		});
 
 

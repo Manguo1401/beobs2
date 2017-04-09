@@ -20,7 +20,7 @@
   border-bottom-color: $userFilColor;
 }
 
-.btnmenu-Fil:hover, .btnmenu-Ident:focus {
+.btnmenu-Fil:hover, .btnmenu-Fil:focus {
   color: $userFilColor;
   border-color: $userFilColor;
 }
@@ -35,7 +35,7 @@
   border-bottom-color: $UserParticipationColor;
 }
 
-.btnmenu-Participation:hover, .btnmenu-Ident:focus {
+.btnmenu-Participation:hover, .btnmenu-Participation:focus {
   color: $UserParticipationColor;
   border-color: $UserParticipationColor;
 }
@@ -52,7 +52,7 @@
   color: black;
 }
 
-.btnmenu-Obs:hover{
+.btnmenu-Obs:hover, .btnmenu-Obs:focus {
   color:$UserObsColor;
   border-color: $UserObsColor;
 }
@@ -69,7 +69,7 @@
   color: black;
 }
 
-.btnmenu-Esp:hover{
+.btnmenu-Esp:hover, .btnmenu-Esp:focus {
   color:$GuideEspece;
   border-color: $GuideEspece;
 }
@@ -99,7 +99,7 @@
   border-bottom-color: $OrgColor;
 }
 
-.btnmenu-Org:hover, .btnmenu-Ident:focus {
+.btnmenu-Org:hover, .btnmenu-Org:focus {
   color: $OrgColor;
   border-color: $OrgColor;
 }
@@ -114,7 +114,7 @@
   border-bottom-color: $OrgFilColor;
 }
 
-.btnmenu-OrgFil:hover, .btnmenu-Ident:focus {
+.btnmenu-OrgFil:hover, .btnmenu-OrgFil:focus {
   color: $OrgFilColor;
   border-color: $OrgFilColor;
 }
@@ -129,7 +129,7 @@
   border-bottom-color: $OrgPresentationColor;
 }
 
-.btnmenu-OrgPresentation:hover, .btnmenu-Ident:focus {
+.btnmenu-OrgPresentation:hover, .btnmenu-OrgPresentation:focus {
   color: $OrgPresentationColor;
   border-color: $OrgPresentationColor;
 }
@@ -144,7 +144,7 @@
   border-bottom-color: $OrgMembreColor;
 }
 
-.btnmenu-OrgMembre:hover, .btnmenu-Ident:focus {
+.btnmenu-OrgMembre:hover, .btnmenu-OrgMembre:focus {
   color: $OrgMembreColor;
   border-color: $OrgMembreColor;
 }
@@ -160,7 +160,7 @@
   border-bottom-color: $OrgParcObsColor;
 }
 
-.btnmenu-OrgParcObs:hover, .btnmenu-Ident:focus {
+.btnmenu-OrgParcObs:hover, .btnmenu-OrgParcObs:focus {
   color: $OrgParcObsColor;
   border-color: $OrgParcObsColor;
 }
@@ -175,7 +175,7 @@
   border-bottom-color: $OrgPostulerColor;
 }
 
-.btnmenu-OrgPostuler:hover, .btnmenu-Ident:focus {
+.btnmenu-OrgPostuler:hover, .btnmenu-OrgPostuler:focus {
   color: $OrgPostulerColor;
   border-color: $OrgPostulerColor;
 }
@@ -190,7 +190,7 @@
   border-bottom-color: $OrgDonneesColor;
 }
 
-.btnmenu-OrgDonnees:hover, .btnmenu-Ident:focus {
+.btnmenu-OrgDonnees:hover, .btnmenu-OrgDonnees:focus {
   color: $OrgDonneesColor;
   border-color: $OrgDonneesColor;
 }
@@ -205,7 +205,7 @@
   border-bottom-color: $OrgAdminDonneesColor;
 }
 
-.btnmenu-OrgAdminDonnees:hover, .btnmenu-Ident:focus {
+.btnmenu-OrgAdminDonnees:hover, .btnmenu-OrgAdminDonnees:focus {
   color: $OrgAdminDonneesColor;
   border-color: $OrgAdminDonneesColor;
 }
