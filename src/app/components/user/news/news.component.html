@@ -120,7 +120,117 @@
   </div>
   <div class="col-9 ml-auto d-flex flex-column">
 
+
+    <div class="content_item fil-other d-flex flex-column mb-3 pt-0">
+      <!--<div>{{nbElem}}</div>
+      <div>{{listelem | json}}</div>
+      <span *ngFor="let item of tabVisibility">{{item | json}}</span>
+      <div>{{tabVisibilityPrev | json}}</div>
+      <div>{{overstatus}}</div>
+      <ul>
+        <li *ngFor="elem of tabVisibility">{{elem | json}}</li>
+      </ul> -->
+      <div class="d-flex flex-row justify-content-between mb-1">
+        <div class="row p-0">
+          <div class="align-self-center p-1">
+            <img class="img-fluid rounded size-icon" src="../../../public/assets/images/profil/profil2.jpg" alt="Card image cap">
+          </div>
+          <div class="align-self-center p-0">
+            <h6 class="m-0">Paul</h6>
+          </div>
+        </div>
+        <span class="lead small align-self-center">ajouté le 26/12/2016</span>
+      </div>
+      <div class="d-flex flex-row">
+        <div class="d-flex flex-column size-medium-column">
+          <img id="SO1_img1" (click)="showClick('SO1_1')" on-mouseover="showOver('SO1_1')" on-mouseout="backOver()" src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid size-medium mb-1 icon-waiting" alt="">
+          <img id="SO1_img2" (click)="showClick('SO1_2')" on-mouseover="showOver('SO1_2')" on-mouseout="backOver()" src="../../../public/assets/images/taxonomy/stenella_attenuata.jpg" class="img-fluid size-medium mb-1 icon-ident" alt="">
+        </div>
+        <div id="SO1" class="col flex-column pr-5">
+          <div class="d-flex flex-row"><h5 class="text-primary">Pêche au sud de la Réunion</h5><!-- <div class="ml-auto align-self-center badge badge-success">+12 pts!</div> --></div>
+          <div class="d-flex justify-content-between"><span>Le: 26/12/2016</span><span>Durée: 4h</span><span>Superficie: 220km²</span></div>
+          <div class="d-flex w-100"><span>Sortie à 10 km des côtes pour une après-midi ensoleillée, nous avons pu observer quelques beaux spécimens: le photographe a fait de très belles photos!</span></div>
+        </div>
+        <div id="SO1_obs1" class="col-3 p-0">
+          <div class="">
+            <ul id="obs-list" class="list-group h-100">
+              <li class="list-group-item p-0 img_container_limitH">
+                <img src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid w-100 rounded-top" alt="">
+              </li>
+              <li class="list-group-item">
+                <div class="d-flex flex-row w-100">
+                  <div class="p-0 align-self-center col-1 mr-1 text-center"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+                  <div>1. Dauphin Longbec</div>
+                  <div class="ml-auto align-self-center badge badge-warning">25</div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="d-flex flex-row w-100">
+                  <div class="p-0 align-self-center col-1 mr-1 text-center"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+                  <div>2. Stenella Attenuata</div>
+                  <div class="ml-auto align-self-center badge badge-warning">1</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="SO1_obs2" class="col-3 p-0">
+          <div class="">
+            <ul id="obs-list" class="list-group h-100">
+              <li class="list-group-item p-0 img_container_limitH">
+                <img src="../../../public/assets/images/taxonomy/stenella_attenuata.jpg" class="img-fluid rounded-top" alt="">
+              </li>
+              <li class="list-group-item">
+                <button type="button" class="btn btn-primary mx-auto">Identifier!</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="SO1_obs1Details" class="col-7 p-0 ml-3">
+          <span class="lead">Commentaires:</span>
+          <table class="table flex-nowrap">
+            <tbody>
+              <tr>
+                <td class="text-nowrap"><img class="m-1 img-fluid rounded size-icon" src="../../../public/assets/images/profil/profil2.jpg" alt="Card image cap">Jacob</td>
+                <td>
+                  Belle photo!
+                </td>
+              </tr>
+              <tr>
+                <td class="text-nowrap"><img class="m-1 img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Manguo</td>
+                <td class="w-75"><input type="textarea" class="w-100" placeholder="Exprimez-vous">
+                  <div><button type="button" class="btn btn-secondary btn-sm d-flex ml-auto">Valider</button></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="SO1_obs2Details" class="col-7 p-0 ml-3">
+          <span class="lead">Commentaires:</span>
+          <table class="table flex-nowrap">
+            <tbody>
+              <tr>
+                <td class="text-nowrap"><img class="m-1 img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Manguo</td>
+                <td class="w-75"><input type="textarea" class="w-100" placeholder="Exprimez-vous">
+                  <div><button type="button" class="btn btn-secondary btn-sm d-flex ml-auto">Valider</button></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
     <div class="content_item fil-obs d-flex flex-column mb-3 pt-0">
+      <!--<div>{{nbElem}}</div>
+      <div>{{listelem | json}}</div>
+      <span *ngFor="let item of tabVisibility">{{item | json}}</span>
+      <div>{{tabVisibilityPrev | json}}</div>
+      <div>{{overstatus}}</div>
+      <ul>
+        <li *ngFor="elem of tabVisibility">{{elem | json}}</li>
+      </ul> -->
       <div class="d-flex flex-row justify-content-between mb-1">
         <div class="row p-0">
           <div class="align-self-center p-1">
@@ -134,16 +244,16 @@
       </div>
       <div class="d-flex flex-row">
         <div class="d-flex flex-column size-medium-column">
-          <img id="img1" (click)="show('img1','Obs1')" src="../../../public/assets/images/maquette/dauphinImg.jpg" class="img-fluid size-medium mb-1 icon-success" alt="">
-          <img id="img2" (click)="show('img2','Obs2')" src="../../../public/assets/images/taxonomy/stenella_attenuata.jpg" class="img-fluid size-medium mb-1 icon-waiting" alt="">
-          <img id="img3" (click)="show('img3','Obs3')" src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid size-medium mb-1 icon-wrong" alt="">
+          <img id="S1_img1" (click)="showClick('S1_1')" on-mouseover="showOver('S1_1')" on-mouseout="backOver()" src="../../../public/assets/images/maquette/dauphinImg.jpg" class="img-fluid size-medium mb-1 icon-success" alt="">
+          <img id="S1_img2" (click)="showClick('S1_2')" on-mouseover="showOver('S1_2')" on-mouseout="backOver()" src="../../../public/assets/images/taxonomy/stenella_attenuata.jpg" class="img-fluid size-medium mb-1 icon-waiting" alt="">
+          <img id="S1_img3" (click)="showClick('S1_3')" on-mouseover="showOver('S1_3')" on-mouseout="backOver()" src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid size-medium mb-1 icon-wrong" alt="">
         </div>
-        <div id="SortieInfo" class="col flex-column pr-5">
-          <div class="d-flex flex-row"><h5 class="text-primary">Sortie bateau</h5><div class="mx-auto align-self-center badge badge-success">+28 pts!</div></div>
+        <div id="S1" class="col flex-column pr-5">
+          <div class="d-flex flex-row"><h5 class="text-primary">Sortie bateau</h5><div class="ml-auto align-self-center badge badge-success">+28 pts!</div></div>
           <div class="d-flex justify-content-between"><span>Le: 22/12/2016</span><span>Durée: 6h</span><span>Superficie: 120km²</span></div>
           <div class="d-flex w-100"><span>Sortie vers l'ilot sada, superbe pêche avec Mathieu, et quelques belles observations, j'espère que vous allez aimer les photos!</span></div>
         </div>
-        <div id="Obs1Info" class="col-3 p-0">
+        <div id="S1_obs1" class="col-3 p-0">
           <div class="">
             <ul id="obs-list" class="list-group h-100">
               <li class="list-group-item p-0 img_container_limitH">
@@ -159,7 +269,7 @@
             </ul>
           </div>
         </div>
-        <div id="Obs2Info" class="col-3 p-0">
+        <div id="S1_obs2" class="col-3 p-0">
           <div class="">
             <ul id="obs-list" class="list-group h-100">
               <li class="list-group-item p-0 img_container_limitH">
@@ -189,11 +299,11 @@
             </ul>
           </div>
         </div>
-        <div id="Obs3Info" class="col-3 p-0">
+        <div id="S1_obs3" class="col-3 p-0">
           <div class="">
             <ul id="obs-list" class="list-group">
               <li class="list-group-item p-0 img_container_limitH">
-                <img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" class="img-fluid rounded-top" alt="">
+                <img src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid rounded-top" alt="">
               </li>
               <li class="list-group-item list-group-item-success">
                 <div class="d-flex flex-row w-100">
@@ -219,18 +329,18 @@
             </ul>
           </div>
         </div>
-        <div id="Obs1Details" class="ml-5 w-50">
+        <div id="S1_obs1Details" class="col-7 p-0 ml-3">
           <span class="lead">Commentaires:</span>
           <table class="table flex-nowrap">
             <tbody>
               <tr>
-                <td class="text-nowrap"><img class="img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Jacob</td>
+                <td class="text-nowrap"><img class="m-1 img-fluid rounded size-icon" src="../../../public/assets/images/profil/profil2.jpg" alt="Card image cap">Jacob</td>
                 <td>
                   Belle photo!
                 </td>
               </tr>
               <tr>
-                <td class="text-nowrap"><img class="img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Manguo</td>
+                <td class="text-nowrap"><img class="m-1 img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Manguo</td>
                 <td class="w-75"><input type="textarea" class="w-100" placeholder="Exprimez-vous">
                   <div><button type="button" class="btn btn-secondary btn-sm d-flex ml-auto">Valider</button></div>
                 </td>
@@ -238,26 +348,26 @@
             </tbody>
           </table>
         </div>
-        <div id="Obs3Details" class="ml-5 w-50">
+        <div id="S1_obs3Details" class="col-7 p-0 ml-3">
           <span class="lead">Commentaires:</span>
           <table class="table flex-nowrap">
             <tbody>
               <tr>
-                <td class="text-nowrap"><img class="img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Max</td>
+                <td class="text-nowrap"><img class="m-1 img-fluid rounded size-icon" src="../../../public/assets/images/profil/profil3.jpg" alt="Card image cap">Max</td>
                 <td>
                   Superbe ta photo!
                 </td>
               </tr>
               <tr>
-                <td class="text-nowrap"><img class="img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Jacob</td>
+                <td class="text-nowrap"><img class="m-1 img-fluid rounded size-icon" src="../../../public/assets/images/profil/profil2.jpg" alt="Card image cap">Jacob</td>
                 <td>Manguo tu t'es trompé d'espèce parce que tu n'as pas fait attention à la forme du museau.</td>
               </tr>
               <tr>
-                <td><img class="img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Larry</td>
+                <td><img class="m-1 img-fluid rounded size-icon" src="" alt="Card image cap">Larry</td>
                 <td>Ce qui est caractéristique à cette espèce c'est la tache sur l'aileron! </td>
               </tr>
               <tr>
-                <td class="text-nowrap"><img class="img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Manguo</td>
+                <td class="text-nowrap"><img class="m-1 img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Manguo</td>
                 <td class="w-75"><input type="textarea" class="w-100" placeholder="Exprimez-vous">
                   <div><button type="button" class="btn btn-secondary btn-sm d-flex ml-auto">Valider</button></div>
                 </td>
@@ -265,12 +375,12 @@
             </tbody>
           </table>
         </div>
-        <div id="Obs2Details" class="ml-5 w-50">
+        <div id="S1_obs2Details" class="col-7 p-0 ml-3">
           <span class="lead">Commentaires:</span>
           <table class="table flex-nowrap">
             <tbody>
               <tr>
-                <td class="text-nowrap"><img class="img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Manguo</td>
+                <td class="text-nowrap"><img class="m-1 img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Manguo</td>
                 <td class="w-75"><input type="textarea" class="w-100" placeholder="Exprimez-vous">
                   <div><button type="button" class="btn btn-secondary btn-sm d-flex ml-auto">Valider</button></div>
                 </td>
@@ -282,7 +392,7 @@
       </div>
     </div>
 
-    <div class="content_item fil-obs d-flex flex-column mb-3 pt-0">
+    <!-- <div class="content_item fil-obs d-flex flex-column mb-3 pt-0">
       <div class="d-flex flex-row justify-content-between mb-1">
         <div class="row p-0">
           <div class="align-self-center p-1">
@@ -414,8 +524,290 @@
           </div>
         </div>
       </div>
+    </div> -->
+
+    <div class="content_item fil-ident d-flex flex-column mb-3 pt-0">
+      <div class="d-flex flex-row justify-content-between mb-1">
+        <div class="row p-0">
+          <div class="align-self-center p-1">
+            <img class="img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">
+          </div>
+          <div class="align-self-center p-0">
+            <h6 class="m-0">Manguo</h6>
+          </div>
+        </div>
+        <span class="lead small align-self-center">le 26/12/2016</span>
+      </div>
+      <div class="d-flex flex-row">
+        <div class="d-flex flex-column size-medium-column">
+          <img id="I1_img1" (click)="showClick('I1_1')" on-mouseover="showOver('I1_1')" on-mouseout="backOver()" src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" class="img-fluid size-medium mb-1 icon-success" alt="">
+          <img id="I1_img2" (click)="showClick('I1_2')" on-mouseover="showOver('I1_2')" on-mouseout="backOver()" src="../../../public/assets/images/taxonomy/stenella_attenuata.jpg" class="img-fluid size-medium mb-1 icon-waiting" alt="">
+          <img id="I1_img3" (click)="showClick('I1_3')" on-mouseover="showOver('I1_3')" on-mouseout="backOver()" src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid size-medium mb-1 icon-waiting" alt="">
+        </div>
+        <div id="I1" class="col flex-column pr-5">
+          <div class="d-flex flex-row"><h5 class="text-primary">Identifications</h5></div>
+          <div class="d-flex flex-row">
+            <div class="d-flex w-100">
+              <span class="text-success">1 réussite </span>&nbsp;/&nbsp;<span class="text-danger"> 0 echec </span>&nbsp;/&nbsp;<span class="text-warning"> 2 en attente</span><div class="ml-auto align-self-center badge badge-success">+12 pts!</div>
+            </div>
+          </div>
+          <div class="card col-5 pb-1 mt-1">
+            <h4 class="card-title text-center">Dauphins</h4>
+            <div class="card-img-top">
+              <div class="image-container">
+                <div class="relative-container">
+                  <img class= " mx-auto d-block back-img" src="../../../public/assets/images/medals/contours/bronze_medal_icon.png" alt="Bronze Medal Icon" />
+                  <img class= "icon-img" src="../../../public/assets/images/medals/icons/shark_icon.png" alt="Bird icon" />
+                </div>
+                <div class="d-flex justify-content-between mx-1">
+                  <span class="w-25">120 pts!</span>
+                  <span>Aventurier</span>
+                  <span class="w-25">/ 250 pts</span>
+                </div>
+                <div class="progress mx-1">
+                  <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="d-flex flex-row">
+            <h5 class="text-center align-self-center">Requins</h5>
+            <div class="image-container">
+              <div class="relative-container">
+                <img class= " mx-auto d-block back-img" src="../../../public/assets/images/medals/contours/bronze_medal_icon.png" alt="Bronze Medal Icon" />
+                <img class= "icon-img" src="../../../public/assets/images/medals/icons/shark_icon.png" alt="Bird icon" />
+              </div>
+            </div>
+            <div class="w-50 align-self-center">
+              <div class="d-flex justify-content-between mx-1">
+                <span class="w-25">78 pts!</span>
+                <span>Curieux</span>
+                <span class="w-25">/ 100 pts</span>
+              </div>
+              <div class="progress mx-1">
+                <div class="progress-bar" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div> -->
+
+        </div>
+        <div id="I1_obs1" class="col-3 p-0">
+          <div class="">
+            Réussite:
+            <ul id="ident-list" class="list-group">
+              <li class="list-group-item p-0">
+                <img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" class="img-fluid w-100 rounded-top" alt="">
+              </li>
+              <li class="list-group-item list-group-item-success">
+                <div class="d-flex flex-row w-100">
+                  <div class="p-0 align-self-center col-1 mr-1 text-center"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+                  <div>1. Stenella Attenuata</div>
+                  <div class="ml-auto align-self-center badge badge-success">+12 pts!</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="I1_obs2" class="col-3 p-0">
+          <div class="">
+            En cours:
+            <ul id="ident-list" class="list-group">
+              <li class="list-group-item p-0">
+                <img src="../../../public/assets/images/taxonomy/stenella_attenuata.jpg" class="img-fluid rounded-top" alt="">
+              </li>
+              <li class="list-group-item">
+                <div class="d-flex flex-row w-100">
+                  <div class="p-0 align-self-center col-1 mr-1 text-center"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+                  <div>1. Dauphin Longbec</div>
+                  <div class="ml-auto align-self-center badge badge-warning">25</div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="d-flex flex-row w-100">
+                  <div class="p-0 align-self-center col-1 mr-1 text-center"><i class="fa fa-users" aria-hidden="true"></i></div>
+                  <div class="ml-2">Stenella Attenuata</div>
+                  <div class="ml-auto align-self-center badge badge-warning">1</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="I1_obs3" class="col-3 p-0">
+          <div class="">
+            En cours:
+            <ul id="ident-list" class="list-group">
+              <li class="list-group-item p-0">
+                <img src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid rounded-top" alt="">
+              </li>
+              <li class="list-group-item">
+                <div class="d-flex flex-row w-100">
+                  <div class="p-0 align-self-center col-1 mr-1 text-center">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                  </div>
+                  <div class="ml-2">Stenella Attenuata</div>
+                  <div class="ml-auto align-self-center badge badge-warning">18</div>
+                </div>
+              </li>
+              <li class="list-group-item list-group-item-warning">
+                <div class="d-flex flex-row w-100">
+                  <div class="p-0 align-self-center col-1 mr-1 text-center">
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                  </div>
+                  <div>1.  Dauphin Longbec</div>
+                  <div class="ml-auto align-self-center badge badge-warning">2</div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="d-flex flex-row w-100">
+                  <div class="p-0 align-self-center col-1 mr-1 text-center"><i class="fa fa-users" aria-hidden="true"></i></div>
+                  <div class="ml-2">Stenella Longirostris</div>
+                  <div class="ml-auto align-self-center badge badge-warning">1</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="I1_obs1Details" class="col-7 p-0 ml-3">
+          <div class="d-flex flex-column">
+            <div class="d-flex flex-row justify-content-between">
+              <div class="d-flex flex-row">
+                <span class="align-self-center">Observateur: </span>
+                <div class="align-self-center">
+                  <img class="m-1 img-fluid rounded size-icon" src="../../../public/assets/images/profil/profil2.jpg" alt="Card image cap">
+                </div>
+                <div class="align-self-center p-0">
+                  <span class="m-0">Jacob</span>
+                </div>
+              </div>
+              <div class="d-flex flex-row">
+                <span class="align-self-center">Localisation: </span>
+                <div class="align-self-center p-0">
+                  <span class="m-0">&nbsp;Mayotte</span>
+                </div>
+              </div>
+              <div class="d-flex flex-row">
+                <span class="align-self-center">Le: </span>
+                <div class="align-self-center p-0">
+                  <span class="m-0">&nbsp;18/06/2016</span>
+                </div>
+              </div>
+            </div>
+
+            <span class="lead">Commentaires:</span>
+            <table class="table flex-nowrap">
+              <tbody>
+                <tr>
+                  <td class="text-nowrap"><img class="m-1 img-fluid rounded size-icon" src="../../../public/assets/images/profil/profil2.jpg" alt="Card image cap">Jacob</td>
+                  <td>
+                    Belle photo!
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-nowrap"><img class="m-1 img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Manguo</td>
+                  <td class="w-75"><input type="textarea" class="w-100" placeholder="Exprimez-vous">
+                    <div><button type="button" class="btn btn-secondary btn-sm d-flex ml-auto">Valider</button></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div id="I1_obs3Details" class="col-7 p-0 ml-3">
+          <div class="d-flex flex-column">
+            <div class="d-flex flex-row justify-content-between">
+              <div class="d-flex flex-row">
+                <span class="align-self-center">Observateur: </span>
+                <div class="align-self-center">
+                  <img class="m-1 img-fluid rounded size-icon" src="../../../public/assets/images/profil/profil3.jpg" alt="Card image cap">
+                </div>
+                <div class="align-self-center p-0">
+                  <span class="m-0">Marie</span>
+                </div>
+              </div>
+              <div class="d-flex flex-row">
+                <span class="align-self-center">Localisation: </span>
+                <div class="align-self-center p-0">
+                  <span class="m-0">&nbsp;Mayotte</span>
+                </div>
+              </div>
+              <div class="d-flex flex-row">
+                <span class="align-self-center">Le: </span>
+                <div class="align-self-center p-0">
+                  <span class="m-0">&nbsp;18/06/2016</span>
+                </div>
+              </div>
+            </div>
+            <span class="lead">Commentaires:</span>
+            <table class="table flex-nowrap">
+              <tbody>
+                <tr>
+                  <td class="text-nowrap"><img class="m-1 img-fluid rounded size-icon" src="../../../public/assets/images/profil/profil3.jpg" alt="Card image cap">Marie</td>
+                  <td>
+                    Superbe ta photo!
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-nowrap"><img class="m-1 img-fluid rounded size-icon" src="../../../public/assets/images/profil/profil2.jpg" alt="Card image cap">Jacob</td>
+                  <td>Manguo tu t'es trompé d'espèce parce que tu n'as pas fait attention à la forme du museau.</td>
+                </tr>
+                <tr>
+                  <td><img class="m-1 img-fluid rounded size-icon" src="" alt="Card image cap">Larry</td>
+                  <td>Ce qui est caractéristique à cette espèce c'est la tache sur l'aileron! </td>
+                </tr>
+                <tr>
+                  <td class="text-nowrap"><img class="m-1 img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Manguo</td>
+                  <td class="w-75"><input type="textarea" class="w-100" placeholder="Exprimez-vous">
+                    <div><button type="button" class="btn btn-secondary btn-sm d-flex ml-auto">Valider</button></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div id="I1_obs2Details" class="col-7 p-0 ml-3">
+          <div class="d-flex flex-column">
+            <div class="d-flex flex-row justify-content-between">
+              <div class="d-flex flex-row">
+                <span class="align-self-center">Observateur: </span>
+                <div class="align-self-center">
+                  <img class="m-1 img-fluid rounded size-icon" src="../../../public/assets/images/profil/profil3.jpg" alt="Card image cap">
+                </div>
+                <div class="align-self-center p-0">
+                  <span class="m-0">Marie</span>
+                </div>
+              </div>
+              <div class="d-flex flex-row">
+                <span class="align-self-center">Localisation: </span>
+                <div class="align-self-center p-0">
+                  <span class="m-0">&nbsp;Mayotte</span>
+                </div>
+              </div>
+              <div class="d-flex flex-row">
+                <span class="align-self-center">Le: </span>
+                <div class="align-self-center p-0">
+                  <span class="m-0">&nbsp;18/06/2016</span>
+                </div>
+              </div>
+            </div>
+            <span class="lead">Commentaires:</span>
+            <table class="table flex-nowrap">
+              <tbody>
+                <tr>
+                  <td class="text-nowrap"><img class="m-1 img-fluid rounded size-icon" src="../../../public/assets/images/profil/profile_picture.png" alt="Card image cap">Manguo</td>
+                  <td class="w-75"><input type="textarea" class="w-100" placeholder="Exprimez-vous">
+                    <div><button type="button" class="btn btn-secondary btn-sm d-flex ml-auto">Valider</button></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
     </div>
 
+    <!--
     <div class="fil-ident content_item d-flex flex-column mb-3">
       <div class="row d-flex justify-content-between">
         <h5><span>Manguo: </span>Identifications</h5> <span>Le 10/12/2016</span>
@@ -494,166 +886,167 @@
         </div>
       </div>
     </div>
+  -->
 
-    <div class="fil-other content_item d-flex flex-column mb-3">
-      <div class="row d-flex justify-content-between">
-        <h5><span>Paul: </span>Pêche au sud de la Réunion</h5>  <span>Le 11/11/2016</span>
+  <!-- <div class="fil-other content_item d-flex flex-column mb-3">
+    <div class="row d-flex justify-content-between">
+      <h5><span>Paul: </span>Pêche au sud de la Réunion</h5>  <span>Le 11/11/2016</span>
+    </div>
+    <div class="row">
+      <div class="col-4">
+
+        <ul id="obs-list-other" class="list-group">
+          <li class="list-group-item p-0">
+            <img src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid rounded-top" alt="">
+          </li>
+          <li class="list-group-item list-group-item-success">
+            <div class="d-flex w-100">
+              <div>1. dauphin Longbec</div>
+              <div class="ml-auto align-self-center badge badge-warning">25</div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="d-flex w-100">
+              <div>2. Stenella Attenuata</div>
+              <div class="ml-auto align-self-center badge badge-warning">1</div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="d-flex w-100">
+              <div>3. Stenella Longirostris</div>
+              <div class="ml-auto align-self-center badge badge-warning">0</div>
+            </div>
+          </li>
+        </ul>
       </div>
-      <div class="row">
-        <div class="col-4">
+      <div class="col-4">
+        <ul id="obs-list-other" class="list-group">
+          <li class="list-group-item p-0">
+            <img src="../../../public/assets/images/taxonomy/stenella_attenuata.jpg" class="img-fluid rounded-top" alt="">
+          </li>
+          <li class="list-group-item">
+            <div class="d-flex w-100">
+              <div>1. dauphin Longbec</div>
+              <div class="ml-auto align-self-center badge badge-warning">2</div>
+            </div>
+          </li>
+          <li class="list-group-item list-group-item-warning">
+            <div class="d-flex w-100">
+              &nbsp;&nbsp;<div>Stenella Attenuata</div>
+              <div class="ml-auto align-self-center badge badge-warning">18</div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="d-flex w-100">
+              <div>&nbsp;&nbsp; Stenella Longirostris</div>
+              <div class="ml-auto align-self-center badge badge-warning">1</div>
+            </div>
+          </li>
+        </ul>
 
-          <ul id="obs-list-other" class="list-group">
-            <li class="list-group-item p-0">
-              <img src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid rounded-top" alt="">
-            </li>
-            <li class="list-group-item list-group-item-success">
-              <div class="d-flex w-100">
-                <div>1. dauphin Longbec</div>
-                <div class="ml-auto align-self-center badge badge-warning">25</div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="d-flex w-100">
-                <div>2. Stenella Attenuata</div>
-                <div class="ml-auto align-self-center badge badge-warning">1</div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="d-flex w-100">
-                <div>3. Stenella Longirostris</div>
-                <div class="ml-auto align-self-center badge badge-warning">0</div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="col-4">
-          <ul id="obs-list-other" class="list-group">
-            <li class="list-group-item p-0">
-              <img src="../../../public/assets/images/taxonomy/stenella_attenuata.jpg" class="img-fluid rounded-top" alt="">
-            </li>
-            <li class="list-group-item">
-              <div class="d-flex w-100">
-                <div>1. dauphin Longbec</div>
-                <div class="ml-auto align-self-center badge badge-warning">2</div>
-              </div>
-            </li>
-            <li class="list-group-item list-group-item-warning">
-              <div class="d-flex w-100">
-                &nbsp;&nbsp;<div>Stenella Attenuata</div>
-                <div class="ml-auto align-self-center badge badge-warning">18</div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="d-flex w-100">
-                <div>&nbsp;&nbsp; Stenella Longirostris</div>
-                <div class="ml-auto align-self-center badge badge-warning">1</div>
-              </div>
-            </li>
-          </ul>
-
-        </div>
-        <div class="col-4">
-          <ul id="obs-list-other" class="list-group">
-            <li class="list-group-item p-0">
-              <img src="../../../public/assets/images/maquette/dauphinImg.jpg" class="img-fluid w-100 rounded-top" alt="">
-            </li>
-            <li class="list-group-item">
-              <button type="button" class="btn btn-primary mx-auto">Identifier!</button>
-            </li>
-          </ul>
-        </div>
+      </div>
+      <div class="col-4">
+        <ul id="obs-list-other" class="list-group">
+          <li class="list-group-item p-0">
+            <img src="../../../public/assets/images/maquette/dauphinImg.jpg" class="img-fluid w-100 rounded-top" alt="">
+          </li>
+          <li class="list-group-item">
+            <button type="button" class="btn btn-primary mx-auto">Identifier!</button>
+          </li>
+        </ul>
       </div>
     </div>
+  </div> -->
 
-    <div class="fil-news content_item d-flex flex-column mb-3">
-      <div class="row d-flex justify-content-between">
-        <h5><span>Info: </span>Publication de AFAKE</h5>  <span>Le 08/11/2016</span>
-      </div>
-      <div class="row">
-        <div class="w-100 row mx-auto">
+  <div class="fil-news content_item d-flex flex-column mb-3">
+    <div class="row d-flex justify-content-between">
+      <h5><span>Info: </span>Publication de AFAKE</h5>  <span>Le 08/11/2016</span>
+    </div>
+    <div class="row">
+      <div class="w-100 row mx-auto">
 
-          <div id="list-info" class="row">
-            <div class="list-group-item border-0 p-0">
-              <img src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid rounded-top" alt="">
-            </div>
-            <div class="list-group-item border-0">
-              <div class="d-flex w-100">
-                <div class=" align-self-center">Nous tenons à vous remercier pour votre contribution à la collecte des données, cela nous a permis d'observer que le nombre de natalité des Tursiops aduncus a augmenté cette année, mais qu'ils sont moins présent dans le lagon...</div>
-              </div>
+        <div id="list-info" class="row">
+          <div class="list-group-item border-0 p-0">
+            <img src="../../../public/assets/images/taxonomy/stenella_longirostris.jpg" class="img-fluid rounded-top" alt="">
+          </div>
+          <div class="list-group-item border-0">
+            <div class="d-flex w-100">
+              <div class=" align-self-center">Nous tenons à vous remercier pour votre contribution à la collecte des données, cela nous a permis d'observer que le nombre de natalité des Tursiops aduncus a augmenté cette année, mais qu'ils sont moins présent dans le lagon...</div>
             </div>
           </div>
         </div>
-
       </div>
+
     </div>
-
-    <div class="fil-news content_item d-flex flex-column mb-3">
-      <div class="row d-flex justify-content-between">
-        <h5><span>Info: </span>Remerciement</h5>  <span>Le 08/11/2016</span>
-      </div>
-      <div class="row">
-        <div class="col-8 mx-auto">
-
-          <ul id="list-info" class="list-group">
-            <li class="list-group-item border-0">
-              <div class="d-flex w-100">
-                <div class=" align-self-center">Vos observations ont été utilisé par 19 organisme en 2017, nous vous remercions pour votre contribution.</div>
-                <a class="m-2 btn btn-secondary align-self-center">Parrainez un ami! +1000pt</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-    <div class="fil-news content_item d-flex flex-column mb-3">
-      <div class="row d-flex justify-content-between">
-        <h5><span>Info: </span>Nouveau Trophé!</h5>  <span>Le 01/11/2016</span>
-      </div>
-      <div class="row">
-        <div class="col-5 mx-auto">
-          <div class="card ">
-            <h4 class="card-title text-center">Oiseaux</h4>
-            <div class="card-img-top">
-              <div class="image-container">
-                <div class="relative-container">
-                  <img class= " mx-auto d-block back-img" src="../../../public/assets/images/medals/contours/teal_medal_icon.png" alt="Bronze Medal Icon" />
-                  <img class= "icon-img" src="../../../public/assets/images/medals/icons/bird_icon.png" alt="Bird icon" />
-                </div>
-                <div class="d-flex justify-content-between mx-1">
-                  <span class="w-25">244 pts!</span>
-                  <span>Explorateur</span>
-                  <span class="w-25">/ 500 pts</span>
-                </div>
-                <div class="progress mx-1">
-                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-            </div>
-            <div class="card-block p-2 flex-column">
-
-              <div class="d-flex justify-content-between">
-                <div class=""><span class="text-info">Observation</span></div>
-                <div class=""><span class="badge badge-info">22</span></div>
-              </div>
-              <div class="d-flex justify-content-between">
-                <div class=""><span class="text-warning">Identification</span></div>
-                <div class=""><span class="badge badge-warning">40</span></div>
-              </div>
-              <div class="d-flex justify-content-between">
-                <div class=""><span class="text-darkgreen">Espèces </span></div>
-                <div class=""><span class="badge badge-darkgreen">
-                  <span class="text-info">6</span>-
-                  <span class="text-warning">10</span> /
-                  <span class="text-darkgreen"> 19</span></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
   </div>
+
+  <div class="fil-news content_item d-flex flex-column mb-3">
+    <div class="row d-flex justify-content-between">
+      <h5><span>Info: </span>Remerciement</h5>  <span>Le 08/11/2016</span>
+    </div>
+    <div class="row">
+      <div class="col-8 mx-auto">
+
+        <ul id="list-info" class="list-group">
+          <li class="list-group-item border-0">
+            <div class="d-flex w-100">
+              <div class=" align-self-center">Vos observations ont été utilisé par 19 organisme en 2017, nous vous remercions pour votre contribution.</div>
+              <a class="m-2 btn btn-secondary align-self-center">Parrainez un ami! +1000pt</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <div class="fil-news content_item d-flex flex-column mb-3">
+    <div class="row d-flex justify-content-between">
+      <h5><span>Info: </span>Nouveau Trophé!</h5>  <span>Le 01/11/2016</span>
+    </div>
+    <div class="row">
+      <div class="col-5 mx-auto">
+        <div class="card ">
+          <h4 class="card-title text-center">Oiseaux</h4>
+          <div class="card-img-top">
+            <div class="image-container">
+              <div class="relative-container">
+                <img class= " mx-auto d-block back-img" src="../../../public/assets/images/medals/contours/teal_medal_icon.png" alt="Bronze Medal Icon" />
+                <img class= "icon-img" src="../../../public/assets/images/medals/icons/bird_icon.png" alt="Bird icon" />
+              </div>
+              <div class="d-flex justify-content-between mx-1">
+                <span class="w-25">244 pts!</span>
+                <span>Explorateur</span>
+                <span class="w-25">/ 500 pts</span>
+              </div>
+              <div class="progress mx-1">
+                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-block p-2 flex-column">
+
+            <div class="d-flex justify-content-between">
+              <div class=""><span class="text-info">Observation</span></div>
+              <div class=""><span class="badge badge-info">22</span></div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <div class=""><span class="text-warning">Identification</span></div>
+              <div class=""><span class="badge badge-warning">40</span></div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <div class=""><span class="text-darkgreen">Espèces </span></div>
+              <div class=""><span class="badge badge-darkgreen">
+                <span class="text-info">6</span>-
+                <span class="text-warning">10</span> /
+                <span class="text-darkgreen"> 19</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
 </div>

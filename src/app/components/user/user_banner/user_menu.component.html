@@ -4,25 +4,27 @@
       <nav class="navbar navbar-toggleable-md navbar-light pt-2 pb-0">
         <ul class="nav navbar-nav">
           <li class="nav-item mr-1">
-            <div class=""><button routerLink="./fil" routerLinkActive="active" class="nav-item btn btnunder-1">Fil d'actualité</button></div>
+            <div class=""><button routerLink="./fil" routerLinkActive="active" class="nav-item btn btnmenu btnmenu-Fil">Fil d'actualité</button></div>
+          </li>
+          <li class="nav-item mr-1">
+            <div class=""><button routerLink="./my_observations" routerLinkActive="active" class="nav-item btn btnmenu btnmenu-Participation">Ma participation</button></div>
           </li>
           <li class="nav-item btn-group mr-1" role="group">
             <div class="">
-              <button id="btnObs" type="button" class="btn btnunder-1 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button id="btnObs" type="button" class="btn btnmenu btnmenu-Obs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Observations
               </button>
               <div class="dropdown-menu" aria-labelledby="btnObs">
                 <a routerLink="./new_observation" routerLinkActive="active" class="dropdown-item btnunder-1">Nouvelle observation</a>
-                <a routerLink="./my_observations" routerLinkActive="active" class="dropdown-item btnunder-1">Mes observations</a>
                 <a routerLink="./global_results" routerLinkActive="active" class="dropdown-item btnunder-1">Résultats</a>
               </div>
             </div>
           </li>
           <li class="nav-item mr-1">
-            <div class=""><a routerLink="./taxonomic_book" routerLinkActive="active" class="nav-item btn btnunder-2">Guide d'identification</a></div>
+            <div class=""><a routerLink="./taxonomic_book" routerLinkActive="active" class="nav-item btn btnmenu btnmenu-Esp">Guide des espèces</a></div>
           </li>
           <li class="nav-item mr-1">
-            <div class=""><a routerLink="./obs_identification" routerLinkActive="active" class="nav-item btn btnunder-3">Identification d'observations</a></div>
+            <div class=""><a routerLink="./obs_identification" routerLinkActive="active" class="nav-item btn btnmenu btnmenu-Ident">Identification collaborative</a></div>
           </li>
         </ul>
       </nav>
@@ -40,7 +42,7 @@
           </li>-->
           <li class="nav-item btn-group ml-1" role="group">
             <div class="">
-              <button id="btnOrganismes" type="button" class="btn btnunder-1 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button id="btnOrganismes" type="button" class="btn btnmenu btnmenu-Org dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Organismes
               </button>
               <div class="dropdown-menu" aria-labelledby="btnOrganismes">

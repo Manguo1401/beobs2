@@ -21,12 +21,6 @@
   border-left-width: 3px;
 }
 
-.icon-active{
-  /* box-shadow: 1px 0 0px 1px #5cb85c; */
-  /* 50px 0px 0px -32px rgba(40,40,100,0.75);10px 0px 10px -5px rgba(0,0,0,0.75); */
-  border-width: 2px !important;
-}
-
 .icon-waiting{
   border: 0px solid  rgba(240, 173, 78, 1);
   border-left-width: 3px;
@@ -35,6 +29,23 @@
 .icon-wrong{
    border: 0px solid #d9534f;
   border-left-width: 3px;
+}
+
+.icon-ident{
+  border: 0px solid #333;
+  border-left-width: 3px;
+}
+
+.icon-active{
+  /* box-shadow: 1px 0 0px 1px #5cb85c; */
+  /* 50px 0px 0px -32px rgba(40,40,100,0.75);10px 0px 10px -5px rgba(0,0,0,0.75); */
+  border-width: 2px !important;
+  position: relative;
+  left: 1px;
+}
+
+.block-up{
+  box-shadow: 0px 0px 3px -1px #3c763d;
 }
 
 #carouselMultiTrophe{
@@ -68,24 +79,24 @@
 
 
 
-.card .back-img {
+.back-img {
   max-width:100%;
   height:auto;
   width: auto;
   max-height: 100%;
 }
 
-.card .image-container {
+.image-container {
   position: relative;
 }
 
-.card .relative-container {
+.relative-container {
   width: 100%;
   position: relative;
   max-height: 100%;
 }
 
-.card .icon-img {
+.icon-img {
   position: absolute;
   margin: auto;
   left: 0;

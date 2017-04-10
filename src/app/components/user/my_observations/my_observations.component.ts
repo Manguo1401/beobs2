@@ -9,8 +9,8 @@ import {NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
 	templateUrl: 'my_observations.component.html',
 	providers: [NgbDatepicker],
 	styleUrls: [
-		'my_observations.style.css',
-		//'../user_banner.css'
+	'my_observations.style.css',
+	//'../user_banner.css'
 	]
 })
 
@@ -23,14 +23,117 @@ export class MyObservationsComponent implements AfterViewInit{
 			config.keyboard = false;
 		}*/
 
+		public listelem:any;
+		public tabVisibility= new Array(0);
+		public tabVisibilityPrev= new Array(0);
+		public nbElem:string="none";
 
-	constructor(elementRef: ElementRef, renderer: Renderer, config: NgbDatepicker) {
-
+		constructor(elementRef: ElementRef, renderer: Renderer, config: NgbDatepicker) {
+			this.listelem = [{"FilContent":"S1","ObsList":["1","2","3"]},{"FilContent":"I1","ObsList":["1","2","3"]}];
 
 			// Listen to click events in the component
 			renderer.listenGlobal('window', 'scroll', (evt) => {
 				//window.scroll() d'angular2
 			})
+		}
+
+		public overstatus="no";
+
+		showOver(elem:string){
+			this.tabVisibilityPrev = Object.assign({},this.tabVisibility);
+			this.overstatus = "yes";
+			this.show(elem);
+			this.tabVisibility = Object.assign({},this.tabVisibilityPrev);
+			//this.tabVisibility.push({"#S0_obs0":"show"});
+		}
+
+		showClick(elem:string){
+			this.overstatus = "no";
+			this.show(elem);
+		}
+
+		backOver()
+		{
+			if(this.overstatus == "yes")
+				this.applyVisibility(this.tabVisibilityPrev);
+			this.overstatus = "no";
+			//this.tabVisibility = Object.assign({},this.tabVisibilityPrev);
+		}
+
+		applyVisibility(tabV:Array<Object>){
+			let tabVisibilityIds = Object.keys(tabV);
+			// alert("this.tabVisibilityIds length = "+  tabVisibilityIds.length);
+
+
+			let i;
+			for(i=0;i<tabVisibilityIds.length;i++)
+			{
+				// alert(tabVisibilityIds[i]+":"+this.tabVisibility[tabVisibilityIds[i]]);
+				if(tabV[tabVisibilityIds[i]]=="show")
+					$(tabVisibilityIds[i]).show();
+				else
+					$(tabVisibilityIds[i]).hide();
+			}
+		}
+
+		show(elem:string){
+			//alert(this.nbElem);
+			let sortie = elem.split("_")[0];
+			let imgNum = elem.split("_")[1];
+
+
+			let s,o;
+			for(s=0;s<this.listelem.length;s++)
+			{
+				if(this.listelem[s].FilContent == sortie)
+				{
+					$("#"+this.listelem[s].FilContent).hide();
+					this.tabVisibility["#"+this.listelem[s].FilContent]="hide";
+					for(o=0;o<this.listelem[s].ObsList.length;o++)
+					{
+
+						if(this.listelem[s].ObsList[o] == imgNum)
+						{
+							// $("#"+sortie+"_obs"+imgNum).show();
+							// $("#"+sortie+"_obs"+imgNum+"Details").show();
+							this.tabVisibility["#"+sortie+"_obs"+imgNum]="show";
+							this.tabVisibility["#"+sortie+"_obs"+imgNum+"Details"]="show";
+							if(this.overstatus == "no")
+							{
+								$("#"+this.listelem[s].FilContent+"_img"+this.listelem[s].ObsList[o]).addClass('icon-active');
+							}
+
+						}
+						else
+						{
+							if(this.overstatus == "no")
+							{
+								$("#"+this.listelem[s].FilContent+"_img"+this.listelem[s].ObsList[o]).removeClass('icon-active');
+							}
+							// $("#"+this.listelem[s].FilContent+"_obs"+this.listelem[s].ObsList[o]).hide();
+							// $("#"+this.listelem[s].FilContent+"_obs"+this.listelem[s].ObsList[o]+"Details").hide();
+							this.tabVisibility["#"+this.listelem[s].FilContent+"_obs"+this.listelem[s].ObsList[o]]="hide";
+							this.tabVisibility["#"+this.listelem[s].FilContent+"_obs"+this.listelem[s].ObsList[o]+"Details"]="hide";
+						}
+					}
+				}
+			}
+			this.applyVisibility(this.tabVisibility);
+		/*$("#S1").hide();
+		$("#S1_obs1").hide();
+		$("#S2_obs2").hide();
+		$("#S3_obs3").hide();
+		$("#S1_obs1Details").hide();
+		$("#S2_obs2Details").hide();
+		$("#S3_obs3Details").hide();
+		$("#S"+sortie+"_obs"+imgNum).show();
+		$("#S"+sortie+"_obs"+imgNum+"Details").show();
+
+		*/
+		// $("#S1_img1").removeClass('icon-active');
+		// $("#S1_img2").removeClass('icon-active');
+		// $("#S1_img3").removeClass('icon-active');
+		// $("#"+sortie+"_img"+imgNum).addClass('icon-active');
 	}
 
 
@@ -97,7 +200,33 @@ export class MyObservationsComponent implements AfterViewInit{
 
 		});
 
+		let s,o;
+		for(s=0;s<this.listelem.length;s++)
+		{
 
+			this.tabVisibility["#"+this.listelem[s].FilContent]="show";
+			// alert("tabVisibility"+ "#"+this.listelem[s].FilContent+" = "+this.tabVisibility["#"+this.listelem[s].FilContent]);
+
+			// $("#"+this.listelem[s].FilContent).show();
+			//alert(this.listelem[s].ObsList.length);
+			for(o=0;o<this.listelem[s].ObsList.length;o++)
+			{
+
+				let id_elem = "#"+this.listelem[s].FilContent+"_obs"+this.listelem[s].ObsList[o];
+				let visibility = "hide"
+				// alert(id_elem+":"+visibility);
+
+				this.tabVisibility[id_elem]="hide";
+				this.tabVisibility[id_elem+"Details"]="hide";
+				//alert("tabVisibility"+ "#"+this.listelem[s].FilContent+"_obs"+this.listelem[s].ObsList[o] + " "+ this.tabVisibility["#"+this.listelem[s].Sortie+"_obs"+this.listelem[s].ObsList[o]]);
+				//alert("tabVisibility"+ "#"+this.listelem[s].FilContent+"_obs"+this.listelem[s].ObsList[o]+"Details" + " "+ this.tabVisibility["#"+this.listelem[s].Sortie+"_obs"+this.listelem[s].ObsList[o]+"Details"]);
+				// $("#"+this.listelem[s].FilContent+"_obs"+this.listelem[s].ObsList[o]).hide();
+				// $("#"+this.listelem[s].FilContent+"_obs"+this.listelem[s].ObsList[o]+"Details").hide();
+
+			}
+		}
+		this.tabVisibilityPrev = Object.assign({},this.tabVisibility);
+		this.applyVisibility(this.tabVisibility);
 
 
 	}

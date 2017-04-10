@@ -4,19 +4,19 @@
 			<nav class="navbar navbar-toggleable-md navbar-light">
 				<ul class="nav navbar-nav">
 					<li class="nav-item mr-1">
-						<div class="rounded bg-white"><button [routerLink]="['/organisme/presentation']" routerLinkActive="active" class="nav-item btn btn-outline-success">Présentation</button></div>
+						<div class=""><button [routerLink]="['/organisme/home']" routerLinkActive="active" class="nav-item btn btnmenu btnmenu-OrgFil">Informations</button></div>
 					</li>
 					<li class="nav-item mr-1">
-						<div class="rounded bg-white"><button [routerLink]="['/organisme/member']" routerLinkActive="active" class="nav-item btn btn-outline-success">Membres</button></div>
+						<div class=""><button [routerLink]="['/organisme/presentation']" routerLinkActive="active" class="nav-item btn btnmenu btnmenu-OrgPresentation">Présentation</button></div>
 					</li>
 					<li class="nav-item mr-1">
-						<div class="rounded bg-white"><button [routerLink]="['/organisme/recherche_zone']" routerLinkActive="active" class="nav-item btn btn-outline-success">Parc d'observation</button></div>
+						<div class=""><button [routerLink]="['/organisme/member']" routerLinkActive="active" class="nav-item btn btnmenu btnmenu-OrgMembre">Membres</button></div>
 					</li>
 					<li class="nav-item mr-1">
-						<div class="rounded bg-white"><button [routerLink]="['/organisme/home']" routerLinkActive="active" class="nav-item btn btn-outline-success">Informations</button></div>
+						<div class=""><button [routerLink]="['/organisme/recherche_zone']" routerLinkActive="active" class="nav-item btn btnmenu btnmenu-OrgParcObs">Parc d'observation</button></div>
 					</li>
 					<li class="nav-item mr-1">
-						<div class="rounded bg-white"><button routerLink="/organisme/postuler" routerLinkActive="active" class="nav-item btn btn-outline-success">Postuler</button></div>
+						<div class=""><button routerLink="/organisme/postuler" routerLinkActive="active" class="nav-item btn btnmenu btnmenu-OrgPostuler">Postuler</button></div>
 					</li>
 
 				</ul>
@@ -26,19 +26,16 @@
 			<nav class="navbar navbar-toggleable-md navbar-light pull-right">
 				<ul class="nav navbar-nav">
 					<li class="nav-item mr-1">
-						<div class="rounded bg-white"><a routerLink="./../new_observation" routerLinkActive="active" class="nav-item btn btn-outline-primary">Données</a></div>
+						<div class=""><a routerLink="./../new_observation" routerLinkActive="active" class="nav-item btn btnmenu btnmenu-OrgDonnees">Données collectées</a></div>
 					</li>
 					<li class="nav-item ml-1">
-						<span class="navbar-text">Administration: </span>
-					</li>
-					<li class="nav-item ml-1">
-						<div class="rounded bg-white">
-							<button [routerLink]="['/organisme/member_management']" routerLinkActive="active" class="nav-item btn btn-outline-success">Gestion des membres</button>
+						<div class="">
+							<button [routerLink]="['/organisme/member_management']" routerLinkActive="active" class="nav-item btn btnmenu btnmenu-OrgMembre">Gestion des membres</button>
 						</div>
 					</li>
 					<li class="nav-item btn-group ml-1" role="group">
-						<div class="rounded bg-white">
-							<button id="btndata" type="button" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<div class="">
+							<button id="btndata" type="button" class="btn btnmenu btnmenu-OrgAdminDonnees dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Choix des données
 							</button>
 							<div class="dropdown-menu" aria-labelledby="btndata">
