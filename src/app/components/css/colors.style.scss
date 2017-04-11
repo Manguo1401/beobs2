@@ -1,22 +1,26 @@
 /* Déclaration des couleurs*/
 
-$userFilColor: darkslategray;
-$UserParticipationColor: darkcyan;/* lavender; cadetblue;*/
-$UserObsColor: skyblue; /*#87ceeb*/
-$GuideEspece: saddlebrown; /*#8b4513*/
-$UserIdentifColor:seagreen; /*#2e8b57*/
+$userFilColor: #a09b82;
+$UserParticipationColor: #a09b82;/* lavender; cadetblue;*/
+$userFilColorT: rgba(160, 155, 130, 0.5);
+$UserObsColor: #609fb9; /*#87ceeb*/
+$UserObsColorT: rgba(96, 159, 185, 0.5);
+$GuideEspece: #67ab85; /*saddlebrown; #8b4513*/
+$GuideEspeceT: rgba(103, 171, 133, 0.5);
+$UserIdentifColor: #d5b76c; /*#2e8b57*/
+$UserIdentifColorT: rgba(213, 183, 108, 0.5);
 $UserIdentifColorPastel:seagreen;
 $ResultatsColor: #AA4B39;
 
 
-$OrgColor: indianred;
-$OrgFilColor: #D47A6A;
-$OrgPresentationColor: #AA4B39;
-$OrgMembreColor: #AA4B39;
-$OrgParcObsColor: #303C74; /* ou #AA8939 */
+$OrgColor: #a09b82;
+$OrgFilColor: #a09b82;
+$OrgPresentationColor: #a09b82;
+$OrgMembreColor: #a09b82;
+$OrgParcObsColor: #609fb9; /* ou #AA8939 */
 $OrgPostulerColor: #a09b82;
-$OrgDonneesColor: #AA4B39;
-$OrgAdminDonneesColor: #AA4B39;
+$OrgDonneesColor: #a09b82;
+$OrgAdminDonneesColor: #a09b82;
 
 
 /* @blue: #17B6FF;
