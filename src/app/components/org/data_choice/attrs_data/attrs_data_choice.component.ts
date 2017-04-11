@@ -13,6 +13,16 @@ import { ServiceCaterogiesModules } from './../../../../services/attrs_data/cate
 export class AttrsDataChoiceOrgComponent {
 		categories: Category[] = [];
 
+		cat: boolean = true;
+
+		selectCat() {
+			if (this.cat === true) {
+				this.cat = false;
+			} else {
+				this.cat = true;
+			}
+		}
+
 		constructor(
 			private serviceCategories: ServiceCaterogiesModules
 		) {}
