@@ -6,7 +6,7 @@ import * as ol from 'openlayers';
 @Component ({
 	selector: 'my-localisation-selector',
 	templateUrl: 'localisation_selector.component.html',
-	styleUrls: ['localisation_selector.style.css']
+	styleUrls: ['localisation_selector.style.scss']
 })
 
 
