@@ -4,37 +4,31 @@
 		<div class="row mx-0">
 			<div class="col-12 px-1 bg-white">
 				<div class="row m-1 lead">
-					Dans quels milieux pouvons nous retrouver votre espèce ?
+					Est-ce que votre espèce détient 4 pattes ?
 				</div>
 				<div class="row">
 					<div class="col-10 offset-2 mt-1">
 						<div class="form-check">
 							<label class="form-check-label">
-								<input type="checkbox" class="form-check-input">
-								Terrestre
+								<input type="radio" class="form-check-input">
+								Oui
 							</label>
 						</div>
 						<div class="form-check">
 							<label class="form-check-label">
-								<input type="checkbox" class="form-check-input">
-								Aérien
+								<input type="radio" class="form-check-input">
+								Non
 							</label>
 						</div>
 						<div class="form-check">
 							<label class="form-check-label">
-								<input type="checkbox" class="form-check-input">
-								Aquatique
-							</label>
-						</div>
-						<div class="form-check">
-							<label class="form-check-label">
-								<input type="checkbox" class="form-check-input">
+								<input type="radio" class="form-check-input">
 								Je ne sais pas
 							</label>
 						</div>
 						<div class="form-check">
 							<label class="form-check-label">
-								<input type="checkbox" class="form-check-input">
+								<input type="radio" class="form-check-input">
 								Non pertinent
 							</label>
 						</div>
@@ -107,8 +101,8 @@
 				<span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
 			</div>
 		</div>
-		<div class="list-group mt-2">
-			<button class="list-group-item list-group-item-success list-group-item-action">
+		<div class="list-group mt-2" [hidden]="!group" >
+			<button class="list-group-item list-group-item-success list-group-item-action" (click)="selectGroup()" >
 				<div class="d-flex w-100 justify-content-between">
 					<div>
 						<h5 class="mb-0">Mammalia</h5>
@@ -147,6 +141,10 @@
 					</div>
 				</div>
 			</button>
+		</div>
+
+		<div class="list-group mt-2" [hidden]="group">
+			<button class="btn btn-default" (click)="selectGroup()" >Mammifères</button>
 			<button type="button" class="list-group-item list-group-item-action">
 				<div class="col-md-3">
 					<img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" class="img-fluid rounded" alt="">

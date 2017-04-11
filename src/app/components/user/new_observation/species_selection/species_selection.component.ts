@@ -10,6 +10,16 @@ import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core'
 
 export class SpeciesSelectComponent {
 
+	group: boolean = true;
+
+	selectGroup() {
+		if(this.group === true ) {
+			this.group = false;
+		} else {
+			this.group = true;
+		}
+	}
+
 /*	constructor(config: NgbCarouselConfig) {
     // customize default values of carousels used by this component tree
     config.interval = 500;
