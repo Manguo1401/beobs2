@@ -2,21 +2,21 @@
 
 
 .new_obs_process:hover {
-	background-color: $UserObsColorT;
+	background-color: $color_obs_1;
 	color: white;
 }
 
 .new_obs_process {
-	border-color: $UserObsColor;
-	color: $UserObsColor;
+	border-color: $color_obs_0;
+	color: $color_obs_0;
 }
 
 .new_obs_process.active {
-	background-color: $UserObsColor;
+	background-color: $color_obs_0;
 	color: white;
 }
 
 .arrow_next {
-	color: $UserObsColor;
+	color: $color_obs_0;
 	font-size: 60px;
 }
