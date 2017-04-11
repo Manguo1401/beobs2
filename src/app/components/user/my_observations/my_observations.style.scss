@@ -243,34 +243,30 @@
   overflow-x: hidden;
 }
 
-.limitH-60{
+.sized-img{
   height: 60px;
+  width: 93px;
 }
 
 .over-icon{
   position: absolute;
-  top:20px;
-  left: 10px;
+  top:0px;
+  left:0px;
 }
 
-.over-icon{
-  position: absolute;
-  top:4px;
-  left: 4px;
-}
 
 .over-icon button{
-  padding: 20px 16px 21px 16px;
+  height: 60px;
+  width: 93px;
   border-width: 0px;
   color:transparent;
 }
 
 .over-icon button:hover{
-  padding: 20px 16px 21px 16px;
-  border-width: 1px;
+  /* height: 60px;
+  width: 93px; */
   color:white;
   background-color: $UserIdentifColor;
-  border-width: UserIdentifColor;
 }
 
 .btn-ident:hover{
@@ -278,7 +274,9 @@
   background-color: $UserIdentifColorT;
 }
 
-#obs-list-ident
+.ident-container{
+  position: relative;
+}
 
 
 #obs-list-esp li{
