@@ -1,29 +1,64 @@
 /* Déclaration des couleurs*/
 
-$userFilColor: darkslategray;
-$UserParticipationColor: darkcyan;/* lavender; cadetblue;*/
-$UserObsColor: skyblue; /*#87ceeb*/
-$GuideEspece: saddlebrown; /*#8b4513*/
-$UserIdentifColor:seagreen; /*#2e8b57*/
+/* $userFilColor: #a09b82;
+$UserParticipationColor: #a09b82;
+$userFilColorT: rgba(160, 155, 130, 0.3);
+$UserObsColor: #609fb9;
+$UserObsColorT: rgba(96, 159, 185, 0.3);
+$GuideEspece: #67ab85;
+$GuideEspeceT: rgba(103, 171, 133, 0.3);
+$UserIdentifColor: #d5b76c;
+$UserIdentifColorT: rgba(213, 183, 108, 0.3);
 $UserIdentifColorPastel:seagreen;
 $ResultatsColor: #AA4B39;
 
 
-$OrgColor: indianred;
-$OrgFilColor: #D47A6A;
-$OrgPresentationColor: #AA4B39;
-$OrgMembreColor: #AA4B39;
-$OrgParcObsColor: #303C74; /* ou #AA8939 */
+$OrgColor: #a09b82;
+$OrgFilColor: #a09b82;
+$OrgPresentationColor: #a09b82;
+$OrgMembreColor: #a09b82;
+$OrgParcObsColor: #609fb9;
 $OrgPostulerColor: #a09b82;
-$OrgDonneesColor: #AA4B39;
-$OrgAdminDonneesColor: #AA4B39;
+$OrgDonneesColor: #a09b82;
+$OrgAdminDonneesColor: #a09b82; */
 
 
-/* @blue: #17B6FF;
-@magenta: #FF17B6;
-@lime: #B6FF17;
-@green: #1BFF17; */
+$color_default_0: #A09B82;  // Main Primary color */
+$color_default_1: #F4F1E3;
+$color_default_2: #C6C1AC;
+$color_default_3: #7B765D;
+$color_default_4: #4D4832;
 
-/* TEST */
-/* $blue: #17B6FF;
-.bg-test { background-color:$blue; } */
+$color_espece_0: #51A348;
+$color_espece_1: #ADDEA8;
+$color_espece_2: #7EC577;
+$color_espece_3: #2D8124;
+$color_espece_4: #115C0A;
+
+$color_obs_0: #435785;
+$color_obs_1: #98A5C3;
+$color_obs_2: #6879A1;
+$color_obs_3: #253A69;
+$color_obs_4: #0F214B;
+
+$color_ident_0: #C7A258;
+$color_ident_1: #FFEAC1;
+$color_ident_2: #F0D091;
+$color_ident_3: #9D782C;
+$color_ident_4: #704F0C;
+
+$color_org_0: #C4575C;
+$color_org_1: #FCBFC2;
+$color_org_2: #EC8F93;
+$color_org_3: #9B2B31;
+$color_org_4: #6E0B10;
+
+/*
+$OrgColor: #a09b82;
+$OrgFilColor: #a09b82;
+$OrgPresentationColor: #a09b82;
+$OrgMembreColor: #a09b82;
+$OrgParcObsColor: #609fb9;
+$OrgPostulerColor: #a09b82;
+$OrgDonneesColor: #a09b82;
+$OrgAdminDonneesColor: #a09b82; */

@@ -181,23 +181,31 @@
   border-bottom-left-radius:0px;
 }
 .text-Espece{
-  color: $GuideEspece;/*olivedrab;*/
+  color: $color_espece_0;/*olivedrab;*/
 }
 
 .badge-Espece{
-  color: $GuideEspece;/*olivedrab;*/
-  background-color: rgba(139, 69, 19, 0.3);/*rgba(107, 142, 35, 0.3);*/
+  color: $color_espece_0;/*olivedrab;*/
+  background-color: $color_espece_1;/*rgba(107, 142, 35, 0.3);*/
   /* background-color: olivedrab; */
 }
 
+.text-Obs{
+  color: $color_obs_0;
+}
+
 .badge-Obs{
-  color: $UserObsColor!important;/*#5bc0de!important;*/
-  background-color: rgba(135, 206, 235, 0.3);/*rgba(91, 192, 222, 0.3);*/
+  color: $color_obs_0!important;/*#5bc0de!important;*/
+  background-color: $color_obs_1;/*rgba(91, 192, 222, 0.3);*/
+}
+
+.text-Ident{
+  color: $color_ident_0;
 }
 
 .badge-Ident{
-  color: $UserIdentifColor!important;/*#f0ad4e!important;*/
-  background-color: rgba(46, 139, 87, 0.3);/*rgba(240, 173, 78, 0.3);*/
+  color: $color_ident_0!important;/*#f0ad4e!important;*/
+  background-color: $color_ident_1;/*rgba(240, 173, 78, 0.3);*/
 }
 
 .badge-default{
@@ -235,45 +243,51 @@
   overflow-x: hidden;
 }
 
-.limitH-60{
+.sized-img{
   height: 60px;
+  width: 93px;
 }
 
 .over-icon{
   position: absolute;
-  top:20px;
-  left: 10px;
+  top:0px;
+  left:0px;
 }
 
-.over-icon{
-  position: absolute;
-  top:4px;
-  left: 4px;
-}
 
 .over-icon button{
-  padding: 20px 16px 21px 16px;
+  height: 60px;
+  width: 93px;
   border-width: 0px;
   color:transparent;
 }
 
 .over-icon button:hover{
-  padding: 20px 16px 21px 16px;
-  border-width: 1px;
+  /* height: 60px;
+  width: 93px; */
   color:white;
+  background-color: $color_ident_0;
 }
 
-#obs-list-ident
+.btn-ident:hover{
+  border-color: $color_ident_0;
+  background-color: $color_ident_1;
+}
+
+.ident-container{
+  position: relative;
+}
 
 
 #obs-list-esp li{
   /* border-color: olivedrab; */
-  background-color: $UserObsColor; /* #F1F9F1; */
+  background-color: $color_obs_0; /* #F1F9F1; */
 }
 
 #obs-list-ident li{
   /* border-color: olivedrab; */
-  background-color: #FFFEEE;
+  background-color: #F5F5F5;
+  border-color: #F5F5F5;
 }
 
 #overflowfix .badge:first-child{
@@ -298,7 +312,7 @@
 
 .fil-obs{
   border: 1px solid lightgrey;
-  border-left: 3px solid lightblue;
+  border-left: 3px solid $color_obs_0;
   /*border: 1px solid #5bc0de;*/
 }
 
@@ -311,7 +325,7 @@
 
 .fil-ident{
   border: 1px solid lightgrey;
-  border-left: 3px solid palegoldenrod;
+  border-left: 3px solid $color_ident_1; /*rgba(46, 139, 87, 0.3)*/
   /* border: 1px solid #f0ad4e; */
 }
 
@@ -324,14 +338,14 @@
 
 .fil-other{
   border: 1px solid lightgrey;
-  border-left: 3px solid rgba(68, 157, 68, 0.4);
+  border-left: 3px solid $color_obs_1;
   /* border: 1px solid #f0ad4e; */
 }
 
 
 .fil-news{
   border: 1px solid lightgrey;
-  border-left: 3px solid lightgrey;/* rgba(150, 0, 0, 0.4); */
+  border-left: 3px solid $color_default_2;/* rgba(150, 0, 0, 0.4); */
   /* border: 1px solid #f0ad4e; */
 }
 

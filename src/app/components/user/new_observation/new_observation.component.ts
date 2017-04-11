@@ -3,7 +3,8 @@ import { Component } from '@angular/core'
 
 @Component ({
 	selector: 'my-new-observation',
-	templateUrl: 'new_observation.component.html'
+	templateUrl: 'new_observation.component.html',
+	styleUrls: ['new_observation.style.scss']
 })
 
 export class NewObservationComponent {}
