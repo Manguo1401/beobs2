@@ -1,0 +1,22 @@
+@import "../../css/colors.style";
+
+
+.new_obs_process:hover {
+	background-color: $UserObsColorT;
+	color: white;
+}
+
+.new_obs_process {
+	border-color: $UserObsColor;
+	color: $UserObsColor;
+}
+
+.new_obs_process.active {
+	background-color: $UserObsColor;
+	color: white;
+}
+
+.arrow_next {
+	color: $UserObsColor;
+	font-size: 60px;
+}
