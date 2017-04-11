@@ -181,31 +181,31 @@
   border-bottom-left-radius:0px;
 }
 .text-Espece{
-  color: $GuideEspece;/*olivedrab;*/
+  color: $color_espece_0;/*olivedrab;*/
 }
 
 .badge-Espece{
-  color: $GuideEspece;/*olivedrab;*/
-  background-color: $GuideEspeceT;/*rgba(107, 142, 35, 0.3);*/
+  color: $color_espece_0;/*olivedrab;*/
+  background-color: $color_espece_1;/*rgba(107, 142, 35, 0.3);*/
   /* background-color: olivedrab; */
 }
 
 .text-Obs{
-  color: $UserObsColor;
+  color: $color_obs_0;
 }
 
 .badge-Obs{
-  color: $UserObsColor!important;/*#5bc0de!important;*/
-  background-color: $UserObsColorT;/*rgba(91, 192, 222, 0.3);*/
+  color: $color_obs_0!important;/*#5bc0de!important;*/
+  background-color: $color_obs_1;/*rgba(91, 192, 222, 0.3);*/
 }
 
 .text-Ident{
-  color: $UserIdentifColor;
+  color: $color_ident_0;
 }
 
 .badge-Ident{
-  color: $UserIdentifColor!important;/*#f0ad4e!important;*/
-  background-color: $UserIdentifColorT;/*rgba(240, 173, 78, 0.3);*/
+  color: $color_ident_0!important;/*#f0ad4e!important;*/
+  background-color: $color_ident_1;/*rgba(240, 173, 78, 0.3);*/
 }
 
 .badge-default{
@@ -266,12 +266,12 @@
   /* height: 60px;
   width: 93px; */
   color:white;
-  background-color: $UserIdentifColor;
+  background-color: $color_ident_0;
 }
 
 .btn-ident:hover{
-  border-color: $UserIdentifColor;
-  background-color: $UserIdentifColorT;
+  border-color: $color_ident_0;
+  background-color: $color_ident_1;
 }
 
 .ident-container{
@@ -281,7 +281,7 @@
 
 #obs-list-esp li{
   /* border-color: olivedrab; */
-  background-color: $UserObsColor; /* #F1F9F1; */
+  background-color: $color_obs_0; /* #F1F9F1; */
 }
 
 #obs-list-ident li{
@@ -312,7 +312,7 @@
 
 .fil-obs{
   border: 1px solid lightgrey;
-  border-left: 3px solid $UserObsColor;
+  border-left: 3px solid $color_obs_0;
   /*border: 1px solid #5bc0de;*/
 }
 
@@ -325,7 +325,7 @@
 
 .fil-ident{
   border: 1px solid lightgrey;
-  border-left: 3px solid $UserIdentifColorT; /*rgba(46, 139, 87, 0.3)*/
+  border-left: 3px solid $color_ident_1; /*rgba(46, 139, 87, 0.3)*/
   /* border: 1px solid #f0ad4e; */
 }
 
@@ -338,14 +338,14 @@
 
 .fil-other{
   border: 1px solid lightgrey;
-  border-left: 3px solid $UserObsColorT;
+  border-left: 3px solid $color_obs_1;
   /* border: 1px solid #f0ad4e; */
 }
 
 
 .fil-news{
   border: 1px solid lightgrey;
-  border-left: 3px solid $userFilColorT;/* rgba(150, 0, 0, 0.4); */
+  border-left: 3px solid $color_default_2;/* rgba(150, 0, 0, 0.4); */
   /* border: 1px solid #f0ad4e; */
 }
 

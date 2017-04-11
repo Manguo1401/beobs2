@@ -1,5 +1,5 @@
 @import "colors.style";
-/* $UserObsColor: #303C74;
+/* $color_obs_0: #303C74;
  */
 .btn{
   border-radius: 0px;
@@ -17,201 +17,201 @@
 }
 
 .btnmenu-Fil{
-  border-bottom-color: $userFilColor;
+  border-bottom-color: $color_default_0;
 }
 
 .btnmenu-Fil:hover, .btnmenu-Fil:focus {
-  color: $userFilColor;
-  border-color: $userFilColor;
+  color: $color_default_0;
+  border-color: $color_default_0;
 }
 
 .btnmenu-Fil.active{
   color:white;
-  border-color: $userFilColor;
-  background-color: $userFilColor;
+  border-color: $color_default_0;
+  background-color: $color_default_0;
 }
 
 .btnmenu-Participation{
-  border-bottom-color: $UserParticipationColor;
+  border-bottom-color: $color_default_0;
 }
 
 .btnmenu-Participation:hover, .btnmenu-Participation:focus {
-  color: $UserParticipationColor;
-  border-color: $UserParticipationColor;
+  color: $color_default_0;
+  border-color: $color_default_0;
 }
 
 .btnmenu-Participation.active{
   color:white;
-  border-color: $UserParticipationColor;
-  background-color: $UserParticipationColor;
+  border-color: $color_default_0;
+  background-color: $color_default_0;
 }
 
 
 .btnmenu-Obs{
-  border-bottom-color: $UserObsColor;
+  border-bottom-color: $color_obs_0;
   color: black;
 }
 
 .btnmenu-Obs:hover, .btnmenu-Obs:focus {
-  color:$UserObsColor;
-  border-color: $UserObsColor;
+  color:$color_obs_0;
+  border-color: $color_obs_0;
 }
 
 .btnmenu-Obs.active{
   color:white;
-  border-color: $UserObsColor;
-  background-color: $UserObsColor;
+  border-color: $color_obs_0;
+  background-color: $color_obs_0;
 }
 
 
 .btnmenu-Esp{
-  border-bottom-color: $GuideEspece;
+  border-bottom-color: $color_espece_0;
   color: black;
 }
 
 .btnmenu-Esp:hover, .btnmenu-Esp:focus {
-  color:$GuideEspece;
-  border-color: $GuideEspece;
+  color:$color_espece_0;
+  border-color: $color_espece_0;
 }
 
 .btnmenu-Esp.active{
   color:white;
-  border-color: $GuideEspece;
-  background-color: $GuideEspece;
+  border-color: $color_espece_0;
+  background-color: $color_espece_0;
 }
 
 .btnmenu-Ident{
-  border-bottom-color: $UserIdentifColor;
+  border-bottom-color: $color_ident_0;
 }
 
 .btnmenu-Ident:hover, .btnmenu-Ident:focus {
-  color: $UserIdentifColor;
-  border-color: $UserIdentifColor;
+  color: $color_ident_0;
+  border-color: $color_ident_0;
 }
 
 .btnmenu-Ident.active{
   color:white;
-  border-color: $UserIdentifColor;
-  background-color: $UserIdentifColor;
+  border-color: $color_ident_0;
+  background-color: $color_ident_0;
 }
 
 .btnmenu-Org{
-  border-bottom-color: $OrgColor;
+  border-bottom-color: $color_org_0;
 }
 
 .btnmenu-Org:hover, .btnmenu-Org:focus {
-  color: $OrgColor;
-  border-color: $OrgColor;
+  color: $color_org_0;
+  border-color: $color_org_0;
 }
 
 .btnmenu-Org.active{
   color:white;
-  border-color: $OrgColor;
-  background-color: $OrgColor;
+  border-color: $color_org_0;
+  background-color: $color_org_0;
 }
 
 .btnmenu-OrgFil{
-  border-bottom-color: $OrgFilColor;
+  border-bottom-color: $color_org_0;
 }
 
 .btnmenu-OrgFil:hover, .btnmenu-OrgFil:focus {
-  color: $OrgFilColor;
-  border-color: $OrgFilColor;
+  color: $color_org_0;
+  border-color: $color_org_0;
 }
 
 .btnmenu-OrgFil.active{
   color:white;
-  border-color: $OrgFilColor;
-  background-color: $OrgFilColor;
+  border-color: $color_org_0;
+  background-color: $color_org_0;
 }
 
 .btnmenu-OrgPresentation{
-  border-bottom-color: $OrgPresentationColor;
+  border-bottom-color: $color_org_0;
 }
 
 .btnmenu-OrgPresentation:hover, .btnmenu-OrgPresentation:focus {
-  color: $OrgPresentationColor;
-  border-color: $OrgPresentationColor;
+  color: $color_org_0;
+  border-color: $color_org_0;
 }
 
 .btnmenu-OrgPresentation.active{
   color:white;
-  border-color: $OrgPresentationColor;
-  background-color: $OrgPresentationColor;
+  border-color: $color_org_0;
+  background-color: $color_org_0;
 }
 
 .btnmenu-OrgMembre{
-  border-bottom-color: $OrgMembreColor;
+  border-bottom-color: $color_org_0;
 }
 
 .btnmenu-OrgMembre:hover, .btnmenu-OrgMembre:focus {
-  color: $OrgMembreColor;
-  border-color: $OrgMembreColor;
+  color: $color_org_0;
+  border-color: $color_org_0;
 }
 
 .btnmenu-OrgMembre.active{
   color:white;
-  border-color: $OrgMembreColor;
-  background-color: $OrgMembreColor;
+  border-color: $color_org_0;
+  background-color: $color_org_0;
 }
 
 
 .btnmenu-OrgParcObs{
-  border-bottom-color: $OrgParcObsColor;
+  border-bottom-color: $color_obs_0;
 }
 
 .btnmenu-OrgParcObs:hover, .btnmenu-OrgParcObs:focus {
-  color: $OrgParcObsColor;
-  border-color: $OrgParcObsColor;
+  color: $color_obs_0;
+  border-color: $color_obs_0;
 }
 
 .btnmenu-OrgParcObs.active{
   color:white;
-  border-color: $OrgParcObsColor;
-  background-color: $OrgParcObsColor;
+  border-color: $color_obs_0;
+  background-color: $color_obs_0;
 }
 
 .btnmenu-OrgPostuler{
-  border-bottom-color: $OrgPostulerColor;
+  border-bottom-color: $color_obs_0;
 }
 
 .btnmenu-OrgPostuler:hover, .btnmenu-OrgPostuler:focus {
-  color: $OrgPostulerColor;
-  border-color: $OrgPostulerColor;
+  color: $color_org_0;
+  border-color: $color_org_0;
 }
 
 .btnmenu-OrgPostuler.active{
   color:white;
-  border-color: $OrgPostulerColor;
-  background-color: $OrgPostulerColor;
+  border-color: $color_org_0;
+  background-color: $color_org_0;
 }
 
 .btnmenu-OrgDonnees{
-  border-bottom-color: $OrgDonneesColor;
+  border-bottom-color: $color_org_0;
 }
 
 .btnmenu-OrgDonnees:hover, .btnmenu-OrgDonnees:focus {
-  color: $OrgDonneesColor;
-  border-color: $OrgDonneesColor;
+  color: $color_org_0;
+  border-color: $color_org_0;
 }
 
 .btnmenu-OrgDonnees.active{
   color:white;
-  border-color: $OrgDonneesColor;
-  background-color: $OrgDonneesColor;
+  border-color: $color_org_0;
+  background-color: $color_org_0;
 }
 
 .btnmenu-OrgAdminDonnees{
-  border-bottom-color: $OrgAdminDonneesColor;
+  border-bottom-color: $color_org_0;
 }
 
 .btnmenu-OrgAdminDonnees:hover, .btnmenu-OrgAdminDonnees:focus {
-  color: $OrgAdminDonneesColor;
-  border-color: $OrgAdminDonneesColor;
+  color: $color_org_0;
+  border-color: $color_org_0;
 }
 
 .btnmenu-OrgAdminDonnees.active{
   color:white;
-  border-color: $OrgAdminDonneesColor;
-  background-color: $OrgAdminDonneesColor;
+  border-color: $color_org_0;
+  background-color: $color_org_0;
 }
