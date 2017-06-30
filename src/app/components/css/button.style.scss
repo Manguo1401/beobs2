@@ -111,48 +111,48 @@
 }
 
 .btnmenu-OrgFil{
-  border-bottom-color: $color_org_0;
+  border-bottom-color: $color_default_0;
 }
 
 .btnmenu-OrgFil:hover, .btnmenu-OrgFil:focus {
-  color: $color_org_0;
-  border-color: $color_org_0;
+  color: $color_default_0;
+  border-color: $color_default_0;
 }
 
 .btnmenu-OrgFil.active{
   color:white;
-  border-color: $color_org_0;
-  background-color: $color_org_0;
+  border-color: $color_default_0;
+  background-color: $color_default_0;
 }
 
 .btnmenu-OrgPresentation{
-  border-bottom-color: $color_org_0;
+  border-bottom-color: $color_default_0;
 }
 
 .btnmenu-OrgPresentation:hover, .btnmenu-OrgPresentation:focus {
-  color: $color_org_0;
-  border-color: $color_org_0;
+  color: $color_default_0;
+  border-color: $color_default_0;
 }
 
 .btnmenu-OrgPresentation.active{
   color:white;
-  border-color: $color_org_0;
-  background-color: $color_org_0;
+  border-color: $color_default_0;
+  background-color: $color_default_0;
 }
 
 .btnmenu-OrgMembre{
-  border-bottom-color: $color_org_0;
+  border-bottom-color: $color_default_0;
 }
 
 .btnmenu-OrgMembre:hover, .btnmenu-OrgMembre:focus {
-  color: $color_org_0;
-  border-color: $color_org_0;
+  color: $color_default_0;
+  border-color: $color_default_0;
 }
 
 .btnmenu-OrgMembre.active{
   color:white;
-  border-color: $color_org_0;
-  background-color: $color_org_0;
+  border-color: $color_default_0;
+  background-color: $color_default_0;
 }
 
 
@@ -172,18 +172,18 @@
 }
 
 .btnmenu-OrgPostuler{
-  border-bottom-color: $color_obs_0;
+  border-bottom-color: $color_default_0;
 }
 
 .btnmenu-OrgPostuler:hover, .btnmenu-OrgPostuler:focus {
-  color: $color_org_0;
-  border-color: $color_org_0;
+  color: $color_default_0;
+  border-color: $color_default_0;
 }
 
 .btnmenu-OrgPostuler.active{
   color:white;
-  border-color: $color_org_0;
-  background-color: $color_org_0;
+  border-color: $color_default_0;
+  background-color: $color_default_0;
 }
 
 .btnmenu-OrgDonnees{
@@ -201,16 +201,16 @@
   background-color: $color_org_0;
 }
 
-.btnmenu-OrgAdminDonnees{
+.btnmenu-OrgAdmin{
   border-bottom-color: $color_org_0;
 }
 
-.btnmenu-OrgAdminDonnees:hover, .btnmenu-OrgAdminDonnees:focus {
+.btnmenu-OrgAdmin:hover, .btnmenu-OrgAdmin:focus {
   color: $color_org_0;
   border-color: $color_org_0;
 }
 
-.btnmenu-OrgAdminDonnees.active{
+.btnmenu-OrgAdmin.active{
   color:white;
   border-color: $color_org_0;
   background-color: $color_org_0;
