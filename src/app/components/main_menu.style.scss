@@ -1,3 +1,5 @@
+@import "./css/colors.style";
+
 .bg-banner{
   background-color: lightsteelblue;
 }
@@ -35,7 +37,7 @@
 }
 
 .topMargeNav .btn:hover{
-  color:white;
-  border:1px solid white;
+  color:$color_default_4;
+  border:1px solid $color_default_4;
   /* background-color: darkblue; */
 }
