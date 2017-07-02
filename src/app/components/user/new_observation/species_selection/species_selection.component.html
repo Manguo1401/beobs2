@@ -1,7 +1,8 @@
 
 <div class="box-message alert-info  w-75 mx-auto">
 	Sélectionnez l'espèce de l'observation que vous souhaitez saisir.
-	<br> Vous avez la possibilité d'en choisir plusieurs si vous n'êtes pas sûr de votre choix et vous pouvez aussi passez cette étape si vous ne connaissez pas l'espèce observée.
+	<br> Vous avez la possibilité d'en choisir plusieurs si vous n'êtes pas sûr de votre choix.
+	Si vous n'arivez pas à trouver votre espèce vous pouvez passez directement à l'étape suivante.
 </div>
 
 
@@ -10,23 +11,23 @@
 		<div class="col-12 mb-2 px-1 bg-white">
 			<div class="flex mx-1 lead">Je ne connais pas l'espèce : <button class="btn btn-outline-primary btn-sm mb-1">Passer cette étape</button></div>
 		</div>
-		<div class="row mx-0 q1">
+		<div class="row mx-0" *ngIf="!question">
 			<div class="col-12 px-1 bg-white">
-				<div class="row m-1 lead">
-					Dans quel milieu vie l'espèce ?
+				<div class="row m-1 lead">					
+					<div class="col-8 lead">Est-ce que sa longueur dépasse 3 mètres ?</div>
 				</div>
 				<div class="row">
 					<div class="col-10 offset-2 mt-1">
 						<div class="form-check">
 							<label class="form-check-label">
-								<input type="radio" class="form-check-input">
-								Aquatique
+								<input type="radio" class="form-check-input" (click)="answer()">
+								Oui
 							</label>
 						</div>
 						<div class="form-check">
 							<label class="form-check-label">
-								<input type="radio" class="form-check-input r1" (click)="nextquestion()">
-								Terrestre
+								<input type="radio" class="form-check-input">
+								Non
 							</label>
 						</div>
 						<div class="form-check">
@@ -45,24 +46,26 @@
 				</div>
 			</div>
 		</div>
-		<div class="row mx-0 q2" style="display: none;">
+		<div class="row mx-0" *ngIf="question">
 			<div class="col-12 px-1 bg-white">
 				<div class="row m-1 lead">
-					<div class="col-4"><button class="btn btn-outline-primary"><i class="fa fa-chevron-left" aria-hidden="true"></i></button></div>
-					<div class="col-8 lead">Est-ce que votre espèce détient 4 pattes ?</div>
+					<button class="btn btn-outline-primary mx-3" (click)="answer()">
+							<i class="fa fa-chevron-left" aria-hidden="true"></i>
+					</button>
+					Dans quel milieu vie l'espèce ?
 				</div>
 				<div class="row">
 					<div class="col-10 offset-2 mt-1">
 						<div class="form-check">
 							<label class="form-check-label">
-								<input type="radio" class="form-check-input">
-								Oui
+								<input type="radio" class="form-check-input r1">
+								Aquatique
 							</label>
 						</div>
 						<div class="form-check">
 							<label class="form-check-label">
 								<input type="radio" class="form-check-input">
-								Non
+								Terrestre
 							</label>
 						</div>
 						<div class="form-check">
@@ -70,6 +73,7 @@
 								<input type="radio" class="form-check-input">
 								Je ne sais pas
 							</label>
+		
 						</div>
 						<div class="form-check">
 							<label class="form-check-label">
@@ -154,11 +158,14 @@
 				</div>
 				<div class="col-md-6 bg-white mx-0 py-2 px-2">
 					<nav class="breadcrumb">
-						<a class="breadcrumb-item" href="#">Animalia</a>
-						<a class="breadcrumb-item" href="#">Chordata</a>
-						<a class="breadcrumb-item" href="#">Mammalia</a>
-						<a class="breadcrumb-item" href="#">Cetacea</a>
-						<span class="breadcrumb-item active">Delphinidae</span>
+						<a class="breadcrumb-item">Animalia</a>
+						<a class="breadcrumb-item">Chordata</a>
+						<a class="breadcrumb-item">Mammalia</a>
+						<a class="breadcrumb-item">Cetartiodactyla</a>
+						<a class="breadcrumb-item">Cetacea</a>
+						<span class="breadcrumb-item active" (click)="selectGroup()" *ngIf="!group">Odontoceti</span>
+						<a class="breadcrumb-item" (click)="selectGroup()" *ngIf="group">Odontoceti</a>
+						<span class="breadcrumb-item active" *ngIf="group">Delphinidae</span>
 					</nav>
 					<div class="row">
 						<div class="input-group col-12 mb-1">
@@ -166,12 +173,15 @@
 							<span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
 						</div>
 					</div>
-					<div class="list-group mt-2" [hidden]="!group" >
+
+					<!-- ////////////////////////////////////////////////////////////////////////// -->
+
+					<div class="list-group mt-2" *ngIf="question === true && group === true" >
 						<button class="list-group-item list-group-item-success list-group-item-action" (click)="selectGroup()" >
 							<div class="d-flex w-100 justify-content-between">
 								<div>
-									<h5 class="mb-0">Mammalia</h5>
-									<small>(Dauphins, Baleines, Ours, Félins et 10 autres)</small>
+									<h5 class="mb-0">Delphinidae</h5>
+									<small>(Dauphins, Orques)</small>
 								</div>
 								<div>
 									<span class="badge badge-success badge-pill mx-1 my-1">8</span>
@@ -183,8 +193,8 @@
 						<button class="list-group-item list-group-item-warning list-group-item-action">
 							<div class="d-flex w-100 justify-content-between">
 								<div>
-									<h5 class="mb-0">Amphibia</h5>
-									<small>(Dauphins, Baleines, Ours, Félins et 10 autres)</small>
+									<h5 class="mb-0">Monodontidae</h5>
+									<small>(Béluga, Narval)</small>
 								</div>
 								<div>
 									<span class="badge badge-success badge-pill mx-1 my-1">5</span>
@@ -196,8 +206,8 @@
 						<button class="list-group-item list-group-item-danger list-group-item-action">
 							<div class="d-flex w-100 justify-content-between">
 								<div>
-									<h5 class="mb-0">Reptilia</h5>
-									<small>(Dauphins, Baleines, Ours, Félins et 10 autres)</small>
+									<h5 class="mb-0">Phocoenidae</h5>
+									<small>(Marsouins)</small>
 								</div>
 								<div>
 									<span class="badge badge-success badge-pill mx-1 my-1">2</span>
@@ -208,8 +218,51 @@
 						</button>
 					</div>
 
+
+					<!-- ////////////////////////////////////////////////////////////////////////// -->
+
+					<div class="list-group mt-2" *ngIf="question === false && group === true" >
+						<button class="list-group-item list-group-item-default list-group-item-action" (click)="selectGroup()" >
+							<div class="d-flex w-100 justify-content-between">
+								<div>
+									<h5 class="mb-0">Delphinidae</h5>
+									<small>(Dauphins, Orques)</small>
+								</div>
+								<div>
+									<span class="badge badge-default badge-pill mx-1 my-1">15</span>
+								</div>
+							</div>
+						</button>
+						<button class="list-group-item list-group-item-default list-group-item-action">
+							<div class="d-flex w-100 justify-content-between">
+								<div>
+									<h5 class="mb-0">Monodontidae</h5>
+									<small>(Béluga, Narval)</small>
+								</div>
+								<div>
+									<span class="badge badge-default badge-pill mx-1 my-1">15</span>
+								</div>
+							</div>
+						</button>
+						<button class="list-group-item list-group-item-default list-group-item-action">
+							<div class="d-flex w-100 justify-content-between">
+								<div>
+									<h5 class="mb-0">Phocoenidae</h5>
+									<small>(Marsouins)</small>
+								</div>
+								<div>
+									<span class="badge badge-default badge-pill mx-1 my-1">19</span>
+								</div>
+							</div>
+						</button>
+					</div>
+					
+
+
+					<!-- ////////////////////////////////////////////////////////////////////////// -->
+
 					<div class="list-group mt-2" [hidden]="group">
-						<button class="btn btn-default" (click)="selectGroup()" >Mammifères</button>
+						<button class="btn btn-default" (click)="selectGroup()" >Odontoceti (Odontocètes)</button>
 						<button type="button" class="list-group-item list-group-item-action">
 							<div class="col-md-3">
 								<img src="../../../public/assets/images/taxonomy/tursiops_aduncus.jpg" class="img-fluid rounded" alt="">
