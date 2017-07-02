@@ -11,6 +11,7 @@ import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core'
 export class SpeciesSelectComponent {
 
 	group: boolean = true;
+	question: boolean = false;
 
 	selectGroup() {
 		if(this.group === true ) {
@@ -20,12 +21,13 @@ export class SpeciesSelectComponent {
 		}
 	}
 
-  nextquestion(){
-
-    $('.q2').show();
-    $('.q1').hide();
-
-  }
+	answer() {
+		if(this.question === false) {
+		    this.question = true;
+		} else {
+			this.question = false;
+		}
+	}
 
 /*	constructor(config: NgbCarouselConfig) {
     // customize default values of carousels used by this component tree
