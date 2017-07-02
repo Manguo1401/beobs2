@@ -5,7 +5,7 @@ import * as ol from 'openlayers';
 @Component ({
 	selector: "my-trip-selector",
 	templateUrl: 'trip_selector.component.html',
-	styleUrls: ['trip_selector.style.css']
+	styleUrls: ['trip_selector.style.css', '../../../css/utils.style.scss']
 })
 
 export class TripSelectorComponent implements AfterViewInit, OnInit {

@@ -4,8 +4,8 @@ import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core'
 
 @Component ({
 	selector: 'my-species-selector',
-	templateUrl: 'species_selection.component.html'/*,
-  	providers: [NgbCarouselConfig]*/
+	templateUrl: 'species_selection.component.html',
+  styleUrls: ['../../../css/utils.style.scss']
 })
 
 export class SpeciesSelectComponent {
@@ -19,6 +19,13 @@ export class SpeciesSelectComponent {
 			this.group = true;
 		}
 	}
+
+  nextquestion(){
+
+    $('.q2').show();
+    $('.q1').hide();
+
+  }
 
 /*	constructor(config: NgbCarouselConfig) {
     // customize default values of carousels used by this component tree
