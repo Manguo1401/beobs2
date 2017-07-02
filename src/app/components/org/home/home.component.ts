@@ -9,7 +9,8 @@ import {NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
   selector: 'my-home-component',
   templateUrl: 'home.component.html',
   providers: [NgbDatepicker],
-  styleUrls: ['home.style.css'],
+  styleUrls: ['home.style.css',
+  '../../css/utils.style.scss'],
 })
 
 export class HomeOrgComponent implements AfterViewInit{
