@@ -7,7 +7,7 @@ import {NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
 	providers: [NgbDatepicker],
 	styleUrls: [
 	'./../my_observations/my_observations.style.scss',
-	//'../user_banner.css'
+	'../../css/utils.style.scss'
 	]
 })
 
