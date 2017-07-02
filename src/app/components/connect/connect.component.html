@@ -1,6 +1,6 @@
 <div class="connectcomp">
   <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#connectcontent" aria-expanded="false" aria-controls="connectcontent">
-    <span *ngIf="!_isAuthenticated">Connexion</span><span *ngIf="_isAuthenticated">Connexion Info</span>
+    <span *ngIf="!_isAuthenticated">Connexion</span><!-- <span *ngIf="_isAuthenticated">Connexion Info</span> -->
   </button>
   <div class="collapse" id="connectcontent" style="max-width: 50%;">
     <div class="card card-block bg-faded" >
@@ -74,14 +74,14 @@
       <!-- <section *ngIf="_isAuthenticated" class="child">CONNECT {{user.username}}</section> -->
         </div>
       </div>
-      <section *ngIf="_isAuthenticated"  class="child text-left">
+      <!-- <section *ngIf="_isAuthenticated"  class="child text-left">
         <div style="word-wrap: break-word;">
           Token: {{tokenjwt}}
         </div>
         <div>
           User: {{user.username}}
         </div>
-      </section>
+      </section> -->
     </div>
   </div>
 
