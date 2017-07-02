@@ -180,37 +180,7 @@
   border-bottom-right-radius:0px;
   border-bottom-left-radius:0px;
 }
-.text-Espece{
-  color: $color_espece_0;/*olivedrab;*/
-}
 
-.badge-Espece{
-  color: $color_espece_0;/*olivedrab;*/
-  background-color: $color_espece_1;/*rgba(107, 142, 35, 0.3);*/
-  /* background-color: olivedrab; */
-}
-
-.text-Obs{
-  color: $color_obs_0;
-}
-
-.badge-Obs{
-  color: $color_obs_0!important;/*#5bc0de!important;*/
-  background-color: $color_obs_1;/*rgba(91, 192, 222, 0.3);*/
-}
-
-.text-Ident{
-  color: $color_ident_0;
-}
-
-.badge-Ident{
-  color: $color_ident_0!important;/*#f0ad4e!important;*/
-  background-color: $color_ident_1;/*rgba(240, 173, 78, 0.3);*/
-}
-
-.badge-default{
-  background-color: rgba(99, 108, 114, 0.3)
-}
 
 
 #obs_nav::after {
