@@ -87,11 +87,11 @@ export class GlobalResultsComponent implements OnInit{
 					style = new ol.style.Style({
 						image: new ol.style.Circle({
 							radius: 10 + (size^2*3.14)/3,
-							stroke: new ol.style.Stroke({
-								color: '#fff'
-							}),
+							/*stroke: new ol.style.Stroke({
+								color: '#000'
+							}),*/
 							fill: new ol.style.Fill({
-								color: '#3399CC'
+								color: 'rgba( 255, 114, 107, 0.8)'
 							})
 						}),
 						text: new ol.style.Text({
