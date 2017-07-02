@@ -1,64 +1,84 @@
 /* Déclaration des couleurs*/
 
-/* $userFilColor: #a09b82;
-$UserParticipationColor: #a09b82;
-$userFilColorT: rgba(160, 155, 130, 0.3);
-$UserObsColor: #609fb9;
-$UserObsColorT: rgba(96, 159, 185, 0.3);
-$GuideEspece: #67ab85;
-$GuideEspeceT: rgba(103, 171, 133, 0.3);
-$UserIdentifColor: #d5b76c;
-$UserIdentifColorT: rgba(213, 183, 108, 0.3);
-$UserIdentifColorPastel:seagreen;
-$ResultatsColor: #AA4B39;
+/*copy/paste de sass color export of http://paletton.com/#uid=73v2b0kiCFn8GVde7NVmtwSqXtg*/
 
+$color-primary-0: #5797C1;  // Main Primary color */
+$color-primary-1: #B2D6EE;
+$color-primary-2: #7FB6D9;
+$color-primary-3: #387BA6;
+$color-primary-4: #1F6795;
 
-$OrgColor: #a09b82;
-$OrgFilColor: #a09b82;
-$OrgPresentationColor: #a09b82;
-$OrgMembreColor: #a09b82;
-$OrgParcObsColor: #609fb9;
-$OrgPostulerColor: #a09b82;
-$OrgDonneesColor: #a09b82;
-$OrgAdminDonneesColor: #a09b82; */
+$color-secondary-1-0: #FF726B;  // Main Secondary color (1) */
+$color-secondary-1-1: #FFBDBA;
+$color-secondary-1-2: #FF948F;
+$color-secondary-1-3: #FF554C;
+$color-secondary-1-4: #E92F25;
 
+$color-secondary-2-0: #5AD86A;  // Main Secondary color (2) */
+$color-secondary-2-1: #B2F5BA;
+$color-secondary-2-2: #81E88E;
+$color-secondary-2-3: #3BC74D;
+$color-secondary-2-4: #1DB52F;
 
+$color-complement-0: #FFBD6B; // Main Complement color */
+$color-complement-1: #FFE0BA;
+$color-complement-2: #FFCD8F;
+$color-complement-3: #FFB04C;
+$color-complement-4: #E99225;
+
+// As RGBa codes */
+
+$rgba-primary-0: rgba( 87,151,193,1); // Main Primary color */
+$rgba-primary-1: rgba(178,214,238,1);
+$rgba-primary-2: rgba(127,182,217,1);
+$rgba-primary-3: rgba( 56,123,166,1);
+$rgba-primary-4: rgba( 31,103,149,1);
+
+$rgba-secondary-1-0: rgba(255,114,107,1); // Main Secondary color (1) */
+$rgba-secondary-1-1: rgba(255,189,186,1);
+$rgba-secondary-1-2: rgba(255,148,143,1);
+$rgba-secondary-1-3: rgba(255, 85, 76,1);
+$rgba-secondary-1-4: rgba(233, 47, 37,1);
+
+$rgba-secondary-2-0: rgba( 90,216,106,1); // Main Secondary color (2) */
+$rgba-secondary-2-1: rgba(178,245,186,1);
+$rgba-secondary-2-2: rgba(129,232,142,1);
+$rgba-secondary-2-3: rgba( 59,199, 77,1);
+$rgba-secondary-2-4: rgba( 29,181, 47,1);
+
+$rgba-complement-0: rgba(255,189,107,1);  // Main Complement color */
+$rgba-complement-1: rgba(255,224,186,1);
+$rgba-complement-2: rgba(255,205,143,1);
+$rgba-complement-3: rgba(255,176, 76,1);
+$rgba-complement-4: rgba(233,146, 37,1);
+
+/* Beobs Colors */
 $color_default_0: #A09B82;  // Main Primary color */
 $color_default_1: #F4F1E3;
 $color_default_2: #C6C1AC;
 $color_default_3: #7B765D;
 $color_default_4: #4D4832;
 
-$color_espece_0: #51A348;
-$color_espece_1: #ADDEA8;
-$color_espece_2: #7EC577;
-$color_espece_3: #2D8124;
-$color_espece_4: #115C0A;
+$color_obs_0: $color-primary-0;/* #OBS_color */
+$color_obs_1: $color-primary-1;
+$color_obs_2: $color-primary-2;
+$color_obs_3: $color-primary-3;
+$color_obs_4: $color-primary-4;
 
-$color_obs_0: #435785;
-$color_obs_1: #98A5C3;
-$color_obs_2: #6879A1;
-$color_obs_3: #253A69;
-$color_obs_4: #0F214B;
+$color_espece_0: $color-secondary-2-0;/* #ESP_color */
+$color_espece_1: $color-secondary-2-1;
+$color_espece_2: $color-secondary-2-2;
+$color_espece_3: $color-secondary-2-3;
+$color_espece_4: $color-secondary-2-4;
 
-$color_ident_0: #C7A258;
-$color_ident_1: #FFEAC1;
-$color_ident_2: #F0D091;
-$color_ident_3: #9D782C;
-$color_ident_4: #704F0C;
+$color_ident_0: $color-complement-0;/* #IDENT_color */
+$color_ident_1: $color-complement-1;
+$color_ident_2: $color-complement-2;
+$color_ident_3: $color-complement-3;
+$color_ident_4: $color-complement-4;
 
-$color_org_0: #C4575C;
-$color_org_1: #FCBFC2;
-$color_org_2: #EC8F93;
-$color_org_3: #9B2B31;
-$color_org_4: #6E0B10;
-
-/*
-$OrgColor: #a09b82;
-$OrgFilColor: #a09b82;
-$OrgPresentationColor: #a09b82;
-$OrgMembreColor: #a09b82;
-$OrgParcObsColor: #609fb9;
-$OrgPostulerColor: #a09b82;
-$OrgDonneesColor: #a09b82;
-$OrgAdminDonneesColor: #a09b82; */
+$color_org_0: $color-secondary-1-0;
+$color_org_1: $color-secondary-1-1;
+$color_org_2: $color-secondary-1-2;
+$color_org_3: $color-secondary-1-3;
+$color_org_4: $color-secondary-1-4;
