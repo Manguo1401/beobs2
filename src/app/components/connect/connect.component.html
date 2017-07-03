@@ -1,6 +1,6 @@
 <div class="connectcomp">
-  <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#connectcontent" aria-expanded="false" aria-controls="connectcontent">
-    <span *ngIf="!_isAuthenticated">Connexion</span><!-- <span *ngIf="_isAuthenticated">Connexion Info</span> -->
+  <button *ngIf="!_isAuthenticated" class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#connectcontent" aria-expanded="false" aria-controls="connectcontent">
+    <span>Connexion</span><!-- <span *ngIf="_isAuthenticated">Connexion Info</span> -->
   </button>
   <div class="collapse" id="connectcontent" style="max-width: 50%;">
     <div class="card card-block bg-faded" >

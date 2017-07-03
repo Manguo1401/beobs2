@@ -5,14 +5,15 @@ import * as ol from 'openlayers';
 @Component ({
 	selector: 'my-taxonomic-book',
 	templateUrl: 'taxonomic_book.component.html',
-	styleUrls: ['taxonomic_book.style.css']
+	styleUrls: ['taxonomic_book.style.css',
+		'../../css/utils.style.scss']
 })
 
 export class TaxonomicBookComponent implements OnInit {
 	ol: any;
 	hoveredFeatName: any;
 	organism:string = 'TEST';
-	
+
 	ngOnInit(): void {
 
 		var geojsonObject = {
@@ -42,13 +43,13 @@ export class TaxonomicBookComponent implements OnInit {
 				'properties': {
 					'name': 'cloud'
 				}
-				
+
 			}]
 		};
 
 		let geometryStyle = new ol.style.Style({
 			stroke: new ol.style.Stroke({
-				color: [92, 184, 92, 1], 
+				color: [92, 184, 92, 1],
 				width: 2
 			})
 		});
@@ -88,7 +89,7 @@ export class TaxonomicBookComponent implements OnInit {
 		let this_ = this;
 		hoverInteraction.on('select', function() {
 			let features = hoverInteraction.getFeatures();
-			
+
 			features.forEach(f => {
 				this_.organism = f.get('name');
 			});
