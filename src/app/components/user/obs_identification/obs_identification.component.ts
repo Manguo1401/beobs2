@@ -5,14 +5,15 @@ import * as ol from 'openlayers';
 @Component ({
 	selector: 'my-obs-identification',
 	templateUrl: 'obs_identification.component.html',
-	styleUrls: ['obs_identification.style.css']
+	styleUrls: ['obs_identification.style.css',
+		'../../css/utils.style.scss']
 })
 
 export class ObsIdentificationComponent implements OnInit {
 	ol:any;
 
 	ngOnInit(): void {
-		
+
 		var geojsonObject = {
 			'type': 'FeatureCollection',
 			'crs': {

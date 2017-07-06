@@ -1,45 +1,54 @@
 <!-- <my-org-banner-component></my-org-banner-component> -->
+<div class="row v-padding-20 justify-content-center">
+  <h1 class="display-3">Creation organisme</h1>
+</div>
 <div class="bg-faded">
-  <h3>Formulaire d'inscription d'organisme</h3>
-  <div class="row mx-0 p-2 mx-0">
-    <div class="col-3 d-flex flex-column">
-      <div class="field">
-        <label>Nom:</label>
-        <div class="fields">
-          <div class="field">
-            <input class="w-100" [(ngModel)]="newOrg.accr" type="text" placeholder="Acronyme">
-          </div>
-          <div class="field w-100">
-            <input class="w-100" [(ngModel)]="newOrg.name" type="text" placeholder="Nom Complet" required>
-          </div>
+  <div class="container">
+    <div class="row mt-2">
+      <div class="col-4 d-flex flex-column">
+        <div class="form-group row">
+          <label for="nom">Nom:</label>
+          <input id="accr" class="w-100" [(ngModel)]="newOrg.accr" type="text" placeholder="Acronyme">
+          <input id="nom" class="w-100" [(ngModel)]="newOrg.name" type="text" placeholder="Nom Complet" required>
         </div>
-        <div class="field">
-          <label>Description :</label>
-          <textarea class="w-100" rows="8">
-
-          </textarea>
+        <div class="form-group">
+          <label for="brevedesc"> Breve Description :</label>
+          <textarea class="form-control" id="brevedesc" rows="4"></textarea>
         </div>
       </div>
-    </div>
 
-    <div class="col-md-3 mx-auto">
-      <div class="image-container">
-        <div class="relative-container height-60">
-          <div class="row justify-content-center mb-2">
-            <button class="btn btn-default btn-lg"><i class="fa fa-picture-o" aria-hidden="true"></i> Ajoutez une image</button>
+
+      <div class="col-3 mx-auto">
+        <div class="image-container">
+          <div class="relative-container height-60">
+            <div class="row justify-content-center mb-2">
+              <button class="btn btn-default btn-lg"><i class="fa fa-picture-o" aria-hidden="true"></i> Ajoutez une image</button>
+            </div>
           </div>
         </div>
       </div>
+      <div class="col-5">
+        <div class="form-group">
+          <label for="site">Site web:</label>
+          <input id="site" class="w-100" [(ngModel)]="newOrg.accr" type="text" placeholder="Site web">
+        </div>
+      </div>
     </div>
-    <div class="col-6">
-      <div class="field"><input class="w-100" type="text" placeholder="Site web"></div>
+    <div class="row">
+      <div class="form-group col-10">
+      <label for="desc"> Description :</label>
+        <textarea class="form-control" id="desc" rows="8"></textarea>
+      </div>
     </div>
+    <div class="row">
+      <div class="offset-10">
+        <button (click)="createOrganism(org)" class="btn btn-outline-primary ml-auto">
+          <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Créer
+        </button>
+      </div>
+    </div>
+
   </div>
-
-  <button (click)="createOrganism(org)" class="ui button">
-    <i class="write icon">Create</i>
-  </button>
-
 </div>
 <!--<my-org-menu-component></my-org-menu-component>
 
