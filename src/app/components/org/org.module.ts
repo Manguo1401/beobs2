@@ -27,7 +27,7 @@ import { MemberManagementComponent } from './member_management/member_management
 import { PresentationOrgComponent } from './information/presentation/presentation.component'
 import { SearchedDataOrgComponent } from './information/searched_data/searched_data.component'
 import { MembersOrgComponent } from './information/members/members.component'
-
+import { CollectedDataComponent } from './collected_data/collected_data.component'
 
 @NgModule({
 	imports: [
@@ -52,7 +52,8 @@ import { MembersOrgComponent } from './information/members/members.component'
 		MemberManagementComponent,
 		PresentationOrgComponent,
 		SearchedDataOrgComponent,
-		MembersOrgComponent
+		MembersOrgComponent,
+		CollectedDataComponent
 	],
 	providers: [
 		// NgbDatepicker

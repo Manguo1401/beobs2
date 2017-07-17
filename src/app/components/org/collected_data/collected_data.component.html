@@ -1,0 +1,286 @@
+<my-org-banner-component></my-org-banner-component>
+<my-org-menu-component></my-org-menu-component>
+<div class="row v-padding-20 justify-content-center">
+  <h1 class="display-3"> Données collectées</h1>
+</div>
+<div id="obs_content" class="faded_background pt-3 rounded row" >
+  <div class="col-3 px-2">
+    <div class="row my-1">
+      <span class="col-4 p-0 text-nowrap w-50 align-self-center">Depuis:</span>
+      <div class="col-8 p-0 input-group">
+        <input class="form-control" placeholder=""
+        name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+        <i class="input-group-addon fa fa-calendar" aria-hidden="true" (click)="d.toggle()"></i>
+      </div>
+    </div>
+    <div class="row my-1">
+      <span class="col-4 p-0 text-nowrap w-50 align-self-center">Avant:</span>
+      <div class="col-8 p-0 input-group">
+        <input class="form-control" placeholder="Aujourd'hui"
+        name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+        <i class="input-group-addon fa fa-calendar" aria-hidden="true" (click)="d.toggle()"></i>
+      </div>
+    </div>
+    <div class="row my-1">
+      <span class="col-4 p-0 text-nowrap w-50 align-self-center">Espèces >:</span>
+      <div class="col-8 p-0 input-group">
+        <input class="form-control" placeholder="Toutes"
+        name="dp" >
+      </div>
+    </div>
+    <div class="row my-1">
+      <span class="col-4 p-0 text-nowrap w-50 align-self-center">% >=:</span>
+      <div class="col-8 p-0 input-group">
+        <input class="form-control" placeholder="50"
+        name="dp" >
+      </div>
+    </div>
+    <div class="row my-1">
+      <span class="col-4 p-0 text-nowrap w-50 align-self-center">Nb identifieurs >:</span>
+      <div class="col-8 p-0 input-group">
+        <input class="form-control" placeholder="10"
+        name="dp" >
+      </div>
+    </div>
+  </div>
+  <div class="col-8 px-2">
+    <table class="table bg-white">
+      <thead>
+        <tr>
+          <th>Observateur</th>
+          <th>Identifieur (personnes/points d'expertises)</th>
+          <th>Espèce 1</th>
+          <th>Espèce 2</th>
+          <th>Localisation</th>
+          <th>Date</th>
+          <th>Attr: Taille</th>
+          <th>Attr: Sexe</th>
+          <th>Attr: Metéo</th>
+          <th>Attr: Nombre d'individu</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mark</td>
+          <td class="text-OK">25/1220
+          </td>
+          <td class="text-OK">Dauphin Longbec (92%)
+          </td>
+          <td>Stenella Attenuata (8%)
+          </td>
+          <td>125525/2562533
+          </td>
+          <td>18/06/17 16h
+          </td>
+          <td>104cm
+          </td>
+          <td>N/A
+          </td>
+          <td>Nuageux
+          </td>
+          <td>8
+          </td>
+        </tr>
+        <tr>
+          <td>Jacob</td>
+          <td class="text-OK">28/1420
+          </td>
+          <td class="text-OK">Stenella Attenuata  (94%)
+          </td>
+          <td>Dauphin Longbec (6%)
+          </td>
+          <td>155525/4762533
+          </td>
+          <td>11/06/17
+          </td>
+          <td>142cm
+          </td>
+          <td>M
+          </td>
+          <td>Ensoleillé
+          </td>
+          <td>1
+          </td>
+        </tr>
+        <tr>
+          <td>Larry</td>
+          <td class="text-Ident">15/820
+          </td>
+          <td class="text-OK">Eretmochelys imbricata (98%)
+          </td>
+          <td>Chelonia mydas  (2%)
+          </td>
+          <td>12525/25533
+          </td>
+          <td>10/06/17 15h30
+          </td>
+          <td>N/A
+          </td>
+          <td>F
+          </td>
+          <td>Orage
+          </td>
+          <td>1
+          </td>
+        </tr>
+        <tr>
+          <td>Bart</td>
+          <td class="text-OK">55/14220
+          </td>
+          <td class="text-Ident">Furcifer pardalis (75%)
+          </td>
+          <td>Chamaeleo eliotti (25%)
+          </td>
+          <td>12525/25533
+          </td>
+          <td>02/06/17
+          </td>
+          <td>10cm
+          </td>
+          <td>N/A
+          </td>
+          <td>F
+          </td>
+          <td>1
+          </td>
+        </tr>
+        <tr>
+          <td>Hugo</td>
+          <td class="text-OK">25/1220
+          </td>
+          <td class="text-Ident">Stenella Longirostris (55%)
+          </td>
+          <td>Stenella Attenuata (45%)
+          </td>
+          <td>125585/755533
+          </td>
+          <td>01/06/17
+          </td>
+          <td>120cm
+          </td>
+          <td>N/A
+          </td>
+          <td>Ensoleillé
+          </td>
+          <td>5
+          </td>
+        </tr>
+        <tr>
+          <td>Mark</td>
+          <td class="text-OK">25/1220
+          </td>
+          <td class="text-OK">Dauphin Longbec (92%)
+          </td>
+          <td>Stenella Attenuata (8%)
+          </td>
+          <td>125525/2562533
+          </td>
+          <td>18/05/17
+          </td>
+          <td>104cm
+          </td>
+          <td>N/A
+          </td>
+          <td>Nuageux
+          </td>
+          <td>8
+          </td>
+        </tr>
+        <tr>
+          <td>Jacob</td>
+          <td class="text-OK">40/4420
+          </td>
+          <td class="text-OK">Stenella Attenuata  (94%)
+          </td>
+          <td>Dauphin Longbec (6%)
+          </td>
+          <td>155525/4762533
+          </td>
+          <td>11/05/17
+          </td>
+          <td>N/A
+          </td>
+          <td>M
+          </td>
+          <td>Ensoleillé
+          </td>
+          <td>1
+          </td>
+        </tr>
+        <tr>
+          <td>Larry</td>
+          <td class="text-OK">125/4220
+          </td>
+          <td class="text-OK">Eretmochelys imbricata (98%)
+          </td>
+          <td>Chelonia mydas  (2%)
+          </td>
+          <td>12525/25533
+          </td>
+          <td>10/05/17
+          </td>
+          <td>100cm
+          </td>
+          <td>N/A
+          </td>
+          <td>Orage
+          </td>
+          <td>1
+          </td>
+        </tr>
+        <tr>
+          <td>Bart</td>
+          <td class="text-OK">25/1220
+          </td>
+          <td class="text-Ident">Furcifer pardalis (75%)
+          </td>
+          <td>Chamaeleo eliotti (25%)
+          </td>
+          <td>12525 /25533
+          </td>
+          <td>02/05/17
+          </td>
+          <td>10cm
+          </td>
+          <td>F
+          </td>
+          <td>Ensoleillé
+          </td>
+          <td>1
+          </td>
+        </tr>
+        <tr>
+          <td>Hugo</td>
+          <td class="text-OK">26/1200
+          </td>
+          <td class="text-Ident">Stenella Longirostris (55%)
+          </td>
+          <td>Stenella Attenuata (45%)
+          </td>
+          <td>125585 /755533
+          </td>
+          <td>01/05/17
+          </td>
+          <td>120cm
+          </td>
+          <td>N/A
+          </td>
+          <td>Ensoleillé
+          </td>
+          <td>5
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="w-100 d-flex">
+        <div class="ml-auto" >
+          Exporter:
+          <button class="btn btn-outline-primary" type="submit">Excel</button>
+          <button class="btn btn-outline-primary" type="submit">CSV</button>
+          <button class="btn btn-outline-primary" type="submit">XML</button>
+        </div>
+
+      </div>
+  </div>
+</div>

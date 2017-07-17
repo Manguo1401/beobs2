@@ -24,10 +24,18 @@ export class ConnectComponent implements OnInit {
   constructor(
     private _myService : UserService,
     private router: Router
-  ){}
+  ){
+
+    this._isAuthenticated = true;
+    this.user.username = 'Manguo';
+    this.tokenjwt = 'token';
+    localStorage.setItem('token', this.tokenjwt);
+    localStorage.setItem('username', this.user.username);
+  }
 
   ngOnInit() {
-    this._myService.username$.subscribe(
+
+    /*this._myService.username$.subscribe(
       res => {
         if(res) {
           this._isAuthenticated = true;
@@ -38,7 +46,7 @@ export class ConnectComponent implements OnInit {
           this.user.username = null;
         }
       }
-    )
+    )*/
   }
 
   showReg(){

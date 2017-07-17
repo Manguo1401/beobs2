@@ -17,6 +17,7 @@ import { PresentationOrgComponent } from './information/presentation/presentatio
 import { SearchedDataOrgComponent } from './information/searched_data/searched_data.component'
 import { MembersOrgComponent } from './information/members/members.component'
 
+import { CollectedDataComponent } from './collected_data/collected_data.component'
 
 @NgModule({
 	imports: [
@@ -61,6 +62,9 @@ import { MembersOrgComponent } from './information/members/members.component'
 			},{
 				path: 'member_management',
 				component: MemberManagementComponent
+			},{
+				path: 'collected_data',
+				component: CollectedDataComponent
 			},{
 				path: '',
 				redirectTo: 'home',
