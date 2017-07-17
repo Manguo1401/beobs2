@@ -1,6 +1,6 @@
 import { Component, AfterViewInit, ElementRef, Renderer } from '@angular/core'
 
-//import {NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
+import {NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
 //import * as $ from 'bootstrap/dist/js/bootstrap.min.js';
 //import * as $ from 'jquery';
 
@@ -29,7 +29,7 @@ export class MyObservationsComponent implements AfterViewInit{
 		public tabVisibilityPrev= new Array(0);
 		public nbElem:string="none";
 
-		constructor(elementRef: ElementRef, renderer: Renderer/*, config: NgbDatepicker*/) {
+		constructor(elementRef: ElementRef, renderer: Renderer, config: NgbDatepicker) {
 			this.listelem = [{"FilContent":"S1","ObsList":["1","2","3"]},{"FilContent":"I1","ObsList":["1","2","3"]}];
 
 			// Listen to click events in the component
