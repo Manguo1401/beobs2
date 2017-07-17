@@ -23,7 +23,7 @@ mongoose.Promise = global.Promise;*/
 require('./db/requests')(app);
 
 app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname,'/../../dist/index.html'));
+  res.sendFile(path.join(__dirname,'/../../dist/public/index.html'));
 });
 
 app.listen(app.get('port'), function() {
