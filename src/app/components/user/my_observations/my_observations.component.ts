@@ -7,7 +7,7 @@ import {NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
 @Component ({
 	selector: 'my-observations',
 	templateUrl: 'my_observations.component.html',
-	providers: [NgbDatepicker],
+	// providers: [NgbDatepicker],
 	styleUrls: [
 	'my_observations.style.scss',
 	'../../css/utils.style.scss'

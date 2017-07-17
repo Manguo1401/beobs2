@@ -11,7 +11,7 @@ import * as ol from 'openlayers'
 export class LocationChoiceOrgComponent implements OnInit, AfterViewInit {
 	ol: any;
 	clearZones: any;
-	
+
 
     ngOnInit(): void {
 
@@ -26,7 +26,7 @@ export class LocationChoiceOrgComponent implements OnInit, AfterViewInit {
         let vectorSource = new ol.source.Vector();
         let vectorLayer = new ol.layer.Vector({    source:vectorSource });
 
-        
+
 
         let orgZoneChoiceMap = new ol.Map({
             layers: [
@@ -45,16 +45,16 @@ export class LocationChoiceOrgComponent implements OnInit, AfterViewInit {
 
 
          ///////////////////////////////////////////
-       
+
 
         var button = document.createElement('button');
 		button.innerHTML = '<i class="fa fa-eraser" aria-hidden="true"></i>';
-		button.setAttribute("data-toggle", "tooltip");
+		//button.setAttribute("data-toggle", "tooltip");
 		button.setAttribute("data-placement", "right");
 		button.setAttribute("title", "Supprimer les zones");
 		button.setAttribute("id", "zoneDeteleBtn");
 
-		
+
 
 		this.clearZones = function() {
 	    	vectorSource.clear();
@@ -83,10 +83,10 @@ export class LocationChoiceOrgComponent implements OnInit, AfterViewInit {
         });
         //Suppression du polygone si un nouveau est créé
         draw.on('drawstart', function (e) {
-            
+
         });
 
-        
+
 
         //Intégration de la couche sur la carte
         orgZoneChoiceMap.addInteraction(draw);
@@ -94,7 +94,7 @@ export class LocationChoiceOrgComponent implements OnInit, AfterViewInit {
 
     ngAfterViewInit() {
     	$(document).ready(function() {
-    		$('#zoneDeteleBtn').tooltip();
+    		//$('#zoneDeteleBtn').tooltip();
     	});
     }
 }

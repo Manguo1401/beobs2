@@ -1,6 +1,7 @@
 import { NgModule }       from '@angular/core'
 import { CommonModule }   from '@angular/common'
 import { FormsModule }    from '@angular/forms'
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import {HomeModule} from '../home.module'
 
@@ -32,6 +33,7 @@ import { MembersOrgComponent } from './information/members/members.component'
 	imports: [
 		CommonModule,
 		FormsModule,
+		NgbModule,
 		HomeModule,
 		OrgRoutes
 	],
@@ -53,7 +55,7 @@ import { MembersOrgComponent } from './information/members/members.component'
 		MembersOrgComponent
 	],
 	providers: [
-
+		// NgbDatepicker
 	]
 })
 
