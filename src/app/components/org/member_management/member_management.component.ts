@@ -14,7 +14,7 @@ export class MemberManagementComponent implements AfterViewInit{
   ngAfterViewInit() {
 
     $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
+      //$('[data-toggle="tooltip"]').tooltip()
     })
   }
 }

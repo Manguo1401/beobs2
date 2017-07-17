@@ -1,10 +1,10 @@
 import { Component, AfterViewInit } from '@angular/core'
-import {NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
+// import {NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
 
 @Component ({
 	selector: 'my-news',
 	templateUrl: 'news.component.html',
-	providers: [NgbDatepicker],
+	// providers: [NgbDatepicker],
 	styleUrls: [
 	'./../my_observations/my_observations.style.scss',
 	'../../css/utils.style.scss'
@@ -20,7 +20,7 @@ export class NewsComponent implements AfterViewInit{
 	public tabVisibilityPrev= new Array(0);
 	public nbElem:string="none";
 
-	constructor(config: NgbDatepicker) {
+	constructor(/*config: NgbDatepicker*/) {
 		this.listelem = [{"FilContent":"S1","ObsList":["1","2","3"]},{"FilContent":"I1","ObsList":["1","2","3"]},{"FilContent":"SO1","ObsList":["1","2"]}];
 	}
 
