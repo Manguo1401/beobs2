@@ -3,12 +3,12 @@ import { Component, AfterViewInit, ElementRef, Renderer} from '@angular/core'
 //banner
 import { OrgBannerComponent } from '../org_banner/org_banner.component'
 import { OrgMenuComponent } from '../org_banner/org_menu.component'
-import {NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'my-home-component',
   templateUrl: 'home.component.html',
-  providers: [NgbDatepicker],
+  // providers: [NgbDatepicker],
   styleUrls: ['home.style.css',
   '../../css/utils.style.scss'],
 })
@@ -16,7 +16,7 @@ import {NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
 export class HomeOrgComponent implements AfterViewInit{
   //model;
 
-  constructor(config: NgbDatepicker) {
+  constructor(/*config: NgbModule*/) {
   }
 
   ngAfterViewInit() {
