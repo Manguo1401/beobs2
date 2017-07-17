@@ -31,7 +31,7 @@ import { NewsComponent } from './news/news.component'
 				component: UserHomeComponent //NOT USED
 			},{*/
 				path: 'new_observation',
-				loadChildren: () => NewObservationModule
+				loadChildren: 'app/components/user/new_observations/new_observation.module#NewObservationModule'
 			},{
 				path:'my_observations',
 				component: MyObservationsComponent,
