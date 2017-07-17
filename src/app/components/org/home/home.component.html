@@ -10,8 +10,8 @@
       <span class="col-4 p-0 text-nowrap w-50 align-self-center">Avant le :</span>
       <div class="col-8 p-0 input-group">
         <input class="form-control" placeholder="Aujourd'hui"
-        name="dp" ><!-- [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" -->
-        <i class="input-group-addon fa fa-calendar" aria-hidden="true" ></i><!-- (click)="d.toggle()" -->
+        name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+        <i class="input-group-addon fa fa-calendar" aria-hidden="true" (click)="d.toggle()"></i>
       </div>
     </div>
     <!-- <div class="row">

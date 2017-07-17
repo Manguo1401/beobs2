@@ -72,7 +72,7 @@ export class UserService {
         localStorage.setItem('username', this._username);
         console.log("localStorage.getItem('token')" + localStorage.getItem('token'));
       })
-    .catch(e => console.log("reject: " + e));
+    .catch(e => console.log("post /user/login reject: " + e));
   }
 
   public loginwithObservable(username : string, password: string) : void {
